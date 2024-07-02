@@ -102,9 +102,16 @@ struct ClubView: View {
                         }
                         .padding()
                     }
-                
-                    Text(description)
-                        .padding()
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("About The Club:")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Text(description)
+                        }
+                        Spacer()
+                    }.padding()
+                 
                     VStack {
                         if isTapped == false {
                             Button {
