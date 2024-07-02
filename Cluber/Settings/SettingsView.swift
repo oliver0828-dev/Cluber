@@ -48,7 +48,6 @@ struct SettingsView: View {
                       
                   }
               }
-              Text("ADD")
             }
             
           .navigationTitle("Settings")
@@ -60,5 +59,4 @@ struct SettingsView: View {
 #Preview {
     SettingsView(username: "Oliver")
         .environmentObject(UsernameGradeClass())
-
 }
