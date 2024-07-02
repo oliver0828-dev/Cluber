@@ -1,0 +1,15 @@
+{
+  "originHash" : "7c4bad5c9408f2c4018ac6e3f371267980be6fa355f3ba31d1d3496c02dda474",
+  "pins" : [
+    {
+      "identity" : "icalendarparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dmail-me/iCalendarParser.git",
+      "state" : {
+        "revision" : "f87378ca7b2d59533c9562324b17a8caf20f26a2",
+        "version" : "0.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34605BD62C1B0CA6003EA9B0 /* iCalendarParser */; };
+		34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */; };
+		34605BDC2C1C5B04003EA9B0 /* ChangeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDB2C1C5B04003EA9B0 /* ChangeNameView.swift */; };
+		34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */; };
+		34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */; };
+		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
+		349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE72C0BEC1F00642E1B /* ASAData.swift */; };
+		349CAFEA2C0BEC3000642E1B /* ASADetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE92C0BEC3000642E1B /* ASADetailView.swift */; };
+		34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A02C0ABA14005914CC /* TestView.swift */; };
+		34ABE1A72C0ABDAF005914CC /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A62C0ABDAF005914CC /* CalendarView.swift */; };
 		34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */; };
-		34B2AB4F2BD7E1F400821D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB4E2BD7E1F400821D81 /* ContentView.swift */; };
 		34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB502BD7E1F500821D81 /* Assets.xcassets */; };
 		34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */; };
 		34B2AB5E2BD7E1F600821D81 /* CluberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB5D2BD7E1F600821D81 /* CluberTests.swift */; };
 		34B2AB682BD7E1F600821D81 /* CluberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB672BD7E1F600821D81 /* CluberUITests.swift */; };
 		34B2AB6A2BD7E1F600821D81 /* CluberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB692BD7E1F600821D81 /* CluberUITestsLaunchTests.swift */; };
+		34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB762BD7E23100821D81 /* HomeView.swift */; };
+		34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB782BD7E24400821D81 /* LunchClubView.swift */; };
+		34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB7A2BD7E24900821D81 /* ASAView.swift */; };
+		34B2AB7D2BD7E25100821D81 /* LunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB7C2BD7E25100821D81 /* LunchView.swift */; };
+		34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB7E2BD7E35600821D81 /* ContentView.swift */; };
+		34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB802BD7E76900821D81 /* LunchClubData.swift */; };
+		34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB832BD9062A00821D81 /* ClubView.swift */; };
+		34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC62BE7C6C100821D81 /* LunchData.swift */; };
+		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
+		34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGradeSettingsView.swift; sourceTree = "<group>"; };
+		34605BDB2C1C5B04003EA9B0 /* ChangeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameView.swift; sourceTree = "<group>"; };
+		34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubShareView.swift; sourceTree = "<group>"; };
+		34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubDetailsView.swift; sourceTree = "<group>"; };
+		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
+		349CAFE92C0BEC3000642E1B /* ASADetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADetailView.swift; sourceTree = "<group>"; };
+		34ABE1A02C0ABA14005914CC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		34ABE1A62C0ABDAF005914CC /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		34B2AB492BD7E1F400821D81 /* Cluber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberApp.swift; sourceTree = "<group>"; };
-		34B2AB4E2BD7E1F400821D81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		34B2AB502BD7E1F500821D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34B2AB592BD7E1F600821D81 /* CluberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CluberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +71,16 @@
 		34B2AB632BD7E1F600821D81 /* CluberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CluberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2AB672BD7E1F600821D81 /* CluberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberUITests.swift; sourceTree = "<group>"; };
 		34B2AB692BD7E1F600821D81 /* CluberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34B2AB762BD7E23100821D81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		34B2AB782BD7E24400821D81 /* LunchClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubView.swift; sourceTree = "<group>"; };
+		34B2AB7A2BD7E24900821D81 /* ASAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAView.swift; sourceTree = "<group>"; };
+		34B2AB7C2BD7E25100821D81 /* LunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchView.swift; sourceTree = "<group>"; };
+		34B2AB7E2BD7E35600821D81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34B2AB802BD7E76900821D81 /* LunchClubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubData.swift; sourceTree = "<group>"; };
+		34B2AB832BD9062A00821D81 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
+		34B2ABC62BE7C6C100821D81 /* LunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
+		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +109,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34605BD82C1BEA4B003EA9B0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				348324F92BFAF20A005BAA45 /* SettingsView.swift */,
+				34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */,
+				34605BDB2C1C5B04003EA9B0 /* ChangeNameView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		349CAFE62C0BEC0E00642E1B /* ASA */ = {
+			isa = PBXGroup;
+			children = (
+				34B2AB7A2BD7E24900821D81 /* ASAView.swift */,
+				349CAFE92C0BEC3000642E1B /* ASADetailView.swift */,
+				349CAFE72C0BEC1F00642E1B /* ASAData.swift */,
+			);
+			path = ASA;
+			sourceTree = "<group>";
+		};
+		34ABE1A52C0ABD9F005914CC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				34B2AB762BD7E23100821D81 /* HomeView.swift */,
+				34ABE1A62C0ABDAF005914CC /* CalendarView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		34B2AB402BD7E1F400821D81 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +162,15 @@
 			isa = PBXGroup;
 			children = (
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
-				34B2AB4E2BD7E1F400821D81 /* ContentView.swift */,
+				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
+				34ABE1A02C0ABA14005914CC /* TestView.swift */,
+				34B2AB832BD9062A00821D81 /* ClubView.swift */,
+				34605BD82C1BEA4B003EA9B0 /* Settings */,
+				34B2ABCE2BEA5C0A00821D81 /* Onboarding Screen */,
+				34ABE1A52C0ABD9F005914CC /* Home */,
+				34B2AB822BD7E77400821D81 /* Lunch Club */,
+				349CAFE62C0BEC0E00642E1B /* ASA */,
+				34B2ABC52BE7C6AD00821D81 /* Lunch  */,
 				34B2AB502BD7E1F500821D81 /* Assets.xcassets */,
 				34B2AB522BD7E1F500821D81 /* Preview Content */,
 			);
@@ -127,6 +202,35 @@
 			path = CluberUITests;
 			sourceTree = "<group>";
 		};
+		34B2AB822BD7E77400821D81 /* Lunch Club */ = {
+			isa = PBXGroup;
+			children = (
+				34B2AB782BD7E24400821D81 /* LunchClubView.swift */,
+				34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */,
+				34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */,
+				34B2AB802BD7E76900821D81 /* LunchClubData.swift */,
+			);
+			path = "Lunch Club";
+			sourceTree = "<group>";
+		};
+		34B2ABC52BE7C6AD00821D81 /* Lunch  */ = {
+			isa = PBXGroup;
+			children = (
+				34B2AB7C2BD7E25100821D81 /* LunchView.swift */,
+				34B2ABC62BE7C6C100821D81 /* LunchData.swift */,
+			);
+			path = "Lunch ";
+			sourceTree = "<group>";
+		};
+		34B2ABCE2BEA5C0A00821D81 /* Onboarding Screen */ = {
+			isa = PBXGroup;
+			children = (
+				34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */,
+				34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */,
+			);
+			path = "Onboarding Screen";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +247,9 @@
 			dependencies = (
 			);
 			name = Cluber;
+			packageProductDependencies = (
+				34605BD62C1B0CA6003EA9B0 /* iCalendarParser */,
+			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +322,9 @@
 				Base,
 			);
 			mainGroup = 34B2AB402BD7E1F400821D81;
+			packageReferences = (
+				34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */,
+			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +367,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B2AB4F2BD7E1F400821D81 /* ContentView.swift in Sources */,
+				34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */,
+				349CAFEA2C0BEC3000642E1B /* ASADetailView.swift in Sources */,
+				34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */,
+				34B2AB7D2BD7E25100821D81 /* LunchView.swift in Sources */,
+				34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */,
+				34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */,
+				34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */,
+				34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */,
+				34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */,
+				349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */,
+				34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */,
+				34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */,
+				34ABE1A72C0ABDAF005914CC /* CalendarView.swift in Sources */,
 				34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */,
+				34605BDC2C1C5B04003EA9B0 /* ChangeNameView.swift in Sources */,
+				34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */,
+				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
+				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,
+				348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */,
+				34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +553,12 @@
 				DEVELOPMENT_TEAM = RASZ5V56S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +583,12 @@
 				DEVELOPMENT_TEAM = RASZ5V56S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +718,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmail-me/iCalendarParser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34605BD62C1B0CA6003EA9B0 /* iCalendarParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */;
+			productName = iCalendarParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34B2AB412BD7E1F400821D81 /* Project object */;
 }

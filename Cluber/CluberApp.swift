@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CluberApp: App {
+    @StateObject var usernameGrade = UsernameGradeClass()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
+                .environmentObject(usernameGrade)
         }
     }
 }
+
