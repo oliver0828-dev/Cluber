@@ -101,7 +101,8 @@ struct ClubView: View {
                             Spacer()
                         }
                         .padding()
-                    }
+                    } 
+
                     HStack {
                         VStack(alignment: .leading) {
                             Text("About The Club:")
