@@ -18,7 +18,7 @@ Coordinating club activities in educational institutions often leads to logistic
 ### Finished - Prototype (DONE):
 1. Overall Structure (Finished)
 2. Lunch Club Information & UI (Finished)
-3. ASA UI (Finished) & Info (Ongoing)
+3. ASA UI (Finished) & Info (In Progress)
 4. Settings & Onboarding Page (Finished)
 
 ### Ongoing
