@@ -105,7 +105,7 @@ struct ClubView: View {
 
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("About The Club:")
+                            Text("About \(lunchClubName):")
                                 .font(.title3)
                                 .fontWeight(.bold)
                             Text(description)
@@ -192,29 +192,29 @@ struct ClubView: View {
                         } label: {
                             if loved == true {
                                 Text("Interested")
-                                    .font(.title3)
+                                    .font(.headline)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.pink)
                                 Image(systemName: "heart.fill")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 20, height:20)
+                                    .frame(width: 5, height:5)
                                     .foregroundStyle(.pink)
                                 
                             } else {
                                 Text("Interested")
-                                    .font(.title3)
+                                    .font(.headline)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.black)
                                 Image(systemName: "heart")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 20, height:20)
+                                    .frame(width: 15, height:15)
                                     .foregroundStyle(.black)
                             }
                         }
                     }
-                    .frame(width: 160, height: 35)
+                    .frame(width: 130, height: 30)
                     .background(.gray.opacity(0.5))
                     .clipShape(.rect(cornerRadius:15))
                 }
