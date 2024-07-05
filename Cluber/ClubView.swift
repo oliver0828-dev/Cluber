@@ -101,8 +101,8 @@ struct ClubView: View {
                             Spacer()
                         }
                         .padding()
-                    } 
-
+                    }
+                    
                     HStack {
                         VStack(alignment: .leading) {
                             Text("About \(lunchClubName):")
@@ -112,112 +112,113 @@ struct ClubView: View {
                         }
                         Spacer()
                     }.padding()
-                 
-                    VStack {
-                        if isTapped == false {
-                            Button {
-                                isTapped2.toggle()
-                            } label: {
-                                if isTapped2 == false {
-                                    Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
-                                        .foregroundColor(.white)
-                                        .frame(width: 200, height: 50)
-                                        .background(Color.blue)
-                                        .clipShape(Capsule())
-                                        .padding()
-                                } else {
-                                    VStack {
-                                        Image(systemName: "person.crop.circle.fill.badge.checkmark")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                                            .frame(width: 50, height: 50)
-                                        Text("Joined It! Wait for a review!")
-                                            .foregroundColor(.gray)
-                                    }
-                                }
-                            }
-                        }
-                        Divider()
-                            .padding()
-                        HStack {
-                            Text(isTapped ? "" : "Are You a Member of This Club?")
-                            Image(systemName: isTapped ? "" :  "arrow.down")
-                        }
-                        if isTapped2 == false {
-                            Button {
-                                print("Signed Up")
-                                memberBoolean.toggle()
-                                isTapped = memberBoolean
-                                usernameGrade.memberBoolean = memberBoolean
-                            } label: {
-                                if isTapped == false {
-                                    Text("Signed Up")
-                                        .foregroundStyle(.white)
-                                        .frame(width: 120, height: 50)
-                                        .background(.green)
-                                        .clipShape(.capsule)
-                                } else {
-                                    VStack {
-                                        Image(systemName: "person.fill.checkmark")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundStyle(colorScheme == .dark ? .white : .black)
-                                            .frame(width: 50, height: 50)
-                                        Text("You're Already Member of this Club!")
-                                            .foregroundStyle(.gray)
-                                        Text("Click Again to Cancel")
-                                            .font(.caption)
-                                            .foregroundStyle(.red)
-                                        
-                                        NavigationLink("Role", destination: LunchClubDetailsView(lunchClubName: lunchClubName))
-                                            .foregroundStyle(.white)
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .fontDesign(.rounded)
-                                            .frame(width: 120, height: 50)
-                                            .background(.blue)
-                                            .clipShape(.rect(cornerRadius: 15))
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    
                 }
-                .toolbar {
-                    HStack {
+                
+                VStack {
+                    if isTapped == false {
                         Button {
-                            loved.toggle()
-                            
+                            isTapped2.toggle()
                         } label: {
-                            if loved == true {
-                                Text("Interested")
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.pink)
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 5, height:5)
-                                    .foregroundStyle(.pink)
-                                
+                            if isTapped2 == false {
+                                Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
+                                    .foregroundColor(.white)
+                                    .frame(width: 200, height: 50)
+                                    .background(Color.blue)
+                                    .clipShape(Capsule())
+                                    .padding()
                             } else {
-                                Text("Interested")
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.black)
-                                Image(systemName: "heart")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 15, height:15)
-                                    .foregroundStyle(.black)
+                                VStack {
+                                    Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                        .frame(width: 50, height: 50)
+                                    Text("Joined It! Wait for a review!")
+                                        .foregroundColor(.gray)
+                                }
                             }
                         }
                     }
-                    .frame(width: 130, height: 30)
-                    .background(.gray.opacity(0.5))
-                    .clipShape(.rect(cornerRadius:15))
+                    Divider()
+                        .padding()
+                    HStack {
+                        Text(isTapped ? "" : "Are You a Member of This Club?")
+                        Image(systemName: isTapped ? "" :  "arrow.down")
+                    }
+                    if isTapped2 == false {
+                        Button {
+                            print("Signed Up")
+                            memberBoolean.toggle()
+                            isTapped = memberBoolean
+                            usernameGrade.memberBoolean = memberBoolean
+                        } label: {
+                            if isTapped == false {
+                                Text("Signed Up")
+                                    .foregroundStyle(.white)
+                                    .frame(width: 120, height: 50)
+                                    .background(.green)
+                                    .clipShape(.capsule)
+                            } else {
+                                VStack {
+                                    Image(systemName: "person.fill.checkmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                                        .frame(width: 50, height: 50)
+                                    Text("You're Already Member of this Club!")
+                                        .foregroundStyle(.gray)
+                                    Text("Click Again to Cancel")
+                                        .font(.caption)
+                                        .foregroundStyle(.red)
+                                    
+                                    NavigationLink("Role", destination: LunchClubDetailsView(lunchClubName: lunchClubName))
+                                        .foregroundStyle(.white)
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                        .fontDesign(.rounded)
+                                        .frame(width: 120, height: 50)
+                                        .background(.blue)
+                                        .clipShape(.rect(cornerRadius: 15))
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+            .toolbar {
+                HStack {
+                    Button {
+                        loved.toggle()
+                        
+                    } label: {
+                        if loved == true {
+                            Text("Interested")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.pink)
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15)
+                                .foregroundStyle(.pink)
+                            
+                        } else {
+                            Text("Interested")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.black)
+                            Image(systemName: "heart")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height:15)
+                                .foregroundStyle(.black)
+                        }
+                    }
+                }
+                .frame(width: 130, height: 30)
+                .background(.gray.opacity(0.5))
+                .clipShape(.rect(cornerRadius:15))
             }
         }
     }
@@ -225,16 +226,18 @@ struct ClubView: View {
         UserDefaults.standard.set(loved, forKey: "\(lunchClubName)_loved")
         UserDefaults.standard.set(memberBoolean, forKey: "\(lunchClubName)_member")
     }
-    
+
     private func loadLoveState() -> Bool {
-         return UserDefaults.standard.bool(forKey: "\(lunchClubName)_loved")
+        return UserDefaults.standard.bool(forKey: "\(lunchClubName)_loved")
     }
-    
+
     private func loadMemberState() -> Bool {
         return UserDefaults.standard.bool(forKey: "\(lunchClubName)_member")
     }
-    
+
 }
+
+
 
 #Preview {
     ClubView(lunchClubName: "Key Club", lunchClubTeacher: "Mrs. Jolly", lunchClubImage: "MSKeyClub", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", loved: .constant(false), memberBoolean: .constant(false))

@@ -54,9 +54,9 @@ struct ASAList {
         
         ASAStruct(clubName: "Competitive Debate Club", teacherName: "Mr. Lipsky", groupImage: "CDC", subName: "", description: "Students learn debate strategies and research and debate issues together. Student coaches Annie and Leanne will lead each practice. They will find competitions for students to enter and try to win awards. Students must commit to joining the ASA for Season 2 and Season 3.", dayOfWeek: 2, roomNumber: 309),
         
-        ASAStruct(clubName: "MS/HS Boys Badminton", teacherName: "Mr. Zhao", groupImage: "BB", subName: "", description: "In this activity period, students will have an opportunity to show their badminton talent. They will be coached in playing the game and practice for the KISAC badminton tournament.", dayOfWeek: 2, roomNumber: 0, location: "DIS Gym"),
+        ASAStruct(clubName: "MS/HS Boys Badminton", teacherName: "Mr. Zhao", groupImage: "BBB", subName: "", description: "In this activity period, students will have an opportunity to show their badminton talent. They will be coached in playing the game and practice for the KISAC badminton tournament.", dayOfWeek: 2, roomNumber: 0, location: "DIS Gym"),
         
-        ASAStruct(clubName: "MS/HS Girls Badminton", teacherName: "Mr. Zhao", groupImage: "BB", subName: "", description: "In this activity period, students will have an opportunity to show their badminton talent. They will be coached in playing the game and practice for the KISAC badminton tournament.", dayOfWeek: 2, roomNumber: 0, location: "DIS Gym"),
+        ASAStruct(clubName: "MS/HS Girls Badminton", teacherName: "Mr. Zhao", groupImage: "GBB", subName: "", description: "In this activity period, students will have an opportunity to show their badminton talent. They will be coached in playing the game and practice for the KISAC badminton tournament.", dayOfWeek: 2, roomNumber: 0, location: "DIS Gym"),
         
         ASAStruct(clubName: "Open Studio", teacherName: "Mr. Gum", groupImage: "OS", subName: "", description: """
 
