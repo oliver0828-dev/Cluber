@@ -57,10 +57,10 @@ struct LunchClubView: View {
                             if elementarySchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || elementarySchoolLunchClub.interested) {
                                 NavigationLink {
                                     ClubView(
-                                        lunchClubName: elementarySchoolLunchClub.clubName,
-                                        lunchClubTeacher: elementarySchoolLunchClub.teacherName,
-                                        lunchClubImage: elementarySchoolLunchClub.groupImage,
-                                        lunchClubSubName: elementarySchoolLunchClub.subName,
+                                        ClubName: elementarySchoolLunchClub.clubName,
+                                        ClubTeacher: elementarySchoolLunchClub.teacherName,
+                                        ClubImage: elementarySchoolLunchClub.groupImage,
+                                        ClubSubName: elementarySchoolLunchClub.subName,
                                         description: elementarySchoolLunchClub.description,
                                         schoolLevel: "Elementary",
                                         roomNumber: elementarySchoolLunchClub.roomNumber,
@@ -99,10 +99,10 @@ struct LunchClubView: View {
                             if middleSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || middleSchoolLunchClub.interested) {
                                 NavigationLink {
                                     ClubView(
-                                        lunchClubName: middleSchoolLunchClub.clubName,
-                                        lunchClubTeacher: middleSchoolLunchClub.teacherName,
-                                        lunchClubImage: middleSchoolLunchClub.groupImage,
-                                        lunchClubSubName: middleSchoolLunchClub.subName,
+                                        ClubName: middleSchoolLunchClub.clubName,
+                                        ClubTeacher: middleSchoolLunchClub.teacherName,
+                                        ClubImage: middleSchoolLunchClub.groupImage,
+                                        ClubSubName: middleSchoolLunchClub.subName,
                                         description: middleSchoolLunchClub.description,
                                         schoolLevel: "Middle",
                                         roomNumber: middleSchoolLunchClub.roomNumber,
@@ -143,10 +143,10 @@ struct LunchClubView: View {
                             if highSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || highSchoolLunchClub.interested) {
                                 NavigationLink {
                                     ClubView(
-                                        lunchClubName: highSchoolLunchClub.clubName,
-                                        lunchClubTeacher: highSchoolLunchClub.teacherName,
-                                        lunchClubImage: highSchoolLunchClub.groupImage,
-                                        lunchClubSubName: highSchoolLunchClub.subName,
+                                        ClubName: highSchoolLunchClub.clubName,
+                                        ClubTeacher: highSchoolLunchClub.teacherName,
+                                        ClubImage: highSchoolLunchClub.groupImage,
+                                        ClubSubName: highSchoolLunchClub.subName,
                                         description: highSchoolLunchClub.description,
                                         schoolLevel: "High",
                                         roomNumber: highSchoolLunchClub.roomNumber,

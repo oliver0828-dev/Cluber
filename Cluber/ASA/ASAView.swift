@@ -59,10 +59,10 @@ struct ASAView: View {
                                 if quarterToString(quarter: elementary.quarter) ==  quarter || quarterToString(quarter: elementary.quarter) == "All"{
                                     NavigationLink {
                                         ClubView(
-                                            lunchClubName: elementary.clubName,
-                                            lunchClubTeacher: elementary.teacherName,
-                                            lunchClubImage: elementary.groupImage,
-                                            lunchClubSubName: elementary.subName,
+                                            ClubName: elementary.clubName,
+                                            ClubTeacher: elementary.teacherName,
+                                            ClubImage: elementary.groupImage,
+                                            ClubSubName: elementary.subName,
                                             description: elementary.description,
                                             schoolLevel: "Elementary",
                                             roomNumber: elementary.roomNumber,
@@ -114,10 +114,10 @@ struct ASAView: View {
                                 if quarterToString(quarter: middle.quarter) == quarter || quarterToString(quarter: middle.quarter) == "All"{
                                     NavigationLink {
                                         ClubView(
-                                            lunchClubName: middle.clubName,
-                                            lunchClubTeacher: middle.teacherName,
-                                            lunchClubImage: middle.groupImage,
-                                            lunchClubSubName: middle.subName,
+                                            ClubName: middle.clubName,
+                                            ClubTeacher: middle.teacherName,
+                                            ClubImage: middle.groupImage,
+                                            ClubSubName: middle.subName,
                                             description: middle.description,
                                             schoolLevel: "Middle",
                                             roomNumber: middle.roomNumber,
@@ -168,10 +168,10 @@ struct ASAView: View {
                                 if quarterToString(quarter: high.quarter) == quarter || quarterToString(quarter: high.quarter) == "All" {
                                     NavigationLink {
                                         ClubView(
-                                            lunchClubName: high.clubName,
-                                            lunchClubTeacher: high.teacherName,
-                                            lunchClubImage: high.groupImage,
-                                            lunchClubSubName: high.subName,
+                                            ClubName: high.clubName,
+                                            ClubTeacher: high.teacherName,
+                                            ClubImage: high.groupImage,
+                                            ClubSubName: high.subName,
                                             description: high.description,
                                             schoolLevel: "High",
                                             roomNumber: high.roomNumber,
