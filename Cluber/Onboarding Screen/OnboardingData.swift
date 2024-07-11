@@ -77,7 +77,6 @@ class UsernameGradeClass: ObservableObject {
     @AppStorage ("userName") var userName: String = ""
     @AppStorage ("gradeYear") var gradeNumber: Int = 1 
     @AppStorage ("memberStatus") var member: String = ""
-    
     @AppStorage ("memberBoolean") var memberBoolean = false 
 }
 

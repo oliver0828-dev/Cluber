@@ -10,7 +10,6 @@ import SwiftUI
 struct ChangeGradeSettingsView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     
-    
     let grade: [String] = ["Elementary", "Middle", "High"]
     @State var isTapped = false
     @State var isChanged = false // for the save button

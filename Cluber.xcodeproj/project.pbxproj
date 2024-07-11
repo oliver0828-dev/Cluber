@@ -13,6 +13,7 @@
 		34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */; };
 		34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */; };
 		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
+		348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B73112C3E741D001CBCFE /* LunchModel.swift */; };
 		349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE72C0BEC1F00642E1B /* ASAData.swift */; };
 		349CAFEA2C0BEC3000642E1B /* ASADetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE92C0BEC3000642E1B /* ASADetailView.swift */; };
 		34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A02C0ABA14005914CC /* TestView.swift */; };
@@ -33,6 +34,12 @@
 		34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC62BE7C6C100821D81 /* LunchData.swift */; };
 		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
 		34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */; };
+		34ED01782C3BAA910021D1DD /* InstagramStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01772C3BAA910021D1DD /* InstagramStories.swift */; };
+		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
+		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
+		34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01822C3D127B0021D1DD /* GetCalendar.swift */; };
+		34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01842C3D128E0021D1DD /* CalendarRowView.swift */; };
+		34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01862C3D12A10021D1DD /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,7 @@
 		34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubShareView.swift; sourceTree = "<group>"; };
 		34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubDetailsView.swift; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		348B73112C3E741D001CBCFE /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
 		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
 		349CAFE92C0BEC3000642E1B /* ASADetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADetailView.swift; sourceTree = "<group>"; };
 		34ABE1A02C0ABA14005914CC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -81,6 +89,12 @@
 		34B2ABC62BE7C6C100821D81 /* LunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
 		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		34ED01772C3BAA910021D1DD /* InstagramStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramStories.swift; sourceTree = "<group>"; };
+		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
+		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		34ED01822C3D127B0021D1DD /* GetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
+		34ED01842C3D128E0021D1DD /* CalendarRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRowView.swift; sourceTree = "<group>"; };
+		34ED01862C3D12A10021D1DD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +179,8 @@
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
 				34ABE1A02C0ABA14005914CC /* TestView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
+				34ED01772C3BAA910021D1DD /* InstagramStories.swift */,
+				34ED01812C3D125F0021D1DD /* Calendar */,
 				34605BD82C1BEA4B003EA9B0 /* Settings */,
 				34B2ABCE2BEA5C0A00821D81 /* Onboarding Screen */,
 				34ABE1A52C0ABD9F005914CC /* Home */,
@@ -218,6 +234,7 @@
 			children = (
 				34B2AB7C2BD7E25100821D81 /* LunchView.swift */,
 				34B2ABC62BE7C6C100821D81 /* LunchData.swift */,
+				348B73112C3E741D001CBCFE /* LunchModel.swift */,
 			);
 			path = "Lunch ";
 			sourceTree = "<group>";
@@ -229,6 +246,18 @@
 				34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */,
 			);
 			path = "Onboarding Screen";
+			sourceTree = "<group>";
+		};
+		34ED01812C3D125F0021D1DD /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				34ED017F2C3D12540021D1DD /* CalendarModel.swift */,
+				34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */,
+				34ED01822C3D127B0021D1DD /* GetCalendar.swift */,
+				34ED01842C3D128E0021D1DD /* CalendarRowView.swift */,
+				34ED01862C3D12A10021D1DD /* DateExtension.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,12 +397,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */,
+				34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */,
 				349CAFEA2C0BEC3000642E1B /* ASADetailView.swift in Sources */,
+				34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */,
 				34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */,
 				34B2AB7D2BD7E25100821D81 /* LunchView.swift in Sources */,
 				34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */,
 				34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */,
+				34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */,
 				34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */,
+				34ED01782C3BAA910021D1DD /* InstagramStories.swift in Sources */,
 				34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */,
 				34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */,
 				349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */,
@@ -381,9 +414,12 @@
 				34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */,
 				34ABE1A72C0ABDAF005914CC /* CalendarView.swift in Sources */,
 				34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */,
+				348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */,
 				34605BDC2C1C5B04003EA9B0 /* ChangeNameView.swift in Sources */,
 				34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */,
 				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
+				34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */,
+				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
 				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,
 				348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */,
 				34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */,
@@ -475,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -532,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -568,7 +604,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -598,7 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -646,12 +682,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RASZ5V56S7;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "site.notion.ollie-dev.CluberUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -664,12 +700,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RASZ5V56S7;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "site.notion.ollie-dev.CluberUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

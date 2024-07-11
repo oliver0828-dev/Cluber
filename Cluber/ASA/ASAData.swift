@@ -20,6 +20,7 @@ struct ASAStruct: Identifiable {
     var socialMedia: Bool = false
     var instagramLink: String = ""
     var instagramID: String = ""
+    var quarter: String = "All"
     
     var interested: Bool {
         get {
@@ -42,9 +43,9 @@ struct ASAList {
         
         ASAStruct(clubName: "Beginner Instruments" , teacherName: "Mr. Hutchings", groupImage: "BI", subName: "", description: "Ever wanted to learn a second instrument? Or maybe even your first? This asa is for students who want to explore new instruments. The school has limited supply of extra Instruments to borrow, but if we don't have one you'll have to buy your own, so make sure to contact Mr Hutchings as soon as you sign up to ask about supply.", dayOfWeek: 1, roomNumber: 406),
         
-        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields"),
+        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
         
-        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields"),
+        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
         
         ASAStruct(clubName: "Crochet Club", teacherName: "Ms. Wang", groupImage: "CrochetC", subName: "", description: "Have you ever experienced with crocheting? Ms. Wang's crochet club invites students who have any experience with crocheting or want to learn how to crochet. We can make nice and useful items like decoration items or accessory for ourselves. We will buy our own kit and crochet together in my classroom! For more clarification, come to Ms. Wang and I'd love to talk with you more!", dayOfWeek: 2, roomNumber: 202),
         
@@ -58,21 +59,19 @@ struct ASAList {
         
         ASAStruct(clubName: "MS/HS Girls Badminton", teacherName: "Mr. Zhao", groupImage: "GBB", subName: "", description: "In this activity period, students will have an opportunity to show their badminton talent. They will be coached in playing the game and practice for the KISAC badminton tournament.", dayOfWeek: 2, roomNumber: 0, location: "DIS Gym"),
         
-        ASAStruct(clubName: "Open Studio", teacherName: "Mr. Gum", groupImage: "OS", subName: "", description: """
-
+        ASAStruct(clubName: "Open Studio", teacherName: "Mr. Gum", groupImage: "n/a", subName: "", description: """
 This ASA is open to all HS students and will have a focus on observational drawing practice (still life and figure drawing). Life Drawing Studio will provide students opportunities to build their observational drawing skills.
 
 Additionally, this ASA optionally provides High School Visual Arts students extra time in the art studio to work on their in-class art projects. If you're a HS art student it is highly encouraged that you sign up for this ASA to reserve extra time to work on your art assignments. This will be the only after school open studio time during Season 2. Weekend options for Open Art Studios are no longer available.
-                  
 """, dayOfWeek: 2, roomNumber: 101),
         
         ASAStruct(clubName: "Elite Training Club", teacherName: "Mr. Purdy & Mr. Faille", groupImage: "ETC", subName: "", description: "Join this ASA to begin your journey into body transformation. We will improve our athletic performances and transform ourselves into our strongest and best versions. A hard workout will also reward you with a powerful mental mindset. Supported by Harrison", dayOfWeek: 2, roomNumber: 0, location: "Fitness Center"),
         
         ASAStruct(clubName: "NHD Club", teacherName: "Mr. Kaschub", groupImage: "NHD", subName: "", description: "National History Day Club will give students an opportunity to participate in National History Day, learn about the NHD process and work on their project. NHD Club is intended for students that are interested in completing an NHD project and would like some direction, assistance and time to complete a quality project. National History Day is a research-based historical inquiry project that culminates in the NHD Korea competition in the spring. Top qualifiers from the NHD Korea competition then have the opportunity to compete in the international NHD competition in the United States in the summer. NHD Club for Trimester 3 will only be open to students that qualify for the final NHD competition.", dayOfWeek: 2, roomNumber: 310),
         
-        ASAStruct(clubName: "MS/HS Korean Language & Social Studies", teacherName: "Korean Studies Teachers", groupImage: "KLSS", subName: "", description: "MS/HS Korean Languages & Social Studies (중/고등 한국교과수업)", dayOfWeek: 3, roomNumber: 0, location: "Various"),
+        ASAStruct(clubName: "MS/HS Korean Language & Social Studies", teacherName: "Korean Studies Teachers", groupImage: "n/a", subName: "", description: "MS/HS Korean Languages & Social Studies (중/고등 한국교과수업)", dayOfWeek: 3, roomNumber: 0, location: "Various"),
         
-        ASAStruct(clubName: "Strength and conditioning", teacherName: "Mr. Bergan", groupImage: "SaC", subName: "", description: "Are you interested in getting into shape for a sport? Getting in shape for personal health? Or just interested in learning how to lift weights for future goals? Then come join the strength and conditioning ASA with Mr. Bergan", dayOfWeek: 4, roomNumber: 0, location: "Fitness Center"),
+        ASAStruct(clubName: "Strength & Conditioning", teacherName: "Mr. Bergan", groupImage: "SaC", subName: "", description: "Are you interested in getting into shape for a sport? Getting in shape for personal health? Or just interested in learning how to lift weights for future goals? Then come join the strength and conditioning ASA with Mr. Bergan", dayOfWeek: 4, roomNumber: 0, location: "Fitness Center"),
         
         ASAStruct(clubName: "Painting Club", teacherName: "Ms. Wang", groupImage: "PC", subName: "", description: "Let's do pipo painting! Pipo painting is a slogan for 'Drawing it easy!' and also called a 'Puzzle painting'. Pipo painting is a type of DIY painting where you color in the numbers with the designated colors. Depending on what you choose, you don't actually color with paint when it comes to Diamond painting. Instead, you glue in small colored diamonds according to designated numbers/letters. Let's have a relaxing fun together with some nice music in Ms. Wang's room! If you want to see a nice example of pipo painting, feel free to visit Ms. Wang's room! We will work individually in a very safe environment and there will be some extra costs to purchase your pipo painting materials and that will cost about 10,000-15,000 won! Anybody can be an artist in this club!", dayOfWeek: 4, roomNumber: 202),
         
@@ -82,7 +81,7 @@ Additionally, this ASA optionally provides High School Visual Arts students extr
         
         ASAStruct(clubName: "MS/HS Chess Club", teacherName: "Mr. Coleman", groupImage: "ChessC", subName: "", description: "Come learn competition chess and flex your chess skills against your friends every Thursday in Mr. Coleman's classroom. Every week there will be mini competitions between students and chances to learn and improve your chess game. Come see Mr. Coleman for more info.", dayOfWeek: 4, roomNumber: 201),
         
-        ASAStruct(clubName: "High School Visual Arts Club", teacherName: "Mr. Gum", groupImage: "HSVAC", subName: "", description: "Are you interested in art? Do you want to help promote visual arts around our campus and community while practicing a wide range of visual art skills? Visual Arts Club would like to invite you to participate in a variety of collaborative art related activities. This club will also be associated with our official chapter of National Art Honors Society (NAHS).", dayOfWeek: 4, roomNumber: 101),
+        ASAStruct(clubName: "High School Visual Arts Club", teacherName: "Mr. Gum", groupImage: "n/a", subName: "", description: "Are you interested in art? Do you want to help promote visual arts around our campus and community while practicing a wide range of visual art skills? Visual Arts Club would like to invite you to participate in a variety of collaborative art related activities. This club will also be associated with our official chapter of National Art Honors Society (NAHS).", dayOfWeek: 4, roomNumber: 101),
         
         ASAStruct(clubName: "HS Rock Band", teacherName: "Mr. Hutchings", groupImage: "HSRB", subName: "", description: "Join the High School Rock Band Club and unleash your inner rock star! Whether you're a seasoned musician or just starting out, our club offers a fun and supportive environment to jam, learn new skills, and rock out with friends. From classic rock to modern hits, come join us as we make music, build friendships, and rock the school stage!", dayOfWeek: 4, roomNumber: 406),
         
@@ -94,9 +93,9 @@ Additionally, this ASA optionally provides High School Visual Arts students extr
         
         ASAStruct(clubName: "String Orchestra Club", teacherName: "Mr. Hutchings", groupImage: "SOC", subName: "", description: "Immerse yourself in the enchanting world of music with our String Orchestra!", dayOfWeek: 5, roomNumber: 406),
         
-        ASAStruct(clubName: "Advanced Media", teacherName: "Mr. Lipsky", groupImage: "AM", subName: "", description: "Advanced Media is offered to current leaders and editors of the Journalism class, Video Production class, Jet Stream ASA, Jets Flyover ASA, JBS Lunch Club, and photography Lunch Club. Students will use this ASA to work on media projects of their choice. Students in leadership positions in any DIS media class, ASA, or Lunch Club are encouraged to join so they can get extra time to work on their media projects. Students will also get the chance to produce podcasts in this ASA.", dayOfWeek: 5, roomNumber: 309),
+        ASAStruct(clubName: "Advanced Media", teacherName: "Mr. Lipsky", groupImage: "n/a", subName: "", description: "Advanced Media is offered to current leaders and editors of the Journalism class, Video Production class, Jet Stream ASA, Jets Flyover ASA, JBS Lunch Club, and photography Lunch Club. Students will use this ASA to work on media projects of their choice. Students in leadership positions in any DIS media class, ASA, or Lunch Club are encouraged to join so they can get extra time to work on their media projects. Students will also get the chance to produce podcasts in this ASA.", dayOfWeek: 5, roomNumber: 309),
         
-        ASAStruct(clubName: "Prom Committee ASA", teacherName: "Mrs. Gum", groupImage: "PCA", subName: "", description: "This ASA is for members of Prom Committee who are available to join us during ASA time to continue preparing for Prom 2024. Tasks include researching ideas, planning and organizing aspects of the event and making decorations related to the theme. If you are not in our Prom Committee lunch club but are interested in joining or helping out during our ASA, please come and speak with Mrs. Gum!", dayOfWeek: 5, roomNumber: 104),
+        ASAStruct(clubName: "Prom Committee ASA", teacherName: "Mrs. Gum", groupImage: "n/a", subName: "", description: "This ASA is for members of Prom Committee who are available to join us during ASA time to continue preparing for Prom 2024. Tasks include researching ideas, planning and organizing aspects of the event and making decorations related to the theme. If you are not in our Prom Committee lunch club but are interested in joining or helping out during our ASA, please come and speak with Mrs. Gum!", dayOfWeek: 5, roomNumber: 104),
         
         ASAStruct(clubName: "HS Game Club", teacherName: "Mr. Coleman", groupImage: "HSGC", subName: "", description: "Come hang out with your peers and play some games and relax after a long week of work! We will play games such as computer games, nintendo switch, board games, and more! If you have any questions please reach out to Mr. Coleman.", dayOfWeek: 5, roomNumber: 201),
         
@@ -104,9 +103,9 @@ Additionally, this ASA optionally provides High School Visual Arts students extr
         
         ASAStruct(clubName: "DAWG", teacherName: "Mr. Jolly", groupImage: "DAWG", subName: "Dog Assistance and Walking Group", description: "The Dog Assistance and Walking Group (DAWG) is an after school activity designed for students from grades 3-12 to learn dog walking skills and promote care for canines.", dayOfWeek: 5, roomNumber: 0, location: "Off-campus"),
         
-        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields"),
+        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
         
-        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields")
+        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3")
         
     ]
     

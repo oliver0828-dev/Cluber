@@ -100,6 +100,7 @@ struct LunchClubShareView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
+            
         }
     }
     

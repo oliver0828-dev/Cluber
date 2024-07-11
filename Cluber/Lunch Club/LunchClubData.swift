@@ -8,6 +8,10 @@ import Foundation
 import SwiftUI
 import SwiftData
 
+class ClubClass: ObservableObject {
+    
+}
+
 func dayOfWeek(for number: Int) -> String {
     switch number {
     case 1:

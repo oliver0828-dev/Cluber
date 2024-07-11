@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @ObservedObject var manager = GetCal()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RowView(data: manager.event)
     }
 }
 
 #Preview {
     CalendarView()
+        .environmentObject(GetCal())
 }
 
 

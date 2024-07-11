@@ -10,7 +10,6 @@ import SwiftUI
 struct LunchClubDetailsView: View {
     @State var lunchClubName: String
     
-    
     var body: some View {
         NavigationStack {
             VStack{
@@ -19,10 +18,6 @@ struct LunchClubDetailsView: View {
                         Text(lunchClubName)
                             .font(.title)
                             .fontWeight(.semibold)
-                        Image(systemName: "checkmark.seal.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
                     }
                     .padding()
                     Spacer()
