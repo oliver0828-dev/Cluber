@@ -22,6 +22,7 @@ struct ClubView: View {
     var socialMedia: Bool = false
     var instagramLink: String = ""
     var instagramID: String = " "
+    var quarter: String = " "
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -178,6 +179,11 @@ struct ClubView: View {
                 .frame(width: 130, height: 30)
                 .background(.gray.opacity(0.5))
                 .clipShape(.rect(cornerRadius:15))
+                
+                if quarter != "All" {
+                    Text(quarter + " Only")
+                        .foregroundStyle(quarterColor(q: quarter))
+                }
             }
         }
     }
@@ -193,12 +199,24 @@ struct ClubView: View {
     private func loadMemberState() -> Bool {
         return UserDefaults.standard.bool(forKey: "\(ClubName)_member")
     }
+    
+    private func quarterColor(q: String) -> Color {
+        if q == "Q1" {
+            return .blue
+        } else if q == "Q2" {
+            return .green
+        } else if q == "Q3" {
+            return . orange
+        }
+        return .black
+    }
 
 }
 
 
 
+
 #Preview {
-    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "n/a", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", loved: .constant(false), memberBoolean: .constant(false))
+    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "n/a", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", quarter: "Q3", loved: .constant(false), memberBoolean: .constant(false))
         .environmentObject(UsernameGradeClass())
 }

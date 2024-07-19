@@ -9,34 +9,33 @@ import SwiftUI
 
 struct RowView: View {
     var data: EventCalModel
+    @Binding var date: Date
+    @Environment(\.colorScheme) var colorScheme
+    
+    var items: [EventCalModel.Item] {
+        data.items.sorted { $0.sort < $1.sort }.filter {stringToDateConverter(start: $0.start, end: $0.end, dateDate: date)}
+    }
+    
     var body: some View {
         VStack {
-            List(data.items.sorted() { $0.sort < $1.sort }, id: \.id) { item in
-                HStack {
-                    VStack {
-                        if item.dateTime != "" {
-                            Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "MMM", convertDate: item.dateTime))")
-                            Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "dd", convertDate: item.dateTime))")
-                            Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "yyyy", convertDate: item.dateTime))")
-                        }
-                        if item.start != "" {
-                            Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "MMM", convertDate: item.start))")
-                            Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "dd", convertDate: item.start))")
-                        }
-                    }.padding()
-                    HStack{
-                        if item.end != "" {
-                            VStack {
-                                Text(item.summary)
-                                Text("\(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "MM-dd", convertDate: item.start)) - \(self.getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "MM-dd", convertDate: item.end))")
-                            }
-                        } else {
-                            Text(item.summary)
-                        }
-                    }
-                }
+            if (items.isEmpty) {
+                Text("No Event")
+                    .foregroundStyle(colorScheme == .light ? .white : .black)
+            }
+            ForEach(items, id: \.id) { item in
+//                if stringToDateConverter(start: item.start, end: item.end, dateDate: date) == true {
+//                    if item.summary.isEmpty || item.summary == " " {
+//                        Text("No Events")
+//                            .foregroundStyle(colorScheme == .light ? .white : .black)
+//                    } else {
+                        Text(item.summary)
+                            .foregroundStyle(colorScheme == .light ? .white : .black)
+//                    }
+//                }
             }
         }
+        .padding()
+       
     }
     
     func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
@@ -46,6 +45,29 @@ struct RowView: View {
         formatter.dateFormat = conVertFormate
         let dateString = formatter.string(from: finalDate!)
         return dateString
+    }
+    
+    func stringToDateConverter(start: String, end: String?, dateDate: Date) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        var changedDate = dateFormatter.date(from: start)
+        
+        if let end {
+            var changedEndDate = dateFormatter.date(from: end)
+            return (changedDate?.compare(dateDate) == .orderedAscending) && (changedEndDate?.compare(dateDate) == .orderedDescending)
+        } else {
+            if changedDate?.compare(dateDate) == .orderedSame {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
+    func dateRange(dateString: String) -> String {
+        
+        return "hello"
     }
 }
 

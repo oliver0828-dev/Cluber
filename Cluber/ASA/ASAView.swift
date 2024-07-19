@@ -69,7 +69,7 @@ struct ASAView: View {
                                             location: elementary.location,
                                             socialMedia: elementary.socialMedia,
                                             instagramLink: elementary.instagramLink,
-                                            instagramID: elementary.instagramID,
+                                            instagramID: elementary.instagramID, quarter: quarterToString(quarter: elementary.quarter),
                                             loved: $elementaryASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                         
@@ -124,7 +124,7 @@ struct ASAView: View {
                                             location: middle.location,
                                             socialMedia: middle.socialMedia,
                                             instagramLink: middle.instagramLink,
-                                            instagramID: middle.instagramID,
+                                            instagramID: middle.instagramID, quarter: quarterToString(quarter: middle.quarter),
                                             loved: $middleSchoolASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                     } label: {
@@ -178,7 +178,7 @@ struct ASAView: View {
                                             location: high.location,
                                             socialMedia: high.socialMedia,
                                             instagramLink: high.instagramLink,
-                                            instagramID: high.instagramID,
+                                            instagramID: high.instagramID, quarter: quarterToString(quarter: high.quarter),
                                             loved: $highSchoolASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                     } label: {

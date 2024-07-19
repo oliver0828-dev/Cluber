@@ -9,57 +9,46 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct  LunchCalModel {
-    var items: [Item]
-    
-    struct Item: Codable  {
-        let id: String
-        let status: String
-        let summary: String
-        let start: String
-        let dateTime: String
-        let timeZone: String
-        let end: String
-        let sort: String
+class GetLunch: ObservableObject {
+    let objectWillChange = ObservableObjectPublisher()
+    var event = EventCalModel() {
+        willSet {
+            self.objectWillChange.send()
+        }
     }
     
     init() {
-        self.items = [Item]()
+        getData()
     }
     
-    init(model: EventCal) {
-        self.init()
+    func getData() {
+        let testDate = Date()
+        let myDateFormatter = DateFormatter()
+        let timeMaxString = "2024-12-31T00:00:00Z"
+        let timeMinString = "2024-01-01T00:00:00Z"
+        let apiKey = "AIzaSyBFDvZH4c6WOwNkXA-pAUC_RuaTeA13g00"
+        let calendarID = "itc1p2pd25jg8l2akarlkrc334gjcofe@import.calendar.google.com"
         
-        for index in 0..<model.items.count {
-            let id = model.items[index].id
-            let status = model.items[index].status
-            let summary = model.items[index].summary ?? ""
-            let start = model.items[index].start?.date ?? ""
-            let dateTime = model.items[index].start?.dateTime ?? ""
-            let timeZone = model.items[index].start?.timeZone ?? ""
-            let end = model.items[index].end?.date ?? ""
-            let sort = model.items[index].start?.date ?? model.items[index].start?.dateTime
-            if model.items[index].status == "cancelled" {
-                
-            } else {
-                var sorted = ""
-                if start == "" {
-                    sorted = LunchgetOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "dd", convertDate: sort!)
-                } else if dateTime == "" {
-                    sorted = LunchgetOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "dd", convertDate: sort!)
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://www.googleapis.com/calendar/v3/calendars/\(calendarID)/events?orderBy=startTime&singleEvents=true&timeMax=\(timeMaxString)&timeMin=\(timeMinString)&key=\(apiKey)")!)) { (data, response, error) in
+            if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse.statusCode)
+                if httpResponse.statusCode == 200 {
+                    if let data = data {
+                        DispatchQueue.main.async {
+                            do {
+                                let test = try JSONDecoder().decode(EventCal.self, from: data)
+                                self.event = EventCalModel(model: test)
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                        }
+                    }
                 }
-                self.items.append(Item(id: id, status: status, summary: summary, start: start, dateTime: dateTime, timeZone: timeZone, end: end, sort: sorted))
             }
-        }
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+        }.resume()
     }
-}
-
-func LunchgetOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
-    let formatter = DateFormatter()
-    formatter.dateFormat = currentDateFormate
-    let finalDate = formatter.date(from: convertDate)
-    formatter.dateFormat = conVertFormate
-    let dateString = formatter.string(from: finalDate!)
-
-    return dateString
 }

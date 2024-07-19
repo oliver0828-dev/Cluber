@@ -42,13 +42,10 @@ class GetCal: ObservableObject {
         //            URLQueryItem(name: "singleEvents", value: "true")
         //        ]
         //
-        let timeMaxString = "2024-08-31T00:00:00Z"
-        let timeMinString = "2024-08-01T00:00:00Z"
+        let timeMaxString = "2024-12-31T00:00:00Z"
+        let timeMinString = "2024-01-01T00:00:00Z"
         let apiKey = "AIzaSyBFDvZH4c6WOwNkXA-pAUC_RuaTeA13g00"
         let calendarID = "dis.sc.kr_537jpt5irot15jvj48krp1f5b4@group.calendar.google.com"
-        
- 
-        
         
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://www.googleapis.com/calendar/v3/calendars/\(calendarID)/events?orderBy=startTime&singleEvents=true&timeMax=\(timeMaxString)&timeMin=\(timeMinString)&key=\(apiKey)")!)) { (data, response, error) in
             if let httpResponse = response as? HTTPURLResponse {
@@ -71,7 +68,5 @@ class GetCal: ObservableObject {
                 return
             }
         }.resume()
-        
-        
     }
 }

@@ -17,7 +17,6 @@
 		349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE72C0BEC1F00642E1B /* ASAData.swift */; };
 		349CAFEA2C0BEC3000642E1B /* ASADetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE92C0BEC3000642E1B /* ASADetailView.swift */; };
 		34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A02C0ABA14005914CC /* TestView.swift */; };
-		34ABE1A72C0ABDAF005914CC /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A62C0ABDAF005914CC /* CalendarView.swift */; };
 		34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */; };
 		34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB502BD7E1F500821D81 /* Assets.xcassets */; };
 		34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */; };
@@ -34,6 +33,7 @@
 		34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC62BE7C6C100821D81 /* LunchData.swift */; };
 		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
 		34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */; };
+		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
 		34ED01782C3BAA910021D1DD /* InstagramStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01772C3BAA910021D1DD /* InstagramStories.swift */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
 		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
@@ -69,7 +69,6 @@
 		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
 		349CAFE92C0BEC3000642E1B /* ASADetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADetailView.swift; sourceTree = "<group>"; };
 		34ABE1A02C0ABA14005914CC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		34ABE1A62C0ABDAF005914CC /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		34B2AB492BD7E1F400821D81 /* Cluber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberApp.swift; sourceTree = "<group>"; };
 		34B2AB502BD7E1F500821D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		34B2ABC62BE7C6C100821D81 /* LunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
 		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
 		34ED01772C3BAA910021D1DD /* InstagramStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramStories.swift; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
 		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				34B2AB762BD7E23100821D81 /* HomeView.swift */,
-				34ABE1A62C0ABDAF005914CC /* CalendarView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -234,6 +233,7 @@
 			children = (
 				34B2AB7C2BD7E25100821D81 /* LunchView.swift */,
 				34B2ABC62BE7C6C100821D81 /* LunchData.swift */,
+				34CCAA322C4A79D200F7E17F /* LunchRowView.swift */,
 				348B73112C3E741D001CBCFE /* LunchModel.swift */,
 			);
 			path = "Lunch ";
@@ -412,7 +412,6 @@
 				349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */,
 				34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */,
 				34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */,
-				34ABE1A72C0ABDAF005914CC /* CalendarView.swift in Sources */,
 				34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */,
 				348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */,
 				34605BDC2C1C5B04003EA9B0 /* ChangeNameView.swift in Sources */,
@@ -420,6 +419,7 @@
 				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
 				34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */,
 				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
+				34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */,
 				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,
 				348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */,
 				34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */,
@@ -594,6 +594,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,9 +603,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "site.notion.ollie-dev.Cluber";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -624,6 +628,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -632,9 +637,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "site.notion.ollie-dev.Cluber";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

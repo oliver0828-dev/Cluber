@@ -7,6 +7,8 @@ struct HomeView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @Environment(\.colorScheme) var colorScheme
     @State private var date = Date.now
+    
+    @ObservedObject var manager = GetCal()
     let username: String
     
     var body: some View {
@@ -30,12 +32,14 @@ struct HomeView: View {
                     DatePicker("Calendar", selection: $date, displayedComponents: .date)
                         .datePickerStyle(GraphicalDatePickerStyle())
                         .padding()
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 350, height: 200)
-                    }
                     
-                    Spacer()
+                    RowView(data: manager.event, date: $date)
+                        .frame(width: 320)
+                        .background(colorScheme == .light ? .black : .white)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+             
+
+                    
                 }
                 .navigationTitle("Cluber")
             }
@@ -45,11 +49,11 @@ struct HomeView: View {
     func getGreeting() -> String {
         let hour = Calendar.current.component(.hour, from: date)
         switch hour {
-        case 5..<12: 
+        case 5..<12:
             return "Good Morning, "
-        case 12..<18: 
+        case 12..<18:
             return "Good Afternoon, "
-        default: 
+        default:
             return "Good Evening, "
         }
     }
@@ -81,6 +85,7 @@ struct HomeView: View {
 #Preview {
     HomeView(username: "Oliver")
         .environmentObject(UsernameGradeClass())
+        .environmentObject(GetCal())
 }
 
 
