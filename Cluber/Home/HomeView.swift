@@ -34,7 +34,7 @@ struct HomeView: View {
                         .padding()
                     
                     RowView(data: manager.event, date: $date)
-                        .frame(width: 320)
+                        .frame(width: 350)
                         .background(colorScheme == .light ? .black : .white)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
              

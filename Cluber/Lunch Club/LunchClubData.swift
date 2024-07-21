@@ -38,6 +38,7 @@ struct LunchClubStruct: Identifiable {
     let description: String
     let dayOfWeek: Int
     let roomNumber: Int
+    var quarter = "All"
     var location: String = " "
     var socialMedia: Bool = false
     var instagramLink: String = ""
@@ -110,7 +111,7 @@ struct LunchClubList {
         // Thursday
         LunchClubStruct(clubName: "HSSC", teacherName: "Mr. Hutchings", groupImage: "HSSC", subName: "High School Student Council", description: "High School Student Council is responsible for building up the DIS Student Community and developing engaging events and activities for the student's to enjoy. High School Student Council is a student led group.", dayOfWeek: 4, roomNumber: 0, location: "Music Room", socialMedia: true, instagramLink: "https://www.instagram.com/dis_hssc_official/", instagramID: "@dis_hssc_official"),
         
-        LunchClubStruct(clubName: "NAHS", teacherName: "Mr. Gum", groupImage: "NAHS", subName: "National Art Honors Society", description: "The NAHS (HS) and NJAHS (MS) programs are designed by the National Art Education Association (NAEA) to support and recognize students who have shown outstanding abilities in art. The NAHS and NJAHS programs support student members in their goal of attaining the highest standards in visual arts. NAHS offers students opportunities for national recognition, scholarships, and connectivity to 58,000+ outstanding art students.", dayOfWeek: 4, roomNumber: 0, location: "Art Studio"),
+        LunchClubStruct(clubName: "NAHS", teacherName: "Mr. Gum", groupImage: "n/a", subName: "National Art Honors Society", description: "The NAHS (HS) and NJAHS (MS) programs are designed by the National Art Education Association (NAEA) to support and recognize students who have shown outstanding abilities in art. The NAHS and NJAHS programs support student members in their goal of attaining the highest standards in visual arts. NAHS offers students opportunities for national recognition, scholarships, and connectivity to 58,000+ outstanding art students.", dayOfWeek: 4, roomNumber: 0, location: "Art Studio"),
         
         LunchClubStruct(clubName: "Greenpeace", teacherName: "Mrs. Lopez", groupImage: "GP", subName: "", description: "Coming Soon", dayOfWeek: 4, roomNumber: 210),
         

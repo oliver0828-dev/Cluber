@@ -17,21 +17,16 @@ struct RowView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             if (items.isEmpty) {
                 Text("No Event")
                     .foregroundStyle(colorScheme == .light ? .white : .black)
             }
             ForEach(items, id: \.id) { item in
-//                if stringToDateConverter(start: item.start, end: item.end, dateDate: date) == true {
-//                    if item.summary.isEmpty || item.summary == " " {
-//                        Text("No Events")
-//                            .foregroundStyle(colorScheme == .light ? .white : .black)
-//                    } else {
-                        Text(item.summary)
-                            .foregroundStyle(colorScheme == .light ? .white : .black)
-//                    }
-//                }
+                VStack(alignment: .leading) {
+                    Text(item.summary)
+                        .foregroundStyle(colorScheme == .light ? .white : .black)
+                }
             }
         }
         .padding()
