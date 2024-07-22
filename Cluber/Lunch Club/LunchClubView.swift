@@ -67,7 +67,7 @@ struct LunchClubView: View {
                                         location: elementarySchoolLunchClub.location,
                                         socialMedia: elementarySchoolLunchClub.socialMedia,
                                         instagramLink: elementarySchoolLunchClub.instagramLink,
-                                        instagramID: elementarySchoolLunchClub.instagramID,
+                                        instagramID: elementarySchoolLunchClub.instagramID,quarter: elementarySchoolLunchClub.quarter,
                                         loved: $elementarySchoolLunchClubList[index].interested, memberBoolean: $elementarySchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
@@ -108,8 +108,7 @@ struct LunchClubView: View {
                                         roomNumber: middleSchoolLunchClub.roomNumber,
                                         location: middleSchoolLunchClub.location,
                                         socialMedia: middleSchoolLunchClub.socialMedia,
-                                        instagramLink: middleSchoolLunchClub.instagramLink,
-                                        instagramID: middleSchoolLunchClub.instagramID,
+                                        instagramLink: middleSchoolLunchClub.instagramLink,instagramID: middleSchoolLunchClub.instagramID, quarter: middleSchoolLunchClub.quarter,
                                         loved: $middleSchoolLunchClubList[index].interested, memberBoolean: $middleSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
@@ -152,8 +151,7 @@ struct LunchClubView: View {
                                         roomNumber: highSchoolLunchClub.roomNumber,
                                         location: highSchoolLunchClub.location,
                                         socialMedia: highSchoolLunchClub.socialMedia,
-                                        instagramLink: highSchoolLunchClub.instagramLink,
-                                        instagramID: highSchoolLunchClub.instagramID,
+                                        instagramLink: highSchoolLunchClub.instagramLink, instagramID: highSchoolLunchClub.instagramID, quarter: highSchoolLunchClub.quarter,
                                         loved: $highSchoolLunchClubList[index].interested, memberBoolean: $highSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {

@@ -120,14 +120,14 @@ struct ClubView: View {
                 }
                 
                 VStack {
-                   
-                        Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 50)
-                            .background(Color.blue)
-                            .clipShape(Capsule())
-                            .padding()
-                  
+                    
+                    Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
+                        .foregroundColor(.white)
+                        .frame(width: 200, height: 50)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .padding()
+                    
                     Divider()
                         .padding()
                     
@@ -181,11 +181,12 @@ struct ClubView: View {
                 .frame(width: 130, height: 30)
                 .background(.gray.opacity(0.5))
                 .clipShape(.rect(cornerRadius:15))
-    
-              
+                
                 if quarter != "All" {
                     Text(quarter + " Only")
                         .foregroundStyle(quarterColor(q: quarter))
+                    
+                    
                 }
             }
         }
@@ -194,11 +195,11 @@ struct ClubView: View {
         UserDefaults.standard.set(loved, forKey: "\(ClubName)_loved")
         UserDefaults.standard.set(memberBoolean, forKey: "\(ClubName)_member")
     }
-
+    
     private func loadLoveState() -> Bool {
         return UserDefaults.standard.bool(forKey: "\(ClubName)_loved")
     }
-
+    
     private func loadMemberState() -> Bool {
         return UserDefaults.standard.bool(forKey: "\(ClubName)_member")
     }
@@ -213,7 +214,7 @@ struct ClubView: View {
         }
         return .black
     }
-
+    
 }
 
 
