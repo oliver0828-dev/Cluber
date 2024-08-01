@@ -69,7 +69,8 @@ struct ASAView: View {
                                             location: elementary.location,
                                             socialMedia: elementary.socialMedia,
                                             instagramLink: elementary.instagramLink,
-                                            instagramID: elementary.instagramID, quarter: quarterToString(quarter: elementary.quarter),
+                                            instagramID: elementary.instagramID, quarter: quarterToString(quarter: elementary.quarter), sports:
+                                                elementary.sports, 
                                             loved: $elementaryASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                         
@@ -124,7 +125,7 @@ struct ASAView: View {
                                             location: middle.location,
                                             socialMedia: middle.socialMedia,
                                             instagramLink: middle.instagramLink,
-                                            instagramID: middle.instagramID, quarter: quarterToString(quarter: middle.quarter),
+                                            instagramID: middle.instagramID, quarter: quarterToString(quarter: middle.quarter), sports: middle.sports,
                                             loved: $middleSchoolASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                     } label: {
@@ -178,7 +179,7 @@ struct ASAView: View {
                                             location: high.location,
                                             socialMedia: high.socialMedia,
                                             instagramLink: high.instagramLink,
-                                            instagramID: high.instagramID, quarter: quarterToString(quarter: high.quarter),
+                                            instagramID: high.instagramID, quarter: quarterToString(quarter: high.quarter), sports: high.sports,
                                             loved: $highSchoolASAList[index].interested, memberBoolean: .constant(true)
                                         )
                                     } label: {
@@ -222,19 +223,11 @@ struct ASAView: View {
             }
             .scrollContentBackground(.hidden)
             .toolbar {
-               
-                Text(usernameGrade.schoolGrade)
-                    .frame(width: 120, height: 40)
-                    .foregroundStyle(.black)
-                    .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                
-                
                 Picker("Quarter", selection: $quarter) {
                     ForEach (quarterPicker, id: \.self) { s in
                         Text(s)
                     }
-                }
+                }.pickerStyle(.segmented)
                 
                 Button {
                     isLoved.toggle()

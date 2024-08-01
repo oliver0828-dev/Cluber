@@ -9,6 +9,7 @@ struct LunchClubView: View {
     @State private var elementarySchoolLunchClubList: [LunchClubStruct] = LunchClubList.ElementarySchool
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     
+    
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @Environment(\.colorScheme) var colorScheme
     
@@ -17,7 +18,6 @@ struct LunchClubView: View {
             VStack {
                 Text(dayOfWeek(for: selectedDay ?? 1))
                     .font(.title.bold())
-                    .fontDesign(.rounded)
                 
                 HStack {
                     ForEach(1..<6) { day in
@@ -78,9 +78,17 @@ struct LunchClubView: View {
                                             .frame(width: 150, height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 15))
                                         VStack(alignment: .leading) {
-                                            Text(elementarySchoolLunchClub.clubName)
-                                                .fontDesign(.rounded)
-                                                .fontWeight(.medium)
+                                            if elementarySchoolLunchClub.groupImage != "n/a" {
+                                                Text(elementarySchoolLunchClub.clubName)
+                                                    .fontDesign(.rounded)
+                                                    .fontWeight(.medium)
+                                            } else {
+                                                Image(systemName: "photo")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 150, height: 100)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                            }
                                             if !elementarySchoolLunchClub.subName.isEmpty {
                                                 Text(elementarySchoolLunchClub.subName)
                                                     .font(.caption)
@@ -113,11 +121,19 @@ struct LunchClubView: View {
                                     )
                                 } label: {
                                     HStack {
-                                        Image(middleSchoolLunchClub.groupImage)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 150, height: 100)
-                                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        if middleSchoolLunchClub.groupImage != "n/a" {
+                                            Image(middleSchoolLunchClub.groupImage)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 150, height: 100)
+                                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        } else {
+                                            Image(systemName: "photo")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 150, height: 100)
+                                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        }
                                         VStack(alignment: .leading) {
                                             
                                             Text(middleSchoolLunchClub.clubName)
@@ -156,11 +172,19 @@ struct LunchClubView: View {
                                     )
                                 } label: {
                                     HStack {
-                                        Image(highSchoolLunchClub.groupImage)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 150, height: 100)
-                                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        if highSchoolLunchClub.groupImage != "n/a" {
+                                            Image(highSchoolLunchClub.groupImage)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 150, height: 100)
+                                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        } else {
+                                            Image(systemName: "photo")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 150, height: 100)
+                                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        }
                                         VStack(alignment: .leading) {
                                             Text(highSchoolLunchClub.clubName)
                                                 .fontDesign(.rounded)
@@ -183,15 +207,9 @@ struct LunchClubView: View {
                 }
                 .scrollContentBackground(.hidden)
                 .navigationTitle("Lunch Club")
+                
             }
             .toolbar {
-                
-                Text(usernameGrade.schoolGrade)
-                    .frame(width: 120, height: 40)
-                    .foregroundStyle(.black)
-                    .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                
                 Button {
                     isTapped.toggle()
                 } label: {
@@ -221,6 +239,7 @@ struct LunchClubView: View {
         }
     }
 }
+
 
 
 #Preview {

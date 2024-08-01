@@ -67,7 +67,6 @@ struct OnboardingView: View {
                         }
                         
                     }
-                    
                     .pickerStyle(.segmented)
                     .padding()
                     Spacer()
@@ -89,7 +88,7 @@ struct OnboardingView: View {
                             .foregroundStyle(.black)
                     }
                     .alert(isPresented: $isPresented) {
-                        Alert (title: Text("Unable Grade"))
+                        Alert (title: Text("Please check your inputs"))
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -21,6 +21,7 @@ struct ASAStruct: Identifiable {
     var instagramLink: String = ""
     var instagramID: String = ""
     var quarter: String = "All"
+    var sports: String = "N"
     
     var interested: Bool {
         get {
@@ -43,9 +44,9 @@ struct ASAList {
         
         ASAStruct(clubName: "Beginner Instruments" , teacherName: "Mr. Hutchings", groupImage: "BI", subName: "", description: "Ever wanted to learn a second instrument? Or maybe even your first? This asa is for students who want to explore new instruments. The school has limited supply of extra Instruments to borrow, but if we don't have one you'll have to buy your own, so make sure to contact Mr Hutchings as soon as you sign up to ask about supply.", dayOfWeek: 1, roomNumber: 406),
         
-        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
+        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
         
-        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
+        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
         
         ASAStruct(clubName: "Crochet Club", teacherName: "Ms. Wang", groupImage: "CrochetC", subName: "", description: "Have you ever experienced with crocheting? Ms. Wang's crochet club invites students who have any experience with crocheting or want to learn how to crochet. We can make nice and useful items like decoration items or accessory for ourselves. We will buy our own kit and crochet together in my classroom! For more clarification, come to Ms. Wang and I'd love to talk with you more!", dayOfWeek: 2, roomNumber: 202),
         
@@ -103,9 +104,9 @@ Additionally, this ASA optionally provides High School Visual Arts students extr
         
         ASAStruct(clubName: "DAWG", teacherName: "Mr. Jolly", groupImage: "DAWG", subName: "Dog Assistance and Walking Group", description: "The Dog Assistance and Walking Group (DAWG) is an after school activity designed for students from grades 3-12 to learn dog walking skills and promote care for canines.", dayOfWeek: 5, roomNumber: 0, location: "Off-campus"),
         
-        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3"),
+        ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
         
-        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3")
+        ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal")
         
     ]
     

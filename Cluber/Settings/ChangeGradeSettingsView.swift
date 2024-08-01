@@ -25,54 +25,44 @@ struct ChangeGradeSettingsView: View {
                     TextField("Grade", value: $gradeInt, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                         .fontWeight(.semibold)
-                        .fontDesign(.rounded)
                         .submitLabel(.done)
                         .onChange(of: gradeInt) {
                             usernameGrade.schoolGrade = gradeLevelSuggestion(number: gradeInt)
                         }
                 }
-                .fontDesign(.rounded)
                 
                 Section("Suggested Grade Level") {
                     Text("Your Current Grade: \(gradeInt)")
                         .fontWeight(.semibold)
-                        .fontDesign(.rounded)
                     Text(usernameGrade.schoolGrade + " School")
                         .fontWeight(.semibold)
-                        .fontDesign(.rounded)
                 }
-                .fontDesign(.rounded)
                 
                 Section("Grade Selection") {
                     Picker("Grade", selection: $usernameGrade.schoolGrade) {
                         ForEach(grade, id: \.self) { school in
                             Text(school)
-                                .fontDesign(.rounded)
                         }
                     }
                     .pickerStyle(.segmented)
                 }
-                .fontDesign(.rounded)
                 
                 Section {
                     Button {
                         if savedGrade != gradeInt {
-                            withAnimation {
-                                usernameGrade.gradeNumber = gradeInt
-                                savedGrade = gradeInt
-                                isChanged = true
-                            }
+                            usernameGrade.gradeNumber = gradeInt
+                            savedGrade = gradeInt
+                            isChanged.toggle()
                         }
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     } label: {
                         Text("SAVE")
-                            .foregroundStyle(.white)
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
+                            .foregroundStyle(.green)
                             .frame(maxWidth: .infinity, maxHeight: 50)
+                    }.alert(isPresented: $isChanged){
+                        Alert(title: Text("New Grade: \(usernameGrade.gradeNumber)"), dismissButton: .default(Text("Done")))
                     }
-                }.listRowBackground(Color.blue)
+                }
             }
             .navigationTitle("Change Grade")
             .onAppear {

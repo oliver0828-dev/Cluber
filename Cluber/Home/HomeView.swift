@@ -36,10 +36,7 @@ struct HomeView: View {
                     RowView(data: manager.event, date: $date)
                         .frame(width: 350)
                         .background(colorScheme == .light ? .black : .white)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-             
-
-                    
+                        .clipShape(RoundedRectangle(cornerRadius: 16))                    
                 }
                 .navigationTitle("Cluber")
             }

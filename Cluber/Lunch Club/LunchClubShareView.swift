@@ -14,13 +14,15 @@ struct LunchClubShareView: View {
     @State private var elementarySchoolLunchClubList: [LunchClubStruct] = LunchClubList.ElementarySchool
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     
+    @State private var instagramButton = false
+    
     var body: some View {
         GeometryReader { _ in
             VStack(alignment: .center) {
                 Text("These are my Lunch Clubs!")
                     .font(.title)
                     .fontWeight(.medium)
-                    .fontDesign(.rounded)
+                    .foregroundStyle(.black)
                     .padding()
                 
                 Section {
@@ -29,7 +31,6 @@ struct LunchClubShareView: View {
                             Section(header:
                                         Text(dayOfWeekString(from: day))
                                 .font(.title)
-                                .fontDesign(.rounded)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding()
                             ) {
@@ -70,12 +71,14 @@ struct LunchClubShareView: View {
                             }
                         }
                     }
+                    .foregroundStyle(.black)
                 }
                 .listStyle(GroupedListStyle())
                 
                 Spacer()
                 Button {
                     print("Sharing with Instagram")
+                    instagramButton.toggle()
                 } label: {
                     HStack {
                         Image("instagram")
@@ -86,20 +89,20 @@ struct LunchClubShareView: View {
                             .foregroundStyle(.white)
                     }
                     .frame(width: 200, height: 50)
-                    .background(.black)
+                    .background(.black.gradient)
                     .clipShape(.rect(cornerRadius: 15))
+                }.alert(isPresented: $instagramButton) {
+                    Alert(title: Text("The Feature Is Currently Unavailable"))
                 }
                 
-                Text(usernameGrade.schoolGrade + " School")
-                    .fontDesign(.rounded)
                 
+                Text(usernameGrade.schoolGrade + " School")
                 Text("Cluber")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .fontDesign(.rounded)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
+            .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: .light))
             
         }
     }

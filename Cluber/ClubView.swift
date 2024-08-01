@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct ClubView: View {
     
@@ -23,11 +24,13 @@ struct ClubView: View {
     var instagramLink: String = ""
     var instagramID: String = " "
     var quarter: String = "All"
+    var sports: String = "N"
     
     @Environment(\.colorScheme) var colorScheme
     
     @State private var isTapped = false // for Signed Up
     @State private var isTapped2 = false // for Signing Up
+    @State private var counter = 0
     
     @Binding var loved: Bool
     @Binding var memberBoolean: Bool
@@ -51,6 +54,7 @@ struct ClubView: View {
                                 .font(.title.bold())
                             
                             Text(ClubSubName)
+                                .foregroundStyle(.gray)
                         }
                         .padding()
                         Spacer()
@@ -58,30 +62,24 @@ struct ClubView: View {
                             Text(ClubTeacher)
                                 .font(.title3)
                                 .fontWeight(.semibold)
-                                .foregroundStyle(.blue)
-                            Text(schoolLevel)
-                                .foregroundStyle(.white)
-                                .font(.subheadline)
-                                .frame(width: 120, height: 25)
-                                .background(.blue)
-                                .clipShape(.capsule)
+                            
                             if roomNumber != 0 {
                                 HStack {
                                     Image(systemName: "door.right.hand.open")
                                     Text("\(roomNumber)")
                                 }
-                                .foregroundStyle(.blue)
+                                
                             } else {
                                 HStack {
                                     Image(systemName: "location.fill")
                                     Text(location)
                                         .font(.callout)
                                 }
-                                .foregroundStyle(.blue)
+                              
                             }
                             
                         }
-                        .padding()
+                    
                     }
                     Divider()
                     
@@ -89,6 +87,7 @@ struct ClubView: View {
                     if socialMedia == true {
                         HStack {
                             Text("Social Media:")
+                                .fontWeight(.semibold)
                             Button {
                                 print("Clicked")
                                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -99,6 +98,7 @@ struct ClubView: View {
                                         .scaledToFit()
                                         .frame(width: 20, height: 20)
                                     Text(instagramID)
+                                     
                                 }
                                 
                             }
@@ -113,6 +113,7 @@ struct ClubView: View {
                                 .font(.title3)
                                 .fontWeight(.bold)
                             Text(description)
+                           
                         }
                         Spacer()
                     }.padding()
@@ -120,16 +121,18 @@ struct ClubView: View {
                 }
                 
                 VStack {
+                    Button { 
+                        counter += 1
+                    } label: {
+                        Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50)
+                            .background(Color.blue)
+                            .clipShape(Capsule())
+                            .padding()
+                    }
+                    .confettiCannon(counter: $counter, confettis: [.sfSymbol(symbolName: sportsConfetti(sports: sports)), .shape(.roundedCross)], colors: [.purple, .orange], confettiSize: 40.0, radius: 400.0)
                     
-                    Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 50)
-                        .background(Color.blue)
-                        .clipShape(Capsule())
-                        .padding()
-                    
-                    Divider()
-                        .padding()
                     
                     if ClubImage == "n/a" {
                         VStack {
@@ -149,9 +152,16 @@ struct ClubView: View {
                 }
             }
             .toolbar {
+                if quarter != "All" {
+                    Text(quarter + " Only")
+                        .fontWeight(.semibold)
+
+                        .foregroundStyle(quarterColor(q: quarter))
+                }
                 HStack {
                     Button {
                         loved.toggle()
+                        counter += 1
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     } label: {
                         if loved == true {
@@ -159,17 +169,21 @@ struct ClubView: View {
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.pink)
+                   
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 15, height: 15)
                                 .foregroundStyle(.pink)
+                          
                             
                         } else {
                             Text("Interested")
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.black)
+                          
+                            
                             Image(systemName: "heart")
                                 .resizable()
                                 .scaledToFit()
@@ -182,15 +196,12 @@ struct ClubView: View {
                 .background(.gray.opacity(0.5))
                 .clipShape(.rect(cornerRadius:15))
                 
-                if quarter != "All" {
-                    Text(quarter + " Only")
-                        .foregroundStyle(quarterColor(q: quarter))
-                    
-                    
-                }
+              
             }
-        }
+        }.frame(width: 350)
     }
+    
+    
     private func saveStates() {
         UserDefaults.standard.set(loved, forKey: "\(ClubName)_loved")
         UserDefaults.standard.set(memberBoolean, forKey: "\(ClubName)_member")
@@ -215,12 +226,23 @@ struct ClubView: View {
         return .black
     }
     
+    private func sportsConfetti(sports: String) -> String {
+        if sports == "futsal" {
+            return "soccerball"
+        } else if sports == "basketball" {
+            return "basketball.fill"
+        } else if sports == "volleyball" {
+            return "volleyball.fill"
+        }
+        return "fireworks"
+    }
+    
 }
 
 
 
 
 #Preview {
-    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "n/a", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", quarter: "Q3", loved: .constant(false), memberBoolean: .constant(false))
+    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "CSCC", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", quarter: "Q3", loved: .constant(false), memberBoolean: .constant(false))
         .environmentObject(UsernameGradeClass())
 }

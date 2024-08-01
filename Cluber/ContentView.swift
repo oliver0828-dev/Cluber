@@ -15,18 +15,6 @@ struct ContentView: View {
     
     var body: some View {
         
-//        ZStack {
-//            Capsule()
-//                .frame(width: 350, height: 60)
-//            HStack {
-//                logoHStack(imageName: "tab1")
-//                logoHStack(imageName: "tab2")
-//                logoHStack(imageName: "tab3")
-//                logoHStack(imageName: "tab4")
-//                logoHStack(sfSymbol: true, imageName: "gear")
-//                
-//            }
-//        }
         TabView(selection: $selection) {
             HomeView(username: username)
                 .tabItem {

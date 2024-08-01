@@ -8,29 +8,6 @@
 import Foundation
 import SwiftUI
 
-//struct ColorView: View {
-//    var body: some View {
-//        ZStack{
-//            Rectangle()
-//                .frame(width: 300, height: 120)
-//                .cornerRadius(20)
-//                .foregroundStyle(.white.opacity(0.6))
-//            VStack {
-//                Text("Choose Your Grade")
-//                    .foregroundStyle(.black)
-//                    .padding(0.2)
-//                HStack {
-//                   CircleColorView(level: "Elementary")
-//                   CircleColorView(level: "Middle")
-//                   CircleColorView(level: "High")
-//                }
-//            }
-//                
-//        }
-//    }
-//}
-
-
 func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
     if gradeLevel == "Elementary" {
         return .yellow
@@ -47,22 +24,6 @@ func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
     }
 }
 
-
-//struct CircleColorView: View {
-//    @State var level: String
-//    var body: some View {
-//        VStack {
-//            Text(level)
-//                .font(.caption2)
-//                .fontWeight(.semibold)
-//                .foregroundStyle(.black)
-//            Circle()
-//                .frame(width: 50, height: 50)
-//                .foregroundStyle(CircleColor(gradeLevel: level))
-//        }
-//        
-//    }
-//}
 
 class UsernameGradeClass: ObservableObject {
     @AppStorage("schoolGrade") var schoolGrade: String = ""
