@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct CluberApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var usernameGrade = UsernameGradeClass()
+    @StateObject var photoImage = PhotoPickerViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            SplashView()
                 .environmentObject(usernameGrade)
+                .environmentObject(photoImage)
         }
     }
 }

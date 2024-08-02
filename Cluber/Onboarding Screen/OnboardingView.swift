@@ -23,7 +23,7 @@ struct OnboardingView: View {
     
     var body: some View {
         GeometryReader { _ in
-            if showingLaunchScreen && savedName.isEmpty && !isPresented {
+            if showingLaunchScreen && savedName.isEmpty {
                 VStack {
                     Spacer()
                     Text("Welcome to Cluber!")
@@ -70,6 +70,7 @@ struct OnboardingView: View {
                     .pickerStyle(.segmented)
                     .padding()
                     Spacer()
+                    
                     Button{
                         withAnimation {
                             showingLaunchScreen = false
@@ -90,6 +91,7 @@ struct OnboardingView: View {
                     .alert(isPresented: $isPresented) {
                         Alert (title: Text("Please check your inputs"))
                     }
+                    
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .transition(.move(edge: .bottom))

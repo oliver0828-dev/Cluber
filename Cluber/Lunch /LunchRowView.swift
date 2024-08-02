@@ -49,10 +49,10 @@ struct LunchRowView: View {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        var changedDate = dateFormatter.date(from: start)
+        let changedDate = dateFormatter.date(from: start)
         
         if let end {
-            var changedEndDate = dateFormatter.date(from: end)
+            let changedEndDate = dateFormatter.date(from: end)
             return (changedDate?.compare(dateDate) == .orderedAscending) && (changedEndDate?.compare(dateDate) == .orderedDescending)
         } else {
             if changedDate?.compare(dateDate) == .orderedSame {

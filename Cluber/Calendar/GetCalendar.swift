@@ -22,8 +22,8 @@ class GetCal: ObservableObject {
     }
     
     func getData() {
-        let testDate = Date()
-        let myDateFormatter = DateFormatter()
+        _ = Date()
+        _ = DateFormatter()
 
         let timeMaxString = "2024-12-31T00:00:00Z"
         let timeMinString = "2024-01-01T00:00:00Z"

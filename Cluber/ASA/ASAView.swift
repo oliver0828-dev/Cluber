@@ -25,7 +25,6 @@ struct ASAView: View {
             VStack {
                 Text(dayOfWeek(for: selectedDay ?? 1))
                     .font(.title.bold())
-                    .fontDesign(.rounded)
                 
                 HStack {
                     ForEach(1..<6) { day in

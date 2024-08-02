@@ -10,23 +10,30 @@ import PhotosUI
 
 struct SettingsView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
+    @EnvironmentObject var photoImage: PhotoPickerViewModel
+    
     let username: String
     @State var gradeLevel = "Elementary"
     let grade: [String] = ["Elementary", "Middle", "High"]
     
     @AppStorage("gradeInt") var gradeInt: Int = 1
-    
-    
     var body: some View {
         
         NavigationStack {
             List {
                 Section("Your Profile") {
                     HStack {
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
+                        if let image = photoImage.selectedImage {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        } else {
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        }
                         VStack (alignment: .leading) {
                             Text(usernameGrade.userName)
                                 .font(.title3.bold())
@@ -81,4 +88,5 @@ struct SettingsView: View {
 #Preview {
     SettingsView(username: "Oliver")
         .environmentObject(UsernameGradeClass())
+        .environmentObject(PhotoPickerViewModel())
 }

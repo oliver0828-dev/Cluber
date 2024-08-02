@@ -40,116 +40,118 @@ struct ClubView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    if ClubImage != "n/a" {
-                        Image(ClubImage)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(.rect(cornerRadius: 10))
-                            .frame(maxWidth: 380, maxHeight: .infinity)
-                    }
-                    
-                    HStack {
-                        VStack (alignment: .leading) {
-                            Text(ClubName)
-                                .font(.title.bold())
-                            
-                            Text(ClubSubName)
-                                .foregroundStyle(.gray)
+                    VStack {
+                        if ClubImage != "n/a" {
+                            Image(ClubImage)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(.rect(cornerRadius: 10))
+                                .frame(maxWidth: 380, maxHeight: .infinity)
                         }
-                        .padding()
-                        Spacer()
-                        VStack{
-                            Text(ClubTeacher)
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                            
-                            if roomNumber != 0 {
-                                HStack {
-                                    Image(systemName: "door.right.hand.open")
-                                    Text("\(roomNumber)")
+                        
+                        HStack {
+                            VStack (alignment: .leading) {
+                                Text(ClubName)
+                                    .font(.title.bold())
+                                
+                                Text(ClubSubName)
+                                    .foregroundStyle(.gray)
+                            }
+                            .padding()
+                            Spacer()
+                            VStack{
+                                Text(ClubTeacher)
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                
+                                if roomNumber != 0 {
+                                    HStack {
+                                        Image(systemName: "door.right.hand.open")
+                                        Text("\(roomNumber)")
+                                    }
+                                    
+                                } else {
+                                    HStack {
+                                        Image(systemName: "location.fill")
+                                        Text(location)
+                                            .font(.callout)
+                                    }
+                                    
                                 }
                                 
-                            } else {
-                                HStack {
-                                    Image(systemName: "location.fill")
-                                    Text(location)
-                                        .font(.callout)
-                                }
-                              
                             }
                             
                         }
-                    
-                    }
-                    Divider()
-                    
-                    
-                    if socialMedia == true {
-                        HStack {
-                            Text("Social Media:")
-                                .fontWeight(.semibold)
-                            Button {
-                                print("Clicked")
-                                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                            } label: {
-                                Link(destination: URL(string: instagramLink) ?? URL(string: "https://instagram.com")!) {
-                                    Image("instagram")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 20, height: 20)
-                                    Text(instagramID)
-                                     
+                        Divider()
+                        
+                        
+                        if socialMedia == true {
+                            HStack {
+                                Text("Social Media:")
+                                    .fontWeight(.semibold)
+                                Button {
+                                    print("Clicked")
+                                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                                } label: {
+                                    Link(destination: URL(string: instagramLink) ?? URL(string: "https://instagram.com")!) {
+                                        Image("instagram")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 20, height: 20)
+                                        Text(instagramID)
+                                        
+                                    }
+                                    
                                 }
+                                Spacer()
+                            }
+                            .padding()
+                        }
+                        
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("About \(ClubName):")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                Text(description)
                                 
                             }
                             Spacer()
-                        }
-                        .padding()
+                        }.padding()
+                        
                     }
-                    
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("About \(ClubName):")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                            Text(description)
-                           
+                    VStack {
+                        Button {
+                            counter += 1
+                        } label: {
+                            Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
+                                .foregroundColor(.white)
+                                .frame(width: 200, height: 50)
+                                .background(Color.blue)
+                                .clipShape(Capsule())
+                                .padding()
                         }
-                        Spacer()
-                    }.padding()
-                    
-                }
-                
-                VStack {
-                    Button { 
-                        counter += 1
-                    } label: {
-                        Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 50)
-                            .background(Color.blue)
-                            .clipShape(Capsule())
-                            .padding()
-                    }
-                    .confettiCannon(counter: $counter, confettis: [.sfSymbol(symbolName: sportsConfetti(sports: sports)), .shape(.roundedCross)], colors: [.purple, .orange], confettiSize: 40.0, radius: 400.0)
-                    
-                    
-                    if ClubImage == "n/a" {
-                        VStack {
-                            Text("Do You Have an Image for this club?")
-                            Text("Help us by uploading the photo")
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "photo.badge.plus.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                
+                        .confettiCannon(counter: $counter, confettis: [.sfSymbol(symbolName: sportsConfetti(sports: sports)), .shape(.roundedCross)], colors: [Color.blue, Color.green], confettiSize: 40.0, radius: 400.0)
+                        
+                        
+                        if ClubImage == "n/a" {
+                            VStack {
+                                Text("Do You Have an Image for this club?")
+                                Text("Help us by uploading the photo")
+                                Button {
+                                    
+                                } label: {
+                                    Image(systemName: "photo.badge.plus.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                    
+                                }
                             }
                         }
                     }
                 }
+                .padding()
             }
             .toolbar {
                 if quarter != "All" {
@@ -198,7 +200,7 @@ struct ClubView: View {
                 
               
             }
-        }.frame(width: 350)
+        }
     }
     
     

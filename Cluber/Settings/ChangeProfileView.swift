@@ -10,15 +10,28 @@ import PhotosUI
 
 @MainActor
 final class PhotoPickerViewModel: ObservableObject {
-    @Published private(set) var selectedImage: UIImage? = nil
+    @Published private(set) var selectedImage: UIImage? = nil {
+        didSet {
+            if let selectedImage {
+                saveImage(image: selectedImage)
+            }
+        }
+    }
     @Published var imageSelection: PhotosPickerItem? = nil {
         didSet {
             setImage(from: imageSelection)
         }
     }
     
+    var isPhoto: Bool {
+        selectedImage != nil
+    }
     
-    private func setImage(from selection: PhotosPickerItem?){
+    init() {
+        loadImage()
+    }
+    
+    private func setImage(from selection: PhotosPickerItem?) {
         guard let selection else { return }
         
         Task {
@@ -27,6 +40,28 @@ final class PhotoPickerViewModel: ObservableObject {
                     selectedImage = uiImage
                     return
                 }
+            }
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+    
+    func saveImage(image: UIImage?) {
+        guard let image = image else { return }
+        if let data = image.jpegData(compressionQuality: 0.8) {
+            let filename = getDocumentsDirectory().appendingPathComponent("savedImage.jpg")
+            try? data.write(to: filename)
+            UserDefaults.standard.set(filename.path, forKey: "savedImagePath")
+        }
+    }
+    
+    func loadImage() {
+        if let imagePath = UserDefaults.standard.string(forKey: "savedImagePath") {
+            let url = URL(fileURLWithPath: imagePath)
+            if let data = try? Data(contentsOf: url) {
+                selectedImage = UIImage(data: data)
             }
         }
     }
@@ -40,8 +75,6 @@ struct ChangeProfileView: View {
     
     // Photo Picker
     @StateObject private var photoViewModel = PhotoPickerViewModel()
-    @State private var isPhoto = false
-    
     
     var body: some View {
         NavigationStack {
@@ -67,7 +100,7 @@ struct ChangeProfileView: View {
                 }
                 
                 
-                if isPhoto {
+                if photoViewModel.isPhoto {
                     PhotosPicker(selection: $photoViewModel.imageSelection, matching: .images) {
                         HStack {
                             Image(systemName: "pencil")
@@ -95,7 +128,6 @@ struct ChangeProfileView: View {
                 Button {
                     usernameGrade.userName = name
                     isTapped.toggle()
-                    isPhoto.toggle()
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 } label: {
                     Text("SAVE")
