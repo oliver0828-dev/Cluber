@@ -38,8 +38,10 @@ struct HomeView: View {
                         .background(colorScheme == .light ? .black : .white)
                         .clipShape(RoundedRectangle(cornerRadius: 16))                    
                 }
-                .navigationTitle("Cluber")
+                .padding()
             }
+            .navigationTitle("Cluber")
+            .modifier(NavigationBarModifier())
         }
     }
     

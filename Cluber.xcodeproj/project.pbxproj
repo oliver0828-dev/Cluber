@@ -12,23 +12,21 @@
 		34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */; };
 		34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */; };
 		34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */; };
+		346568002C5F798900B2FD40 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346567FF2C5F798900B2FD40 /* WidgetKit.framework */; };
+		346568022C5F798900B2FD40 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346568012C5F798900B2FD40 /* SwiftUI.framework */; };
+		346568052C5F798900B2FD40 /* CalendarWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */; };
+		346568072C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */; };
+		346568092C5F798900B2FD40 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568082C5F798900B2FD40 /* CalendarWidget.swift */; };
+		3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465680A2C5F798900B2FD40 /* AppIntent.swift */; };
+		3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3465680C2C5F798B00B2FD40 /* Assets.xcassets */; };
+		346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 347590E22C58076500924CB4 /* ConfettiSwiftUI */; };
 		347591332C5C7A4000924CB4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591322C5C7A3F00924CB4 /* SplashView.swift */; };
 		347591352C5C7EFD00924CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */; };
-		347591382C5C82CB00924CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591372C5C82CB00924CB4 /* AppDelegate.swift */; };
-		3475913B2C5C836F00924CB4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3475913A2C5C836F00924CB4 /* FirebaseAnalytics */; };
-		3475913D2C5C836F00924CB4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3475913C2C5C836F00924CB4 /* FirebaseAnalyticsOnDeviceConversion */; };
-		3475913F2C5C836F00924CB4 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3475913E2C5C836F00924CB4 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		347591412C5C836F00924CB4 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 347591402C5C836F00924CB4 /* FirebaseAppCheck */; };
-		347591432C5C836F00924CB4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 347591422C5C836F00924CB4 /* FirebaseCrashlytics */; };
-		347591452C5C836F00924CB4 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 347591442C5C836F00924CB4 /* FirebaseFunctions */; };
-		347591472C5C836F00924CB4 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 347591462C5C836F00924CB4 /* FirebaseFunctionsCombine-Community */; };
-		347591492C5C836F00924CB4 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 347591482C5C836F00924CB4 /* FirebaseInAppMessaging-Beta */; };
-		3475914B2C5C836F00924CB4 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 3475914A2C5C836F00924CB4 /* FirebaseInstallations */; };
-		3475914D2C5C836F00924CB4 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 3475914C2C5C836F00924CB4 /* FirebasePerformance */; };
-		3475914F2C5C836F00924CB4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3475914E2C5C836F00924CB4 /* FirebaseStorage */; };
-		347591512C5C836F00924CB4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 347591502C5C836F00924CB4 /* FirebaseStorageCombine-Community */; };
-		347591532C5C859C00924CB4 /* FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591522C5C859C00924CB4 /* FirebaseStorage.swift */; };
+		347591762C5D033D00924CB4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 347591752C5D033D00924CB4 /* Lottie */; };
+		347591942C5E5AFA00924CB4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591932C5E5AFA00924CB4 /* LottieView.swift */; };
+		3475919C2C5E5D2A00924CB4 /* jets.json in Resources */ = {isa = PBXBuildFile; fileRef = 3475919B2C5E5D2A00924CB4 /* jets.json */; };
+		3475919E2C5E76DB00924CB4 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475919D2C5E76DB00924CB4 /* IntroView.swift */; };
 		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
 		348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B73112C3E741D001CBCFE /* LunchModel.swift */; };
 		349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE72C0BEC1F00642E1B /* ASAData.swift */; };
@@ -51,7 +49,6 @@
 		34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */; };
 		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
 		34CCAA352C4FD19A00F7E17F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */; };
-		34ED01782C3BAA910021D1DD /* InstagramStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01772C3BAA910021D1DD /* InstagramStories.swift */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
 		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
 		34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01822C3D127B0021D1DD /* GetCalendar.swift */; };
@@ -60,6 +57,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3465680F2C5F798B00B2FD40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 346567FC2C5F798900B2FD40;
+			remoteInfo = CalendarWidgetExtension;
+		};
 		34B2AB5A2BD7E1F600821D81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
@@ -76,15 +80,39 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		346568122C5F798B00B2FD40 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGradeSettingsView.swift; sourceTree = "<group>"; };
 		34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
 		34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubShareView.swift; sourceTree = "<group>"; };
 		34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubDetailsView.swift; sourceTree = "<group>"; };
+		346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		346567FF2C5F798900B2FD40 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		346568012C5F798900B2FD40 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetBundle.swift; sourceTree = "<group>"; };
+		346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		346568082C5F798900B2FD40 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
+		3465680A2C5F798900B2FD40 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		3465680C2C5F798B00B2FD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3465680E2C5F798B00B2FD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347591322C5C7A3F00924CB4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		347591372C5C82CB00924CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		347591522C5C859C00924CB4 /* FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorage.swift; sourceTree = "<group>"; };
+		347591932C5E5AFA00924CB4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		3475919B2C5E5D2A00924CB4 /* jets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jets.json; sourceTree = "<group>"; };
+		3475919D2C5E76DB00924CB4 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		348B73112C3E741D001CBCFE /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
 		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
@@ -110,7 +138,6 @@
 		34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
 		34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		34ED01772C3BAA910021D1DD /* InstagramStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramStories.swift; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
 		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		34ED01822C3D127B0021D1DD /* GetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
@@ -119,24 +146,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		346567FA2C5F798900B2FD40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				346568022C5F798900B2FD40 /* SwiftUI.framework in Frameworks */,
+				346568002C5F798900B2FD40 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34B2AB462BD7E1F400821D81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3475914B2C5C836F00924CB4 /* FirebaseInstallations in Frameworks */,
 				347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */,
-				3475914D2C5C836F00924CB4 /* FirebasePerformance in Frameworks */,
-				3475913F2C5C836F00924CB4 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				347591472C5C836F00924CB4 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				347591762C5D033D00924CB4 /* Lottie in Frameworks */,
 				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
-				347591452C5C836F00924CB4 /* FirebaseFunctions in Frameworks */,
-				347591432C5C836F00924CB4 /* FirebaseCrashlytics in Frameworks */,
-				347591512C5C836F00924CB4 /* FirebaseStorageCombine-Community in Frameworks */,
-				3475914F2C5C836F00924CB4 /* FirebaseStorage in Frameworks */,
-				3475913B2C5C836F00924CB4 /* FirebaseAnalytics in Frameworks */,
-				347591412C5C836F00924CB4 /* FirebaseAppCheck in Frameworks */,
-				3475913D2C5C836F00924CB4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				347591492C5C836F00924CB4 /* FirebaseInAppMessaging-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +192,28 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		346567FE2C5F798900B2FD40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				346567FF2C5F798900B2FD40 /* WidgetKit.framework */,
+				346568012C5F798900B2FD40 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		346568032C5F798900B2FD40 /* CalendarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */,
+				346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */,
+				346568082C5F798900B2FD40 /* CalendarWidget.swift */,
+				3465680A2C5F798900B2FD40 /* AppIntent.swift */,
+				3465680C2C5F798B00B2FD40 /* Assets.xcassets */,
+				3465680E2C5F798B00B2FD40 /* Info.plist */,
+			);
+			path = CalendarWidget;
+			sourceTree = "<group>";
+		};
 		349CAFE62C0BEC0E00642E1B /* ASA */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +238,8 @@
 				34B2AB4B2BD7E1F400821D81 /* Cluber */,
 				34B2AB5C2BD7E1F600821D81 /* CluberTests */,
 				34B2AB662BD7E1F600821D81 /* CluberUITests */,
+				346568032C5F798900B2FD40 /* CalendarWidget */,
+				346567FE2C5F798900B2FD40 /* Frameworks */,
 				34B2AB4A2BD7E1F400821D81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,6 +250,7 @@
 				34B2AB492BD7E1F400821D81 /* Cluber.app */,
 				34B2AB592BD7E1F600821D81 /* CluberTests.xctest */,
 				34B2AB632BD7E1F600821D81 /* CluberUITests.xctest */,
+				346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,12 +259,11 @@
 			isa = PBXGroup;
 			children = (
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
-				347591372C5C82CB00924CB4 /* AppDelegate.swift */,
-				347591522C5C859C00924CB4 /* FirebaseStorage.swift */,
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
 				34ABE1A02C0ABA14005914CC /* TestView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
-				34ED01772C3BAA910021D1DD /* InstagramStories.swift */,
+				347591932C5E5AFA00924CB4 /* LottieView.swift */,
+				3475919B2C5E5D2A00924CB4 /* jets.json */,
 				347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */,
 				34ED01812C3D125F0021D1DD /* Calendar */,
 				34605BD82C1BEA4B003EA9B0 /* Settings */,
@@ -280,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */,
+				3475919D2C5E76DB00924CB4 /* IntroView.swift */,
 				347591322C5C7A3F00924CB4 /* SplashView.swift */,
 				34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */,
 			);
@@ -301,6 +351,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		346567FC2C5F798900B2FD40 /* CalendarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 346568152C5F798B00B2FD40 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */;
+			buildPhases = (
+				346567F92C5F798900B2FD40 /* Sources */,
+				346567FA2C5F798900B2FD40 /* Frameworks */,
+				346567FB2C5F798900B2FD40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalendarWidgetExtension;
+			productName = CalendarWidgetExtension;
+			productReference = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		34B2AB482BD7E1F400821D81 /* Cluber */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34B2AB6D2BD7E1F600821D81 /* Build configuration list for PBXNativeTarget "Cluber" */;
@@ -308,27 +375,18 @@
 				34B2AB452BD7E1F400821D81 /* Sources */,
 				34B2AB462BD7E1F400821D81 /* Frameworks */,
 				34B2AB472BD7E1F400821D81 /* Resources */,
+				346568122C5F798B00B2FD40 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				346568102C5F798B00B2FD40 /* PBXTargetDependency */,
 			);
 			name = Cluber;
 			packageProductDependencies = (
 				34605BD62C1B0CA6003EA9B0 /* iCalendarParser */,
 				347590E22C58076500924CB4 /* ConfettiSwiftUI */,
-				3475913A2C5C836F00924CB4 /* FirebaseAnalytics */,
-				3475913C2C5C836F00924CB4 /* FirebaseAnalyticsOnDeviceConversion */,
-				3475913E2C5C836F00924CB4 /* FirebaseAnalyticsWithoutAdIdSupport */,
-				347591402C5C836F00924CB4 /* FirebaseAppCheck */,
-				347591422C5C836F00924CB4 /* FirebaseCrashlytics */,
-				347591442C5C836F00924CB4 /* FirebaseFunctions */,
-				347591462C5C836F00924CB4 /* FirebaseFunctionsCombine-Community */,
-				347591482C5C836F00924CB4 /* FirebaseInAppMessaging-Beta */,
-				3475914A2C5C836F00924CB4 /* FirebaseInstallations */,
-				3475914C2C5C836F00924CB4 /* FirebasePerformance */,
-				3475914E2C5C836F00924CB4 /* FirebaseStorage */,
-				347591502C5C836F00924CB4 /* FirebaseStorageCombine-Community */,
+				347591752C5D033D00924CB4 /* Lottie */,
 			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
@@ -377,9 +435,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					346567FC2C5F798900B2FD40 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					34B2AB482BD7E1F400821D81 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -405,7 +466,7 @@
 			packageReferences = (
 				34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */,
 				347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
-				347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
@@ -414,11 +475,20 @@
 				34B2AB482BD7E1F400821D81 /* Cluber */,
 				34B2AB582BD7E1F600821D81 /* CluberTests */,
 				34B2AB622BD7E1F600821D81 /* CluberUITests */,
+				346567FC2C5F798900B2FD40 /* CalendarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		346567FB2C5F798900B2FD40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34B2AB472BD7E1F400821D81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +497,7 @@
 				347591352C5C7EFD00924CB4 /* GoogleService-Info.plist in Resources */,
 				34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */,
 				34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */,
+				3475919C2C5E5D2A00924CB4 /* jets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +518,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		346567F92C5F798900B2FD40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				346568072C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift in Sources */,
+				3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */,
+				346568052C5F798900B2FD40 /* CalendarWidgetBundle.swift in Sources */,
+				346568092C5F798900B2FD40 /* CalendarWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34B2AB452BD7E1F400821D81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,27 +537,26 @@
 				34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */,
 				34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */,
 				34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */,
-				347591382C5C82CB00924CB4 /* AppDelegate.swift in Sources */,
 				34B2AB7D2BD7E25100821D81 /* LunchView.swift in Sources */,
 				34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */,
 				34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */,
 				34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */,
 				347591332C5C7A4000924CB4 /* SplashView.swift in Sources */,
 				34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */,
-				34ED01782C3BAA910021D1DD /* InstagramStories.swift in Sources */,
 				34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */,
 				34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */,
 				349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */,
 				34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */,
 				34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */,
+				347591942C5E5AFA00924CB4 /* LottieView.swift in Sources */,
 				34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */,
 				348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */,
 				34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */,
 				34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */,
 				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
 				34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */,
+				3475919E2C5E76DB00924CB4 /* IntroView.swift in Sources */,
 				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
-				347591532C5C859C00924CB4 /* FirebaseStorage.swift in Sources */,
 				34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */,
 				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,
 				348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */,
@@ -503,6 +584,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		346568102C5F798B00B2FD40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 346567FC2C5F798900B2FD40 /* CalendarWidgetExtension */;
+			targetProxy = 3465680F2C5F798B00B2FD40 /* PBXContainerItemProxy */;
+		};
 		34B2AB5B2BD7E1F600821D81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 34B2AB482BD7E1F400821D81 /* Cluber */;
@@ -516,6 +602,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		346568132C5F798B00B2FD40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber.CalendarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		346568142C5F798B00B2FD40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber.CalendarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		34B2AB6B2BD7E1F600821D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -638,6 +778,7 @@
 		34B2AB6E2BD7E1F600821D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,6 +815,7 @@
 		34B2AB6F2BD7E1F600821D81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -790,6 +932,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		346568152C5F798B00B2FD40 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				346568132C5F798B00B2FD40 /* Debug */,
+				346568142C5F798B00B2FD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		34B2AB442BD7E1F400821D81 /* Build configuration list for PBXProject "Cluber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -845,12 +996,12 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.0.0;
+				minimumVersion = 4.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -866,65 +1017,10 @@
 			package = 347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
 		};
-		3475913A2C5C836F00924CB4 /* FirebaseAnalytics */ = {
+		347591752C5D033D00924CB4 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		3475913C2C5C836F00924CB4 /* FirebaseAnalyticsOnDeviceConversion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		3475913E2C5C836F00924CB4 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		347591402C5C836F00924CB4 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		347591422C5C836F00924CB4 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		347591442C5C836F00924CB4 /* FirebaseFunctions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFunctions;
-		};
-		347591462C5C836F00924CB4 /* FirebaseFunctionsCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFunctionsCombine-Community";
-		};
-		347591482C5C836F00924CB4 /* FirebaseInAppMessaging-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseInAppMessaging-Beta";
-		};
-		3475914A2C5C836F00924CB4 /* FirebaseInstallations */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseInstallations;
-		};
-		3475914C2C5C836F00924CB4 /* FirebasePerformance */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebasePerformance;
-		};
-		3475914E2C5C836F00924CB4 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		347591502C5C836F00924CB4 /* FirebaseStorageCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591392C5C836F00924CB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseStorageCombine-Community";
+			package = 347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

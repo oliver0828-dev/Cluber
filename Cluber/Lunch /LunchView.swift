@@ -20,6 +20,7 @@ struct LunchView: View {
                 LunchMenuView(date: $tomorrow)
                 .padding()
                 .navigationTitle("Lunch")
+                .modifier(NavigationBarModifier())
             }
         }
     }

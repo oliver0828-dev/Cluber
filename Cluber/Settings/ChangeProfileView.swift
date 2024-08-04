@@ -137,19 +137,21 @@ struct ChangeProfileView: View {
                         .clipShape(.rect(cornerRadius: 20))
                 }
                 .alert(isPresented: $isTapped) {
-                    Alert(title: Text("New Name: \(usernameGrade.userName)"), dismissButton: .default(Text("Done")))
+                    if let _ = photoViewModel.selectedImage {
+                        return Alert(title: Text("New Name: \(usernameGrade.userName)"), message: Text("Profile image has been saved"), dismissButton: .default(Text("Done")))
+                    } else {
+                        return Alert(title: Text("New Name: \(usernameGrade.userName)"), dismissButton: .default(Text("Done")))
+                    }
                 }
                 
                 
                 
             }
             
-            
-            
             Spacer()
                 .navigationTitle("Change Profile")
         }
-        
+                
     }
 }
 

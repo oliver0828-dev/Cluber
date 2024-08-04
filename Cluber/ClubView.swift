@@ -25,6 +25,7 @@ struct ClubView: View {
     var instagramID: String = " "
     var quarter: String = "All"
     var sports: String = "N"
+    var aiGenerated: Bool = false
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -115,6 +116,21 @@ struct ClubView: View {
                                     .fontWeight(.bold)
                                 Text(description)
                                 
+                                if aiGenerated {
+                                 
+                                    HStack {
+                                        Spacer()
+                                        Image(systemName: "doc.append")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 15, height: 15)
+                                        Text("AI Generated Description")
+                                            .font(.callout)
+                                        Spacer()
+                                    }.foregroundStyle(.gray)
+                                 
+                                }
+                                
                             }
                             Spacer()
                         }.padding()
@@ -163,7 +179,9 @@ struct ClubView: View {
                 HStack {
                     Button {
                         loved.toggle()
-                        counter += 1
+                        if loved {
+                            counter += 1
+                        }
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     } label: {
                         if loved == true {
@@ -245,6 +263,6 @@ struct ClubView: View {
 
 
 #Preview {
-    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "CSCC", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", quarter: "Q3", loved: .constant(false), memberBoolean: .constant(false))
+    ClubView(ClubName: "Key Club", ClubTeacher: "Mrs. Jolly", ClubImage: "CSCC", description: "Key Club", roomNumber: 0, location: "Conference Room 2", socialMedia: true, instagramLink: "instagram.com", instagramID: "@key_club", quarter: "Q3", aiGenerated: true, loved: .constant(false), memberBoolean: .constant(false))
         .environmentObject(UsernameGradeClass())
 }

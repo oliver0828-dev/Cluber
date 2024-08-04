@@ -95,6 +95,7 @@ struct ContentView: View {
 #Preview {
     ContentView(username: .constant("Oliver"), gradeLevel: .constant("High"))
         .environmentObject(UsernameGradeClass())
+        .environmentObject(PhotoPickerViewModel())
 }
 
 struct logoHStack: View {

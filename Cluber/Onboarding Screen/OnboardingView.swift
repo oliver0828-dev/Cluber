@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
+    @EnvironmentObject var profilePhotos: PhotoPickerViewModel
     @Environment(\.colorScheme) var colorScheme
     @State private var showingLaunchScreen = true
     @State private var name: String = ""
@@ -27,13 +28,19 @@ struct OnboardingView: View {
                 VStack {
                     Spacer()
                     Text("Welcome to Cluber!")
-                        .foregroundStyle(.black)
+                        .foregroundStyle(colorSchemeDarkmode(colorScheme: colorScheme))
                         .font(.title.bold())
+                       
+                    Image("glider")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250, height: 250)
                     
                     ZStack {
-                        RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 20)
                             .frame(width: 350, height: 50)
                             .foregroundStyle(.gray.opacity(0.4))
+                        
                         HStack {
                             TextField("Your Firstname Only", text: $name)
                                 .fontDesign(.rounded)
@@ -46,7 +53,7 @@ struct OnboardingView: View {
                     }
                     HStack {
                         Text("Grade:")
-                            .foregroundStyle(.black)
+                            .foregroundStyle(colorSchemeDarkmode(colorScheme: colorScheme))
                         ZStack {
                             RoundedRectangle(cornerRadius: 25)
                                 .frame(width: 120, height: 50)
@@ -54,7 +61,7 @@ struct OnboardingView: View {
                             TextField("", value: $gradeInt, formatter: NumberFormatter())
                                 .fontDesign(.rounded)
                                 .frame(width: 20, height: 50)
-                                .foregroundStyle(.black)
+                                .foregroundStyle(colorSchemeDarkmode(colorScheme: colorScheme))
                                 .submitLabel(.done)
                         }
                     }
@@ -62,6 +69,7 @@ struct OnboardingView: View {
                         Picker("Grade", selection: $gradeLevel) {
                             ForEach(grade, id: \.self) { school in
                                 Text(school)
+                                   
                                 
                             }
                         }
@@ -93,6 +101,7 @@ struct OnboardingView: View {
                     }
                     
                 }
+                .fontDesign(.rounded)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .transition(.move(edge: .bottom))
             } else {
@@ -100,8 +109,8 @@ struct OnboardingView: View {
             }
         }
         .background(CircleColor(gradeLevel: gradeLevel, colorScheme: colorScheme))
-        
-        
+       
+       
     }
     
     func gradeLevelSuggestion(number: Int) -> String {
@@ -120,10 +129,37 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView()
+        .preferredColorScheme(.light)
         .environmentObject(UsernameGradeClass())
+        .environmentObject(PhotoPickerViewModel())
     
 }
 
+func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
+    if gradeLevel == "Elementary" && colorScheme == .light{
+        return Color("yellowDark")
+    } else if gradeLevel == "Elementary" && colorScheme == .dark {
+        return .yellow.opacity(0.7)
+    } else if gradeLevel == "Middle" && colorScheme == .light {
+        return .blue.opacity(0.5)
+    } else if gradeLevel == "High" && colorScheme == .light {
+        return .green.opacity(0.7)
+    } else if gradeLevel == "Middle" && colorScheme == .dark {
+        return .blue
+    } else if gradeLevel == "High" && colorScheme == .dark {
+        return .green
+    } else {
+        return .white
+    }
+}
+
+func colorSchemeDarkmode(colorScheme: ColorScheme) -> Color {
+    if colorScheme == .dark {
+        return .white
+    } else {
+        return .black
+    }
+}
 
 
 

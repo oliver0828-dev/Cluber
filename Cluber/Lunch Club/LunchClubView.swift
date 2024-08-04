@@ -18,6 +18,7 @@ struct LunchClubView: View {
             VStack {
                 Text(dayOfWeek(for: selectedDay ?? 1))
                     .font(.title.bold())
+                    .fontDesign(.rounded)
                 
                 HStack {
                     ForEach(1..<6) { day in
@@ -67,7 +68,7 @@ struct LunchClubView: View {
                                         location: elementarySchoolLunchClub.location,
                                         socialMedia: elementarySchoolLunchClub.socialMedia,
                                         instagramLink: elementarySchoolLunchClub.instagramLink,
-                                        instagramID: elementarySchoolLunchClub.instagramID,quarter: elementarySchoolLunchClub.quarter,
+                                        instagramID: elementarySchoolLunchClub.instagramID,quarter: elementarySchoolLunchClub.quarter, aiGenerated: elementarySchoolLunchClub.aiGenerated,
                                         loved: $elementarySchoolLunchClubList[index].interested, memberBoolean: $elementarySchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
@@ -117,6 +118,7 @@ struct LunchClubView: View {
                                         location: middleSchoolLunchClub.location,
                                         socialMedia: middleSchoolLunchClub.socialMedia,
                                         instagramLink: middleSchoolLunchClub.instagramLink,instagramID: middleSchoolLunchClub.instagramID, quarter: middleSchoolLunchClub.quarter,
+                                        aiGenerated: middleSchoolLunchClub.aiGenerated,
                                         loved: $middleSchoolLunchClubList[index].interested, memberBoolean: $middleSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
@@ -167,7 +169,7 @@ struct LunchClubView: View {
                                         roomNumber: highSchoolLunchClub.roomNumber,
                                         location: highSchoolLunchClub.location,
                                         socialMedia: highSchoolLunchClub.socialMedia,
-                                        instagramLink: highSchoolLunchClub.instagramLink, instagramID: highSchoolLunchClub.instagramID, quarter: highSchoolLunchClub.quarter,
+                                        instagramLink: highSchoolLunchClub.instagramLink, instagramID: highSchoolLunchClub.instagramID, quarter: highSchoolLunchClub.quarter, aiGenerated: highSchoolLunchClub.aiGenerated,
                                         loved: $highSchoolLunchClubList[index].interested, memberBoolean: $highSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
@@ -206,9 +208,10 @@ struct LunchClubView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
-                .navigationTitle("Lunch Club")
-                
+  
             }
+            .navigationTitle("Lunch Club")
+            .modifier(NavigationBarModifier())
             .toolbar {
                 Button {
                     isTapped.toggle()
@@ -237,6 +240,8 @@ struct LunchClubView: View {
             }
             
         }
+      
+        
     }
 }
 

@@ -68,7 +68,7 @@ struct ChangeGradeSettingsView: View {
             .onAppear {
                 usernameGrade.schoolGrade = gradeLevelSuggestion(number: gradeInt)
                 savedGrade = gradeInt
-            }
+            } .modifier(NavigationBarModifier())
         }
     }
     

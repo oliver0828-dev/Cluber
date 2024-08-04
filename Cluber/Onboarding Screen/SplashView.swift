@@ -12,13 +12,14 @@ struct SplashView: View {
     
     var body: some View {
         if isLoading {
-            Text("Cluber")
+            LottieView(animationFileName: "jets", loopMode: .loop)
                 .task {
-                    try? await Task.sleep(for: .seconds(1))
+                    try? await Task.sleep(for: .seconds(3))
                     isLoading = false
                 }
         } else {
             OnboardingView()
+                .preferredColorScheme(.light)
         }
     }
 }

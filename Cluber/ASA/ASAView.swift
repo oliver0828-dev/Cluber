@@ -220,6 +220,8 @@ struct ASAView: View {
                 }
                 .scrollContentBackground(.hidden)
             }
+            .navigationTitle("ASA")
+            .modifier(NavigationBarModifier())
             .scrollContentBackground(.hidden)
             .toolbar {
                 Picker("Quarter", selection: $quarter) {
@@ -245,7 +247,6 @@ struct ASAView: View {
                     
                 }
             }
-            .navigationTitle("ASA")
         }
     }
     
