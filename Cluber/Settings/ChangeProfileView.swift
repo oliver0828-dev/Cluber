@@ -74,7 +74,7 @@ struct ChangeProfileView: View {
     @State var isTapped = false
     
     // Photo Picker
-    @StateObject private var photoViewModel = PhotoPickerViewModel()
+    @EnvironmentObject private var photoViewModel: PhotoPickerViewModel
     
     var body: some View {
         NavigationStack {
@@ -86,6 +86,7 @@ struct ChangeProfileView: View {
                     
                     TextField("Username", text: $name)
                         .font(.title3.bold())
+                        .fontDesign(.rounded)
                         .frame(width: 300, height: 50)
                         .submitLabel(.done)
                         .padding()
@@ -97,8 +98,8 @@ struct ChangeProfileView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 150, height: 150)
                             .clipShape(Circle())
+                            .frame(width: 150, height: 150)
                         Text("Your Profile Image")
                             .font(.title3)
                             .fontWeight(.semibold)
@@ -149,6 +150,7 @@ struct ChangeProfileView: View {
                         .frame(width: 120, height: 50)
                         .background(.blue)
                         .clipShape(.rect(cornerRadius: 20))
+                        .fontDesign(.rounded)
                 }
                 .alert(isPresented: $isTapped) {
                     if let _ = photoViewModel.selectedImage {
@@ -169,4 +171,5 @@ struct ChangeProfileView: View {
 #Preview {
     ChangeProfileView(name: "Oliver")
         .environmentObject(UsernameGradeClass())
+        .environmentObject(PhotoPickerViewModel())
 }

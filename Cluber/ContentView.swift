@@ -50,27 +50,27 @@ struct ContentView: View {
                         Text("Lunch Club")
                     }
                 }.tag(1)
-            ASAView()
-                .tabItem {
-                    VStack{
-                        if selection == 2 {
-                            Image("tab3Blue")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        } else {
-                            Image("tab3")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        }
-                        Text("ASA")
-                    }
-                }.tag(2)
+//            ASAView()
+//                .tabItem {
+//                    VStack{
+//                        if selection == 2 {
+//                            Image("tab3Blue")
+//                                .resizable()
+//                                .frame(width: 1, height: 1)
+//                                .scaledToFit()
+//                        } else {
+//                            Image("tab3")
+//                                .resizable()
+//                                .frame(width: 1, height: 1)
+//                                .scaledToFit()
+//                        }
+//                        Text("ASA")
+//                    }
+//                }.tag(2)
             LunchView()
                 .tabItem {
                     VStack{
-                        if selection == 3 {
+                        if selection == 2 {
                             Image("tab4Blue")
                                 .resizable()
                                 .frame(width: 1, height: 1)
@@ -83,11 +83,11 @@ struct ContentView: View {
                         }
                         Text("Lunch")
                     }
-                }.tag(3)
+                }.tag(2)
             SettingsView(username: username, gradeLevel: gradeLevel)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
-                }.tag(4)
+                }.tag(3)
         }
     }
 }

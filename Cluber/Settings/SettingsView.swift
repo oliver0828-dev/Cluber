@@ -25,7 +25,6 @@ struct SettingsView: View {
                 List {
                     Section("Your Profile") {
                         HStack {
-                            // Check if the user has a profile image
                             if let image = photoImage.selectedImage {
                                 Image(uiImage: image)
                                     .resizable()
@@ -33,7 +32,6 @@ struct SettingsView: View {
                                     .clipShape(Circle())
                                     .frame(width: 150, height: 100)
                             } else {
-                                // Placeholder profile image
                                 Image(systemName: "person.crop.circle.fill")
                                     .resizable()
                                     .scaledToFit()
@@ -109,8 +107,11 @@ struct NavigationBarModifier: ViewModifier {
         
         let boldDescriptor = baseDescriptor.withSymbolicTraits(.traitBold) ?? baseDescriptor
         
-        let font = UIFont(descriptor: boldDescriptor, size: 35)
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
+        let largeFont = UIFont(descriptor: boldDescriptor, size: 35)
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font: largeFont]
+        
+        let font = UIFont(descriptor: boldDescriptor, size: 16)
+        UINavigationBar.appearance().titleTextAttributes = [.font: font]
     }
 
     func body(content: Content) -> some View {

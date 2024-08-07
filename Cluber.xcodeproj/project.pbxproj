@@ -22,15 +22,12 @@
 		346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 347590E22C58076500924CB4 /* ConfettiSwiftUI */; };
 		347591332C5C7A4000924CB4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591322C5C7A3F00924CB4 /* SplashView.swift */; };
-		347591352C5C7EFD00924CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */; };
 		347591762C5D033D00924CB4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 347591752C5D033D00924CB4 /* Lottie */; };
 		347591942C5E5AFA00924CB4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591932C5E5AFA00924CB4 /* LottieView.swift */; };
 		3475919C2C5E5D2A00924CB4 /* jets.json in Resources */ = {isa = PBXBuildFile; fileRef = 3475919B2C5E5D2A00924CB4 /* jets.json */; };
-		3475919E2C5E76DB00924CB4 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475919D2C5E76DB00924CB4 /* IntroView.swift */; };
 		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
 		348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B73112C3E741D001CBCFE /* LunchModel.swift */; };
 		349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CAFE72C0BEC1F00642E1B /* ASAData.swift */; };
-		34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE1A02C0ABA14005914CC /* TestView.swift */; };
 		34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */; };
 		34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB502BD7E1F500821D81 /* Assets.xcassets */; };
 		34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */; };
@@ -109,14 +106,11 @@
 		3465680C2C5F798B00B2FD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3465680E2C5F798B00B2FD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347591322C5C7A3F00924CB4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		347591932C5E5AFA00924CB4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		3475919B2C5E5D2A00924CB4 /* jets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jets.json; sourceTree = "<group>"; };
-		3475919D2C5E76DB00924CB4 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		348B73112C3E741D001CBCFE /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
 		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
-		34ABE1A02C0ABA14005914CC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		34B2AB492BD7E1F400821D81 /* Cluber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberApp.swift; sourceTree = "<group>"; };
 		34B2AB502BD7E1F500821D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,11 +254,9 @@
 			children = (
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
-				34ABE1A02C0ABA14005914CC /* TestView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
 				347591932C5E5AFA00924CB4 /* LottieView.swift */,
 				3475919B2C5E5D2A00924CB4 /* jets.json */,
-				347591342C5C7EFD00924CB4 /* GoogleService-Info.plist */,
 				34ED01812C3D125F0021D1DD /* Calendar */,
 				34605BD82C1BEA4B003EA9B0 /* Settings */,
 				34B2ABCE2BEA5C0A00821D81 /* Onboarding Screen */,
@@ -329,7 +321,6 @@
 			isa = PBXGroup;
 			children = (
 				34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */,
-				3475919D2C5E76DB00924CB4 /* IntroView.swift */,
 				347591322C5C7A3F00924CB4 /* SplashView.swift */,
 				34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */,
 			);
@@ -494,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34CCAA352C4FD19A00F7E17F /* Launch Screen.storyboard in Resources */,
-				347591352C5C7EFD00924CB4 /* GoogleService-Info.plist in Resources */,
 				34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */,
 				34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */,
 				3475919C2C5E5D2A00924CB4 /* jets.json in Resources */,
@@ -533,7 +523,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34ABE1A12C0ABA14005914CC /* TestView.swift in Sources */,
 				34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */,
 				34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */,
 				34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */,
@@ -555,7 +544,6 @@
 				34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */,
 				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
 				34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */,
-				3475919E2C5E76DB00924CB4 /* IntroView.swift in Sources */,
 				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
 				34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */,
 				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,

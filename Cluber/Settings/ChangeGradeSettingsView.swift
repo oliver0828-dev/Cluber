@@ -57,13 +57,14 @@ struct ChangeGradeSettingsView: View {
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     } label: {
                         Text("SAVE")
-                            .foregroundStyle(.green)
+                            .foregroundStyle(.blue)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                     }.alert(isPresented: $isChanged){
                         Alert(title: Text("New Grade: \(usernameGrade.gradeNumber)"), dismissButton: .default(Text("Done")))
                     }
                 }
             }
+            .fontDesign(.rounded)
             .navigationTitle("Change Grade")
             .onAppear {
                 usernameGrade.schoolGrade = gradeLevelSuggestion(number: gradeInt)
