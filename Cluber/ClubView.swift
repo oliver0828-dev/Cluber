@@ -167,6 +167,7 @@ struct ClubView: View {
                         }
                     }
                 }
+                .fontDesign(.rounded)
                 .padding()
             }
             .toolbar {
@@ -189,6 +190,7 @@ struct ClubView: View {
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.pink)
+                                .fontDesign(.rounded)
                    
                             Image(systemName: "heart.fill")
                                 .resizable()
@@ -202,6 +204,7 @@ struct ClubView: View {
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.black)
+                                .fontDesign(.rounded)
                           
                             
                             Image(systemName: "heart")

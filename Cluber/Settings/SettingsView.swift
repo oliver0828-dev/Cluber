@@ -25,13 +25,15 @@ struct SettingsView: View {
                 List {
                     Section("Your Profile") {
                         HStack {
+                            // Check if the user has a profile image
                             if let image = photoImage.selectedImage {
                                 Image(uiImage: image)
                                     .resizable()
                                     .scaledToFit()
                                     .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
+                                    .frame(width: 150, height: 100)
                             } else {
+                                // Placeholder profile image
                                 Image(systemName: "person.crop.circle.fill")
                                     .resizable()
                                     .scaledToFit()
@@ -40,16 +42,16 @@ struct SettingsView: View {
                             VStack (alignment: .leading) {
                                 Text(usernameGrade.userName)
                                     .font(.title3.bold())
-                                HStack {
-                                    Text(usernameGrade.schoolGrade + " School")
-                                        .foregroundStyle(.secondary)
-                                    Image(systemName: "\(usernameGrade.gradeNumber).circle")
-                                }
+                                Text(usernameGrade.schoolGrade + " School")
+                                    .foregroundStyle(.secondary)
+                                Text(gradeYear(year: usernameGrade.gradeNumber))
+                                    .foregroundStyle(.secondary)
                             }
                             .fontDesign(.rounded)
                             .padding()
                         }
                     }
+                    
                     Section ("Edit Your Profile") {
                         NavigationLink {
                             ChangeGradeSettingsView(gradeLevel: gradeLevel, gradeInt: gradeInt)
@@ -84,7 +86,6 @@ struct SettingsView: View {
                                 .foregroundStyle(.primary)
                                 .fontDesign(.rounded)
                         }
-                        
                     }
                 }
             }
@@ -99,7 +100,6 @@ struct SettingsView: View {
         .environmentObject(UsernameGradeClass())
         .environmentObject(PhotoPickerViewModel())
 }
-
 
 struct NavigationBarModifier: ViewModifier {
     init() {

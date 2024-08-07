@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
-
 class UsernameGradeClass: ObservableObject {
     @AppStorage("schoolGrade") var schoolGrade: String = ""
     @Published var grade: String = "Elementary" {

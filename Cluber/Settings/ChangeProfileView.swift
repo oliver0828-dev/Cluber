@@ -10,6 +10,7 @@ import PhotosUI
 
 @MainActor
 final class PhotoPickerViewModel: ObservableObject {
+    @AppStorage("savedImagePath") private var savedImagePath: String = ""
     @Published private(set) var selectedImage: UIImage? = nil {
         didSet {
             if let selectedImage {
@@ -53,20 +54,19 @@ final class PhotoPickerViewModel: ObservableObject {
         if let data = image.jpegData(compressionQuality: 0.8) {
             let filename = getDocumentsDirectory().appendingPathComponent("savedImage.jpg")
             try? data.write(to: filename)
-            UserDefaults.standard.set(filename.path, forKey: "savedImagePath")
+            savedImagePath = filename.path
         }
     }
     
     func loadImage() {
-        if let imagePath = UserDefaults.standard.string(forKey: "savedImagePath") {
-            let url = URL(fileURLWithPath: imagePath)
+        if !savedImagePath.isEmpty {
+            let url = URL(fileURLWithPath: savedImagePath)
             if let data = try? Data(contentsOf: url) {
                 selectedImage = UIImage(data: data)
             }
         }
     }
 }
-
 struct ChangeProfileView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @State var name: String
@@ -91,12 +91,22 @@ struct ChangeProfileView: View {
                         .padding()
                 }
                 
+                
                 if let image = photoViewModel.selectedImage {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                        .clipShape(Circle())
+                    HStack {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150)
+                            .clipShape(Circle())
+                        Text("Your Profile Image")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .fontDesign(.rounded)
+                    }
+                    .frame(width: 350, height: 160)
+                    .background(.gray.opacity(0.4))
+                    .clipShape(.rect(cornerRadius: 20))
                 }
                 
                 
@@ -106,8 +116,11 @@ struct ChangeProfileView: View {
                             Image(systemName: "pencil")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20)
                             Text("Edit Your Profile Image")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .fontDesign(.rounded)
                         }
                     }
                 } else {
@@ -116,14 +129,15 @@ struct ChangeProfileView: View {
                             Image(systemName: "person.crop.circle.badge.plus")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 50, height: 50)
+                                .frame(width: 30, height: 30)
                             Text("Add Your Profile Image")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .fontDesign(.rounded)
                         }
                     }
                     
                 }
-                
-                
                 
                 Button {
                     usernameGrade.userName = name
@@ -143,14 +157,11 @@ struct ChangeProfileView: View {
                         return Alert(title: Text("New Name: \(usernameGrade.userName)"), dismissButton: .default(Text("Done")))
                     }
                 }
-                
-                
-                
             }
             
             Spacer()
                 .navigationTitle("Change Profile")
-        }
+        }.modifier(NavigationBarModifier())
                 
     }
 }
