@@ -26,7 +26,7 @@ class GetLunch: ObservableObject {
         _ = DateFormatter()
         let timeMaxString = "2024-12-31T00:00:00Z"
         let timeMinString = "2024-01-01T00:00:00Z"
-        let apiKey = "AIzaSyBFDvZH4c6WOwNkXA-pAUC_RuaTeA13g00"
+        let apiKey = "YOUR API KEY"
         let calendarID = "itc1p2pd25jg8l2akarlkrc334gjcofe@import.calendar.google.com"
         
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://www.googleapis.com/calendar/v3/calendars/\(calendarID)/events?orderBy=startTime&singleEvents=true&timeMax=\(timeMaxString)&timeMin=\(timeMinString)&key=\(apiKey)")!)) { (data, response, error) in
