@@ -11,7 +11,6 @@ struct ASAView: View {
     @State var selectedDay: Int?
     @State private var highSchoolASAList: [ASAStruct] = ASAList.HighSchool
     @State private var middleSchoolASAList: [ASAStruct] = ASAList.Middle
-    @State private var elementaryASAList: [ASAStruct] = ASAList.Elementary
     @State private var isLoved = false
     @AppStorage ("Quarter") var quarter = "Q1"
     @State var quarterPicker = ["Q1", "Q2", "Q3"]
@@ -53,61 +52,7 @@ struct ASAView: View {
                 List {
                     switch usernameGrade.schoolGrade {
                     case "Elementary":
-                        ForEach(elementaryASAList.indices, id: \.self) { index in
-                            let elementary = elementaryASAList[index]
-                            if elementary.dayOfWeek == selectedDay && (!isLoved || elementary.interested) {
-                                if quarterToString(quarter: elementary.quarter) ==  quarter || quarterToString(quarter: elementary.quarter) == "All"{
-                                    NavigationLink {
-                                        ClubView(
-                                            ClubName: elementary.clubName,
-                                            ClubTeacher: elementary.teacherName,
-                                            ClubImage: elementary.groupImage,
-                                            ClubSubName: elementary.subName,
-                                            description: elementary.description,
-                                            schoolLevel: "Elementary",
-                                            roomNumber: elementary.roomNumber,
-                                            location: elementary.location,
-                                            socialMedia: elementary.socialMedia,
-                                            instagramLink: elementary.instagramLink,
-                                            instagramID: elementary.instagramID, quarter: quarterToString(quarter: elementary.quarter), sports:
-                                                elementary.sports, 
-                                            loved: $elementaryASAList[index].interested, memberBoolean: .constant(true)
-                                        )
-                                        
-                                    } label: {
-                                        HStack {
-                                            if elementary.groupImage != "n/a" {
-                                                Image(elementary.groupImage)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            } else {
-                                                Image(systemName: "photo.badge.exclamationmark")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            }
-                                            VStack(alignment: .leading) {
-                                                Text(elementary.clubName)
-                                                    .fontDesign(.rounded)
-                                                    .fontWeight(.medium)
-                                                if !elementary.subName.isEmpty {
-                                                    Text(elementary.subName)
-                                                        .font(.caption)
-                                                        .foregroundColor(.gray)
-                                                        .fontDesign(.rounded)
-                                                }
-                                            }
-                                        }
-                                            
-                                    }
-                                    .listRowBackground(Color.clear)
-                                }
-                                
-                            }
-                        }
+                       Text("Elementary Is Currently Not Available")
                     case "Middle":
                         ForEach(middleSchoolASAList.indices, id: \.self) { index in
                             let middle = middleSchoolASAList[index]

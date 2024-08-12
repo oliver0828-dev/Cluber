@@ -1,4 +1,5 @@
 import SwiftUI
+import ScreenshotableView
 
 struct LunchClubView: View {
     
@@ -9,6 +10,7 @@ struct LunchClubView: View {
     @State private var elementarySchoolLunchClubList: [LunchClubStruct] = LunchClubList.ElementarySchool
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     
+    @State private var lovedDays: [Int: Bool] = [:]
     
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @Environment(\.colorScheme) var colorScheme
@@ -55,7 +57,7 @@ struct LunchClubView: View {
                     case "Elementary":
                         ForEach(elementarySchoolLunchClubList.indices, id: \.self) { index in
                             let elementarySchoolLunchClub = elementarySchoolLunchClubList[index]
-                            if elementarySchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || elementarySchoolLunchClub.interested) {
+                            if elementarySchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || elementarySchoolLunchClub.isMember) {
                                 NavigationLink {
                                     ClubView(
                                         ClubName: elementarySchoolLunchClub.clubName,
@@ -69,7 +71,7 @@ struct LunchClubView: View {
                                         socialMedia: elementarySchoolLunchClub.socialMedia,
                                         instagramLink: elementarySchoolLunchClub.instagramLink,
                                         instagramID: elementarySchoolLunchClub.instagramID,quarter: elementarySchoolLunchClub.quarter, aiGenerated: elementarySchoolLunchClub.aiGenerated,
-                                        loved: $elementarySchoolLunchClubList[index].interested, memberBoolean: $elementarySchoolLunchClubList[index].memberBoolean
+                                        loved: $elementarySchoolLunchClubList[index].isMember, memberBoolean: $elementarySchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
                                     HStack {
@@ -105,7 +107,7 @@ struct LunchClubView: View {
                     case "Middle":
                         ForEach(middleSchoolLunchClubList.indices, id: \.self) { index in
                             let middleSchoolLunchClub = middleSchoolLunchClubList[index]
-                            if middleSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || middleSchoolLunchClub.interested) {
+                            if middleSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || middleSchoolLunchClub.isMember) {
                                 NavigationLink {
                                     ClubView(
                                         ClubName: middleSchoolLunchClub.clubName,
@@ -119,7 +121,7 @@ struct LunchClubView: View {
                                         socialMedia: middleSchoolLunchClub.socialMedia,
                                         instagramLink: middleSchoolLunchClub.instagramLink,instagramID: middleSchoolLunchClub.instagramID, quarter: middleSchoolLunchClub.quarter,
                                         aiGenerated: middleSchoolLunchClub.aiGenerated,
-                                        loved: $middleSchoolLunchClubList[index].interested, memberBoolean: $middleSchoolLunchClubList[index].memberBoolean
+                                        loved: $middleSchoolLunchClubList[index].isMember, memberBoolean: $middleSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
                                     HStack {
@@ -157,7 +159,7 @@ struct LunchClubView: View {
                     case "High":
                         ForEach(highSchoolLunchClubList.indices, id: \.self) { index in
                             let highSchoolLunchClub = highSchoolLunchClubList[index]
-                            if highSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || highSchoolLunchClub.interested) {
+                            if highSchoolLunchClub.dayOfWeek == selectedDay && (!isLoved || highSchoolLunchClub.isMember) {
                                 NavigationLink {
                                     ClubView(
                                         ClubName: highSchoolLunchClub.clubName,
@@ -170,7 +172,7 @@ struct LunchClubView: View {
                                         location: highSchoolLunchClub.location,
                                         socialMedia: highSchoolLunchClub.socialMedia,
                                         instagramLink: highSchoolLunchClub.instagramLink, instagramID: highSchoolLunchClub.instagramID, quarter: highSchoolLunchClub.quarter, aiGenerated: highSchoolLunchClub.aiGenerated,
-                                        loved: $highSchoolLunchClubList[index].interested, memberBoolean: $highSchoolLunchClubList[index].memberBoolean
+                                        loved: $highSchoolLunchClubList[index].isMember, memberBoolean: $highSchoolLunchClubList[index].memberBoolean
                                     )
                                 } label: {
                                     HStack {
@@ -213,13 +215,7 @@ struct LunchClubView: View {
             .navigationTitle("Lunch Club")
             .modifier(NavigationBarModifier())
             .toolbar {
-                Button {
-                    isTapped.toggle()
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                }.sheet(isPresented: $isTapped) {
-                    LunchClubShareView()
-                }
+                // Instagram Share View
                 
                 Button {
                     isLoved.toggle()

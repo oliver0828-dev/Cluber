@@ -39,7 +39,7 @@ struct LunchClubShareView: View {
                                     VStack (alignment: .leading){
                                         ForEach(elementarySchoolLunchClubList.indices, id: \.self) { index in
                                             let elementarySchoolLunchClub = elementarySchoolLunchClubList[index]
-                                            if elementarySchoolLunchClub.dayOfWeek == day && elementarySchoolLunchClub.interested {
+                                            if elementarySchoolLunchClub.dayOfWeek == day && elementarySchoolLunchClub.isMember {
                                                 Text(elementarySchoolLunchClub.clubName)
                                                     .padding()
                                             }
@@ -49,7 +49,7 @@ struct LunchClubShareView: View {
                                     VStack(alignment: .leading) {
                                         ForEach(middleSchoolLunchClubList.indices, id: \.self) { index in
                                             let middleSchoolLunchClub = middleSchoolLunchClubList[index]
-                                            if middleSchoolLunchClub.dayOfWeek == day && middleSchoolLunchClub.interested {
+                                            if middleSchoolLunchClub.dayOfWeek == day && middleSchoolLunchClub.isMember {
                                                 Text(middleSchoolLunchClub.clubName)
                                                     .padding()
                                             }
@@ -59,7 +59,7 @@ struct LunchClubShareView: View {
                                     VStack (alignment: .leading){
                                         ForEach(highSchoolLunchClubList.indices, id: \.self) { index in
                                             let highSchoolLunchClub = highSchoolLunchClubList[index]
-                                            if highSchoolLunchClub.dayOfWeek == day && highSchoolLunchClub.interested {
+                                            if highSchoolLunchClub.dayOfWeek == day && highSchoolLunchClub.isMember {
                                                 Text(highSchoolLunchClub.clubName)
                                                     .padding()
                                             }

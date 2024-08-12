@@ -1,5 +1,5 @@
 {
-  "originHash" : "290b0fcb4e07acc262419b65d1c8a251cb4660e1f5bfae18f53ac208b6332bdb",
+  "originHash" : "5a890c503f342ef6e6e163528e43d39c66dc5112336c8304b339e4026750a1a8",
   "pins" : [
     {
       "identity" : "confettiswiftui",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "fe4c6fe3a0aa66cdeb51d549623c82ca9704b9a5",
         "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "screenshotableview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RickeyBoy/ScreenshotableView",
+      "state" : {
+        "revision" : "4dcc274e518756c9bb6eabc153b2edb51a7bd482",
+        "version" : "1.1.0"
       }
     }
   ],

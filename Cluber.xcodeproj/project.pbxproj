@@ -20,6 +20,7 @@
 		3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465680A2C5F798900B2FD40 /* AppIntent.swift */; };
 		3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3465680C2C5F798B00B2FD40 /* Assets.xcassets */; };
 		346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 346C47C62C635D6C00440CC8 /* ScreenshotableView */; };
 		347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 347590E22C58076500924CB4 /* ConfettiSwiftUI */; };
 		347591332C5C7A4000924CB4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591322C5C7A3F00924CB4 /* SplashView.swift */; };
 		347591762C5D033D00924CB4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 347591752C5D033D00924CB4 /* Lottie */; };
@@ -105,6 +106,7 @@
 		3465680A2C5F798900B2FD40 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		3465680C2C5F798B00B2FD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3465680E2C5F798B00B2FD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		346C47BD2C6323FE00440CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		347591322C5C7A3F00924CB4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		347591932C5E5AFA00924CB4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		3475919B2C5E5D2A00924CB4 /* jets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jets.json; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */,
 				347591762C5D033D00924CB4 /* Lottie in Frameworks */,
 				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
+				346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +255,7 @@
 		34B2AB4B2BD7E1F400821D81 /* Cluber */ = {
 			isa = PBXGroup;
 			children = (
+				346C47BD2C6323FE00440CC8 /* Info.plist */,
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
@@ -378,6 +382,7 @@
 				34605BD62C1B0CA6003EA9B0 /* iCalendarParser */,
 				347590E22C58076500924CB4 /* ConfettiSwiftUI */,
 				347591752C5D033D00924CB4 /* Lottie */,
+				346C47C62C635D6C00440CC8 /* ScreenshotableView */,
 			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
@@ -458,6 +463,7 @@
 				34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */,
 				347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 				347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */,
 			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
@@ -775,6 +781,7 @@
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cluber/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for DIS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -812,6 +819,7 @@
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cluber/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for DIS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -976,6 +984,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RickeyBoy/ScreenshotableView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
@@ -999,6 +1015,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */;
 			productName = iCalendarParser;
+		};
+		346C47C62C635D6C00440CC8 /* ScreenshotableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */;
+			productName = ScreenshotableView;
 		};
 		347590E22C58076500924CB4 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

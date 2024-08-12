@@ -32,195 +32,174 @@ struct ClubView: View {
     @State private var isTapped = false // for Signed Up
     @State private var isTapped2 = false // for Signing Up
     @State private var counter = 0
+    @State private var showAlert = false
     
     @Binding var loved: Bool
     @Binding var memberBoolean: Bool
     
-    
     var body: some View {
-        ScrollView {
-            VStack {
+        NavigationStack {
+            ScrollView {
                 VStack {
-                    if ClubImage != "n/a" {
-                        Image(ClubImage)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(.rect(cornerRadius: 10))
-                            .frame(maxWidth: 380, maxHeight: .infinity)
-                    }
-                    
-                    HStack {
-                        VStack (alignment: .leading) {
-                            Text(ClubName)
-                                .font(.title.bold())
-                            
-                            Text(ClubSubName)
-                                .foregroundStyle(.gray)
+                    VStack {
+                        if ClubImage != "n/a" {
+                            Image(ClubImage)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(.rect(cornerRadius: 10))
+                                .frame(maxWidth: 380, maxHeight: 250)
                         }
-                        .padding()
-                        Spacer()
-                        VStack{
-                            Text(ClubTeacher)
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                            
-                            if roomNumber != 0 {
-                                HStack {
-                                    Image(systemName: "door.right.hand.open")
-                                    Text("\(roomNumber)")
-                                }
+                        HStack {
+                            VStack (alignment: .leading) {
+                                Text(ClubName)
+                                    .font(.title.bold())
                                 
-                            } else {
-                                HStack {
-                                    Image(systemName: "location.fill")
-                                    Text(location)
-                                        .font(.callout)
+                                Text(ClubSubName)
+                                    .foregroundStyle(.gray)
+                            }
+                            .padding()
+                            Spacer()
+                            VStack{
+                                Text(ClubTeacher)
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                
+                                if roomNumber != 0 {
+                                    HStack {
+                                        Image(systemName: "door.right.hand.open")
+                                        Text("\(roomNumber)")
+                                    }
+                                    
+                                } else {
+                                    HStack {
+                                        Image(systemName: "location.fill")
+                                        Text(location)
+                                            .font(.callout)
+                                    }
+                                    
                                 }
                                 
                             }
                             
                         }
+                        Divider()
                         
-                    }
-                    Divider()
-                    
-                    
-                    if socialMedia == true {
+                        
+                        if socialMedia == true {
+                            HStack {
+                                Text("Social Media:")
+                                    .fontWeight(.semibold)
+                                Button {
+                                    print("Clicked")
+                                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                                } label: {
+                                    Link(destination: URL(string: instagramLink) ?? URL(string: "https://instagram.com")!) {
+                                        Image("instagram")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 20, height: 20)
+                                        Text(instagramID)
+                                        
+                                    }
+                                    
+                                }
+                                Spacer()
+                            }
+                            .padding()
+                        }
+                        
                         HStack {
-                            Text("Social Media:")
-                                .fontWeight(.semibold)
-                            Button {
-                                print("Clicked")
-                                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                            } label: {
-                                Link(destination: URL(string: instagramLink) ?? URL(string: "https://instagram.com")!) {
-                                    Image("instagram")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 20, height: 20)
-                                    Text(instagramID)
+                            VStack(alignment: .leading) {
+                                Text("About \(ClubName):")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                Text(description)
+                                    .confettiCannon(counter: $counter, confettis: [.sfSymbol(symbolName: sportsConfetti(sports: sports)), .shape(.roundedCross)], colors: [Color.blue, Color.green], confettiSize: 40.0, radius: 400.0)
+                                
+                                if aiGenerated {
+                                    
+                                    HStack {
+                                        Spacer()
+                                        Image(systemName: "doc.append")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 15, height: 15)
+                                        Text("AI Generated Description")
+                                            .font(.callout)
+                                        Spacer()
+                                    }.foregroundStyle(.gray)
                                     
                                 }
                                 
                             }
                             Spacer()
-                        }
-                        .padding()
+                        }.padding()
+                        
                     }
-                    
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("About \(ClubName):")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                            Text(description)
-                            
-                            if aiGenerated {
-                                
-                                HStack {
-                                    Spacer()
-                                    Image(systemName: "doc.append")
+                }
+                Spacer()
+                    .toolbar {
+                        if quarter != "All" {
+                            Text(quarter + " Only")
+                                .fontWeight(.semibold)
+                                .foregroundStyle(quarterColor(q: quarter))
+                        }
+                        
+                        HStack {
+                            Button {
+                                loved.toggle()
+                                if loved {
+                                    counter += 1
+                                }
+                                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            } label: {
+                                if loved == true {
+                                    Text("Member")
+                                        .font(.headline)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.blue)
+                                        .fontDesign(.rounded)
+                                    
+                                    Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 15, height: 15)
-                                    Text("AI Generated Description")
-                                        .font(.callout)
-                                    Spacer()
-                                }.foregroundStyle(.gray)
-                                
+                                        .foregroundStyle(.blue)
+                                    
+                                    
+                                } else {
+                                    Text("Enroll")
+                                        .font(.headline)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.black)
+                                        .fontDesign(.rounded)
+                                    
+                                    
+                                    Image(systemName: "person.crop.square.filled.and.at.rectangle")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 15, height:15)
+                                        .foregroundStyle(.black)
+                                }
                             }
-                            
-                        }
-                        Spacer()
-                    }.padding()
-                    
-                }
-                VStack {
-                    Button {
-                        counter += 1
-                    } label: {
-                        Link("Sign Up For This Club", destination: URL(string: "https://docs.google.com/spreadsheets/d/1LkVA2yfSANv72DkeX0DK0NDavRieIv26Tufb8GNxISI/edit#gid=0")!)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 50)
-                            .background(Color.blue)
-                            .clipShape(Capsule())
-                            .padding()
-                    }
-                    .confettiCannon(counter: $counter, confettis: [.sfSymbol(symbolName: sportsConfetti(sports: sports)), .shape(.roundedCross)], colors: [Color.blue, Color.green], confettiSize: 40.0, radius: 400.0)
-                    
-                    
-                    if ClubImage == "n/a" {
-                        VStack {
-                            Text("Do You Have an Image for this club?")
-                            Text("Help us by uploading the photo")
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "photo.badge.plus.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                
+                            .alert(isPresented: $showAlert) {
+                                Alert(
+                                    title: Text("Already Signed Up"),
+                                    message: Text("You have already signed up for \(ClubName), so you cannot sign up for this club again."),
+                                    dismissButton: .default(Text("OK"))
+                                )
                             }
                         }
+                        .frame(width: 130, height: 30)
+                        .background(.gray.opacity(0.5))
+                        .clipShape(.rect(cornerRadius:15))
                     }
-                }
             }
             .fontDesign(.rounded)
             .padding()
+            
         }
-        .toolbar {
-            if quarter != "All" {
-                Text(quarter + " Only")
-                    .fontWeight(.semibold)
-                
-                    .foregroundStyle(quarterColor(q: quarter))
-            }
-            HStack {
-                Button {
-                    loved.toggle()
-                    if loved {
-                        counter += 1
-                    }
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                } label: {
-                    if loved == true {
-                        Text("Interested")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.pink)
-                            .fontDesign(.rounded)
-                        
-                        Image(systemName: "heart.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15, height: 15)
-                            .foregroundStyle(.pink)
-                        
-                        
-                    } else {
-                        Text("Interested")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.black)
-                            .fontDesign(.rounded)
-                        
-                        
-                        Image(systemName: "heart")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15, height:15)
-                            .foregroundStyle(.black)
-                    }
-                }
-            }
-            .frame(width: 130, height: 30)
-            .background(.gray.opacity(0.5))
-            .clipShape(.rect(cornerRadius:15))
-        }
-        
     }
-    
     
     private func saveStates() {
         UserDefaults.standard.set(loved, forKey: "\(ClubName)_loved")

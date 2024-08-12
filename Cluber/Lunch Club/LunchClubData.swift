@@ -45,7 +45,7 @@ struct LunchClubStruct: Identifiable {
     var instagramID: String = ""
     var aiGenerated: Bool = false
     
-    var interested: Bool {
+    var isMember: Bool {
         get {
             UserDefaults.standard.bool(forKey: "\(clubName)_interested")
         }
