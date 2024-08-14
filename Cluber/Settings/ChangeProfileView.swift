@@ -77,7 +77,6 @@ struct ChangeProfileView: View {
     @EnvironmentObject private var photoViewModel: PhotoPickerViewModel
     
     var body: some View {
-        NavigationStack {
             VStack {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -160,11 +159,10 @@ struct ChangeProfileView: View {
                         return Alert(title: Text("New Name: \(usernameGrade.userName)"), dismissButton: .default(Text("Done")))
                     }
                 }
-            }
+            }.modifier(NavigationBarModifier())
             
             Spacer()
                 .navigationTitle("Change Profile")
-        }.modifier(NavigationBarModifier())
                 
     }
 }

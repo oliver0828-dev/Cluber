@@ -16,8 +16,30 @@ struct LunchClubView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationStack {
             VStack {
+                HStack {
+                    Text("Lunch Club")
+                        .font(.title)
+                    Spacer()
+                    Button {
+                        isLoved.toggle()
+                    } label: {
+                        if isLoved == false {
+                            Image(systemName: "arrow.up.arrow.down.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        } else {
+                            Image(systemName: "arrow.up.arrow.down.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        }
+                        
+                    }
+                }
+                .padding()
+                
                 Text(dayOfWeek(for: selectedDay ?? 1))
                     .font(.title.bold())
                     .fontDesign(.rounded)
@@ -212,33 +234,8 @@ struct LunchClubView: View {
                 .scrollContentBackground(.hidden)
   
             }
-            .navigationTitle("Lunch Club")
             .modifier(NavigationBarModifier())
-            .toolbar {
-                // Instagram Share View
-                
-                Button {
-                    isLoved.toggle()
-                } label: {
-                    if isLoved == false {
-                        Image(systemName: "arrow.up.arrow.down.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    } else {
-                        Image(systemName: "arrow.up.arrow.down.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    }
-                    
-                }
-            }
-            
         }
-      
-        
-    }
 }
 
 

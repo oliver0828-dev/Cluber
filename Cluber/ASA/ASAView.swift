@@ -20,8 +20,40 @@ struct ASAView: View {
     
     
     var body: some View {
-        NavigationStack {
             VStack {
+                HStack {
+                    Text("ASA")
+                        .font(.title)
+                    
+                    Spacer()
+                    
+                    Picker("Quarter", selection: $quarter) {
+                        ForEach (quarterPicker, id: \.self) { s in
+                            Text(s)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(width: 120)
+                    
+                    Button {
+                        isLoved.toggle()
+                    } label: {
+                        if isLoved == false {
+                            Image(systemName: "arrow.up.arrow.down.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        } else {
+                            Image(systemName: "arrow.up.arrow.down.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        }
+                        
+                    }
+                }
+                .padding()
+                
                 Text(dayOfWeek(for: selectedDay ?? 1))
                     .font(.title.bold())
                     .fontDesign(.rounded)
@@ -48,6 +80,7 @@ struct ASAView: View {
                         })
                     }
                 }
+                .padding()
                 
                 List {
                     switch usernameGrade.schoolGrade {
@@ -168,31 +201,30 @@ struct ASAView: View {
             .modifier(NavigationBarModifier())
           
             .scrollContentBackground(.hidden)
-            .toolbar {
-                Picker("Quarter", selection: $quarter) {
-                    ForEach (quarterPicker, id: \.self) { s in
-                        Text(s)
-                    }
-                }.pickerStyle(.segmented)
-                
-                Button {
-                    isLoved.toggle()
-                } label: {
-                    if isLoved == false {
-                        Image(systemName: "arrow.up.arrow.down.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    } else {
-                        Image(systemName: "arrow.up.arrow.down.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    }
-                    
-                }
-            }
-        }
+//            .toolbar {
+//                Picker("Quarter", selection: $quarter) {
+//                    ForEach (quarterPicker, id: \.self) { s in
+//                        Text(s)
+//                    }
+//                }.pickerStyle(.segmented)
+//                
+//                Button {
+//                    isLoved.toggle()
+//                } label: {
+//                    if isLoved == false {
+//                        Image(systemName: "arrow.up.arrow.down.circle")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 25, height: 25)
+//                    } else {
+//                        Image(systemName: "arrow.up.arrow.down.circle.fill")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 25, height: 25)
+//                    }
+//                    
+//                }
+//            }
 
     }
     

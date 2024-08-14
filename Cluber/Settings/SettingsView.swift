@@ -20,8 +20,10 @@ struct SettingsView: View {
     @AppStorage("gradeInt") var gradeInt: Int = 1
     
     var body: some View {
-        NavigationStack {
-            VStack {
+        VStack(alignment: .leading) {
+                Text("Setting")
+                    .font(.title)
+                    .padding()
                 List {
                     Section("Your Profile") {
                         HStack {
@@ -87,8 +89,6 @@ struct SettingsView: View {
                     }
                 }
             }
-            .navigationTitle("Settings")
-        }
         .modifier(NavigationBarModifier())
     }
 }

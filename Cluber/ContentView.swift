@@ -14,84 +14,86 @@ struct ContentView: View {
     @State private var selection  = 0
     
     var body: some View {
-        
-        TabView(selection: $selection) {
-            HomeView(username: username)
-                .tabItem {
-                    VStack {
-                        if selection == 0 {
-                            Image("tab1Blue")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        } else {
-                            Image("tab1")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
+        NavigationStack {
+            TabView(selection: $selection) {
+                HomeView(username: username)
+                    .tabItem {
+                        VStack {
+                            if selection == 0 {
+                                Image("tab1Blue")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            } else {
+                                Image("tab1")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            }
+                            Text("Home")
                         }
-                        Text("Home")
-                    }
-                }.tag(0)
-            
-            LunchClubView()
-                .tabItem {
-                    VStack {
-                        if selection == 1 {
-                            Image("tab2Blue")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        } else {
-                            Image("tab2")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
+                    }.tag(0)
+                    .navigationTitle("Home")
+                
+                LunchClubView()
+                    .tabItem {
+                        VStack {
+                            if selection == 1 {
+                                Image("tab2Blue")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            } else {
+                                Image("tab2")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            }
+                            Text("Lunch Club")
                         }
-                        Text("Lunch Club")
-                    }
-                }.tag(1)
-            
-            ASAView()
-                .tabItem {
-                    VStack{
-                        if selection == 2 {
-                            Image("tab3Blue")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        } else {
-                            Image("tab3")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
+                    }.tag(1)
+                
+                ASAView()
+                    .tabItem {
+                        VStack{
+                            if selection == 2 {
+                                Image("tab3Blue")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            } else {
+                                Image("tab3")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            }
+                            Text("ASA")
                         }
-                        Text("ASA")
-                    }
-                }.tag(2)
-            
-            LunchView()
-                .tabItem {
-                    VStack{
-                        if selection == 3 {
-                            Image("tab4Blue")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
-                        } else {
-                            Image("tab4")
-                                .resizable()
-                                .frame(width: 1, height: 1)
-                                .scaledToFit()
+                    }.tag(2)
+                
+                LunchView()
+                    .tabItem {
+                        VStack{
+                            if selection == 3 {
+                                Image("tab4Blue")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            } else {
+                                Image("tab4")
+                                    .resizable()
+                                    .frame(width: 1, height: 1)
+                                    .scaledToFit()
+                            }
+                            Text("Lunch")
                         }
-                        Text("Lunch")
-                    }
-                }.tag(3)
-            
-            SettingsView(username: username, gradeLevel: gradeLevel)
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }.tag(4)
+                    }.tag(3)
+                
+                SettingsView(username: username, gradeLevel: gradeLevel)
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }.tag(4)
+            }
         }
     }
 }
@@ -121,4 +123,3 @@ struct logoHStack: View {
         
     }
 }
-

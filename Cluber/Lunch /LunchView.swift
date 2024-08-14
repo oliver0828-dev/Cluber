@@ -14,15 +14,19 @@ struct LunchView: View {
     @State var isTomorrow = false
     
     var body: some View {
-        NavigationStack{
             ScrollView{
-                LunchMenuView(date: $TodayDate)
-                LunchMenuView(date: $tomorrow)
-                .padding()
-                .navigationTitle("Lunch")
-                .modifier(NavigationBarModifier())
+                VStack(alignment: .leading) {
+                    Text("Lunch")
+                        .font(.title)
+                        .padding()
+                    
+                    LunchMenuView(date: $TodayDate)
+                    LunchMenuView(date: $tomorrow)
+                        .padding()
+                        .navigationTitle("Lunch")
+                        .modifier(NavigationBarModifier())
+                }
             }
-        }
     }
 }
 
