@@ -129,3 +129,22 @@ struct LunchClubShareView: View {
     LunchClubShareView()
         .environmentObject(UsernameGradeClass())
 }
+
+func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
+    switch (gradeLevel, colorScheme) {
+    case ("Elementary", .light):
+        return Color("yellowDark")
+    case ("Elementary", .dark):
+        return .yellow.opacity(0.7)
+    case ("Middle", .light):
+        return .blue.opacity(0.5)
+    case ("Middle", .dark):
+        return .blue
+    case ("High", .light):
+        return .green.opacity(0.7)
+    case ("High", .dark):
+        return .green
+    default:
+        return .white
+    }
+}

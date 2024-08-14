@@ -21,7 +21,6 @@ struct LunchMenuView: View {
     }
     
     var body: some View {
-
         VStack{
             HStack {
                 Text(isTomorrow ? "Tomorrow's Lunch" : "Today's Lunch")
@@ -31,7 +30,6 @@ struct LunchMenuView: View {
                     .font(.title2.bold())
                     .foregroundStyle(.black)
                     .frame(width: 120, height: 40)
-                    .background(isTomorrow ? .green : .yellow)
                     .clipShape(.rect(cornerRadius: 10))
                  
             }
@@ -39,7 +37,6 @@ struct LunchMenuView: View {
                 .frame(width: 350)
             
             LunchRowView(data: manager.event, date: $date)
-
         }
         .fontDesign(.rounded)
     }
