@@ -12,44 +12,43 @@ struct HomeView: View {
     let username: String
     
     var body: some View {
-        
-        NavigationStack {
             GeometryReader { _ in
                 ScrollView {
-                    VStack {
-                        HStack {
-                            Text(getGreeting() + username)
-                                .foregroundStyle(.black)
-                                .font(.title)
+                    VStack(alignment: .leading) {
+                        Text("Cluber")
+                            .font(.title)
+                        VStack {
+                            HStack {
+                                Text(getGreeting() + username)
+                                    .foregroundStyle(.black)
+                                    .font(.title)
+                                    .fontDesign(.rounded)
+                                    .fontWeight(.semibold)
+                                    .frame(width: 320, height: 40)
+                                    .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
+                                    .clipShape(RoundedRectangle(cornerRadius: 40))
+                            }
+                            Text(gradeYear(year: usernameGrade.gradeNumber))
                                 .fontDesign(.rounded)
+                                .foregroundStyle(.gray)
+                            
+                            DatePicker("Calendar", selection: $date, displayedComponents: .date)
+                                .datePickerStyle(GraphicalDatePickerStyle())
+                                .fontDesign(.rounded)
+                                .padding()
+                            
+                            RowView(data: manager.event, date: $date)
+                                .frame(width: 350)
                                 .fontWeight(.semibold)
-                                .frame(width: 320, height: 40)
-                                .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
-                                .clipShape(RoundedRectangle(cornerRadius: 40))
+                                .fontDesign(.rounded)
+                                .background(colorScheme == .light ? .black : .white)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
                         }
-                        Text(gradeYear(year: usernameGrade.gradeNumber))
-                            .fontDesign(.rounded)
-                            .foregroundStyle(.gray)
-                        
-                        DatePicker("Calendar", selection: $date, displayedComponents: .date)
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                            .fontDesign(.rounded)
-                            .padding()
-                        
-                        RowView(data: manager.event, date: $date)
-                            .frame(width: 350)
-                            .fontWeight(.semibold)
-                            .fontDesign(.rounded)
-                            .background(colorScheme == .light ? .black : .white)
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
                     }
                     .padding()
                 }
-                .navigationTitle("Cluber")
                 .modifier(NavigationBarModifier())
             }
-            
-        }
         
     }
     

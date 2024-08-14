@@ -19,7 +19,6 @@ struct ChangeGradeSettingsView: View {
     @State var savedGrade: Int = 1 // to track the currently saved grade
     
     var body: some View {
-        NavigationStack {
             List {
                 Section("Grade Year") {
                     TextField("Grade", value: $gradeInt, formatter: NumberFormatter())
@@ -70,7 +69,6 @@ struct ChangeGradeSettingsView: View {
                 usernameGrade.schoolGrade = gradeLevelSuggestion(number: gradeInt)
                 savedGrade = gradeInt
             } .modifier(NavigationBarModifier())
-        }
     }
     
     func gradeLevelSuggestion(number: Int) -> String {

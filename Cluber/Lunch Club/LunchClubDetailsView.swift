@@ -11,7 +11,6 @@ struct LunchClubDetailsView: View {
     @State var lunchClubName: String
     
     var body: some View {
-        NavigationStack {
             VStack{
                 HStack {
                     HStack {
@@ -26,7 +25,6 @@ struct LunchClubDetailsView: View {
                 Text("")
             }
             .navigationTitle("What Is Your Role?")
-        }
     }
 }
 

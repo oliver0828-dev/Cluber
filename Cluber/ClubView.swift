@@ -38,7 +38,6 @@ struct ClubView: View {
     @Binding var memberBoolean: Bool
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack {
                     VStack {
@@ -202,7 +201,6 @@ struct ClubView: View {
                     }
             }
             .fontDesign(.rounded)
-        }
         .padding()
     }
     
