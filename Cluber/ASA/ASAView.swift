@@ -82,7 +82,7 @@ struct ASAView: View {
                                                     .frame(width: 150, height: 100)
                                                     .clipShape(RoundedRectangle(cornerRadius: 15))
                                             } else {
-                                                Image(systemName: "photo.badge.exclamationmark")
+                                                Image(systemName: "photo")
                                                     .resizable()
                                                     .scaledToFit()
                                                     .frame(width: 150, height: 100)
@@ -158,16 +158,15 @@ struct ASAView: View {
                                     .listRowBackground(Color.clear)
                                 }
                             }
-                            
                         }
                     default:
                         Text("No Lunch Club Available")
                     }
                 }
-                .scrollContentBackground(.hidden)
             }
             .navigationTitle("ASA")
             .modifier(NavigationBarModifier())
+          
             .scrollContentBackground(.hidden)
             .toolbar {
                 Picker("Quarter", selection: $quarter) {
@@ -194,6 +193,7 @@ struct ASAView: View {
                 }
             }
         }
+
     }
     
     func quarterToString(quarter: String) -> String {

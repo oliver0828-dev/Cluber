@@ -60,9 +60,15 @@ struct ClubView: View {
                             .padding()
                             Spacer()
                             VStack{
-                                Text(ClubTeacher)
-                                    .font(.title3)
-                                    .fontWeight(.semibold)
+                                HStack {
+                                    Image(systemName: "person.bust.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 15, height: 20)
+                                    Text(ClubTeacher)
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                }
                                 
                                 if roomNumber != 0 {
                                     HStack {
@@ -196,9 +202,8 @@ struct ClubView: View {
                     }
             }
             .fontDesign(.rounded)
-            .padding()
-            
         }
+        .padding()
     }
     
     private func saveStates() {
