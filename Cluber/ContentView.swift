@@ -13,6 +13,11 @@ struct ContentView: View {
     @Binding var gradeLevel: String
     @State private var selection  = 0
     
+    @State var isLovedLunchClub = false
+    @State var isLovedASA = false
+    @AppStorage ("Quarter") var quarter = "Q1"
+    @State var quarterPicker = ["Q1", "Q2", "Q3"]
+    
     var body: some View {
         NavigationStack {
             TabView(selection: $selection) {
@@ -32,10 +37,10 @@ struct ContentView: View {
                             }
                             Text("Home")
                         }
-                    }.tag(0)
-                    .navigationTitle("Home")
+                    }
+                    .tag(0)
                 
-                LunchClubView()
+                LunchClubView(isLoved: $isLovedLunchClub, quarter: $quarter)
                     .tabItem {
                         VStack {
                             if selection == 1 {
@@ -51,9 +56,10 @@ struct ContentView: View {
                             }
                             Text("Lunch Club")
                         }
-                    }.tag(1)
+                    }
+                    .tag(1)
                 
-                ASAView()
+                ASAView(isLoved: $isLovedASA, quarter: $quarter)
                     .tabItem {
                         VStack{
                             if selection == 2 {
@@ -69,7 +75,8 @@ struct ContentView: View {
                             }
                             Text("ASA")
                         }
-                    }.tag(2)
+                    }
+                    .tag(2)
                 
                 LunchView()
                     .tabItem {
@@ -87,13 +94,75 @@ struct ContentView: View {
                             }
                             Text("Lunch")
                         }
-                    }.tag(3)
+                    }
+                    .tag(3)
                 
                 SettingsView(username: username, gradeLevel: gradeLevel)
                     .tabItem {
                         Label("Settings", systemImage: "gear")
-                    }.tag(4)
+                    }
+                    .tag(4)
             }
+            .navigationTitle(getNavigationTitle(selection))
+            .toolbar {
+                if (selection == 1) {
+                    Button {
+                        isLovedLunchClub.toggle()
+                    } label: {
+                        if isLovedLunchClub == false {
+                            Image(systemName: "arrow.up.arrow.down.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        } else {
+                            Image(systemName: "arrow.up.arrow.down.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        }
+                    }
+                } else if (selection == 2) {
+                    Picker("Quarter", selection: $quarter) {
+                        ForEach (quarterPicker, id: \.self) { s in
+                            Text(s)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(width: 120)
+                    
+                    Button {
+                        isLovedASA.toggle()
+                    } label: {
+                        if isLovedASA == false {
+                            Image(systemName: "arrow.up.arrow.down.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        } else {
+                            Image(systemName: "arrow.up.arrow.down.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    func getNavigationTitle(_ selection: Int) -> String {
+        switch selection {
+        case 0:
+            return "Cluber"
+        case 1:
+            return "Lunch Club"
+        case 2:
+            return "ASA"
+        case 3:
+            return "Lunch"
+        default:
+            return "Settings"
         }
     }
 }
