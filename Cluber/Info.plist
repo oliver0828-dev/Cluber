@@ -9,14 +9,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fbAPP-ID</string>
+				<string>fb885574550055108</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>APP-ID</string>
+	<string>885574550055108</string>
 	<key>FacebookClientToken</key>
-	<string>CLIENT-TOKEN</string>
+	<string>398ab93f9d73713d862c24ba333838c1</string>
 	<key>FacebookDisplayName</key>
 	<string>Cluber</string>
 	<key>LSApplicationQueriesSchemes</key>
