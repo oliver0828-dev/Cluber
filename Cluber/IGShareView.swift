@@ -201,11 +201,10 @@ struct IGShareView: View {
     }
     
     func instagramShare(image: UIImage) {
-        if let urlScheme = URL(string: "instagram-stories://share") {
+        if let urlScheme = URL(string: "instagram-stories://share?source_application=885574550055108") {
             if UIApplication.shared.canOpenURL(urlScheme) {
                 let pasteboardItems = [
                     [
-                        "com.instagram.sharedSticker.stickerImage": image.pngData(),
                         "com.instagram.sharedSticker.backgroundImage": image.pngData()
                     ]
                 ]

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345ABA712C71DDE0009B3D43 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA702C71DDE0009B3D43 /* FacebookAEM */; };
+		345ABA732C71DDE0009B3D43 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA722C71DDE0009B3D43 /* FacebookBasics */; };
+		345ABA752C71DDE0009B3D43 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA742C71DDE0009B3D43 /* FacebookCore */; };
+		345ABA772C71DDE0009B3D43 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA762C71DDE0009B3D43 /* FacebookGamingServices */; };
+		345ABA792C71DDE0009B3D43 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA782C71DDE0009B3D43 /* FacebookLogin */; };
 		34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34605BD62C1B0CA6003EA9B0 /* iCalendarParser */; };
 		34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */; };
 		34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */; };
@@ -156,9 +161,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */,
+				345ABA712C71DDE0009B3D43 /* FacebookAEM in Frameworks */,
+				345ABA752C71DDE0009B3D43 /* FacebookCore in Frameworks */,
 				347591762C5D033D00924CB4 /* Lottie in Frameworks */,
+				345ABA732C71DDE0009B3D43 /* FacebookBasics in Frameworks */,
+				345ABA792C71DDE0009B3D43 /* FacebookLogin in Frameworks */,
 				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
 				346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */,
+				345ABA772C71DDE0009B3D43 /* FacebookGamingServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +393,11 @@
 				347590E22C58076500924CB4 /* ConfettiSwiftUI */,
 				347591752C5D033D00924CB4 /* Lottie */,
 				346C47C62C635D6C00440CC8 /* ScreenshotableView */,
+				345ABA702C71DDE0009B3D43 /* FacebookAEM */,
+				345ABA722C71DDE0009B3D43 /* FacebookBasics */,
+				345ABA742C71DDE0009B3D43 /* FacebookCore */,
+				345ABA762C71DDE0009B3D43 /* FacebookGamingServices */,
+				345ABA782C71DDE0009B3D43 /* FacebookLogin */,
 			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
@@ -464,6 +479,7 @@
 				347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 				347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */,
+				345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
@@ -976,6 +992,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 		34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmail-me/iCalendarParser.git";
@@ -1011,6 +1035,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		345ABA702C71DDE0009B3D43 /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		345ABA722C71DDE0009B3D43 /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		345ABA742C71DDE0009B3D43 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		345ABA762C71DDE0009B3D43 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		345ABA782C71DDE0009B3D43 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		34605BD62C1B0CA6003EA9B0 /* iCalendarParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */;
