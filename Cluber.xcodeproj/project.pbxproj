@@ -52,6 +52,7 @@
 		34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01822C3D127B0021D1DD /* GetCalendar.swift */; };
 		34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01842C3D128E0021D1DD /* CalendarRowView.swift */; };
 		34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01862C3D12A10021D1DD /* DateExtension.swift */; };
+		B9EC74542C718A040036CC95 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = B9EC74532C718A040036CC95 /* FacebookCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */,
+				B9EC74542C718A040036CC95 /* FacebookCore in Frameworks */,
 				347591762C5D033D00924CB4 /* Lottie in Frameworks */,
 				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
 				346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */,
@@ -383,6 +385,7 @@
 				347590E22C58076500924CB4 /* ConfettiSwiftUI */,
 				347591752C5D033D00924CB4 /* Lottie */,
 				346C47C62C635D6C00440CC8 /* ScreenshotableView */,
+				B9EC74532C718A040036CC95 /* FacebookCore */,
 			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
@@ -464,6 +467,7 @@
 				347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 				347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */,
+				B9EC74522C718A040036CC95 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
@@ -1008,6 +1012,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		B9EC74522C718A040036CC95 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1030,6 +1042,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		B9EC74532C718A040036CC95 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EC74522C718A040036CC95 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
