@@ -14,8 +14,6 @@ struct LunchClubShareView: View {
     @State private var elementarySchoolLunchClubList: [LunchClubStruct] = LunchClubList.ElementarySchool
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     
-    @State private var image: UIImage?
-    
     var body: some View {
         GeometryReader { _ in
             VStack(alignment: .center) {
@@ -77,28 +75,21 @@ struct LunchClubShareView: View {
                 
                 Spacer()
                 Button {
-                    image = takeCapture()
+                    let image = takeCapture()
+                    instagramShare(image: image)
                 } label: {
-                    Text("Capture")
-                }
-                if let image {
-                    Button {
-                        instagramShare(image: image)
-                    } label: {
-                        HStack {
-                            Image("instagram")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                            Text("Instagram Stories")
-                                .foregroundStyle(.white)
-                        }
-                        .frame(width: 200, height: 50)
-                        .background(.black.gradient)
-                        .clipShape(.rect(cornerRadius: 15))
+                    HStack {
+                        Image("instagram")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                        Text("Instagram Stories")
+                            .foregroundStyle(.white)
                     }
+                    .frame(width: 200, height: 50)
+                    .background(.black.gradient)
+                    .clipShape(.rect(cornerRadius: 15))
                 }
-                
                 
                 Text(usernameGrade.schoolGrade + " School")
                 Text("Cluber")
