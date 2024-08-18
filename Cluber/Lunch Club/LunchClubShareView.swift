@@ -14,8 +14,6 @@ struct LunchClubShareView: View {
     @State private var elementarySchoolLunchClubList: [LunchClubStruct] = LunchClubList.ElementarySchool
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     
-    @State private var instagramButton = false
-    
     var body: some View {
         GeometryReader { _ in
             VStack(alignment: .center) {
@@ -77,8 +75,8 @@ struct LunchClubShareView: View {
                 
                 Spacer()
                 Button {
-                    print("Sharing with Instagram")
-                    instagramButton.toggle()
+                    let image = takeCapture()
+                    instagramShare(image: image)
                 } label: {
                     HStack {
                         Image("instagram")
@@ -91,10 +89,7 @@ struct LunchClubShareView: View {
                     .frame(width: 200, height: 50)
                     .background(.black.gradient)
                     .clipShape(.rect(cornerRadius: 15))
-                }.alert(isPresented: $instagramButton) {
-                    Alert(title: Text("The Feature Is Currently Unavailable"))
                 }
-                
                 
                 Text(usernameGrade.schoolGrade + " School")
                 Text("Cluber")
@@ -122,6 +117,54 @@ struct LunchClubShareView: View {
         default:
             return "Unknown Day"
         }
+    }
+    
+    func takeCapture() -> UIImage {
+        var image: UIImage?
+        guard let currentLayer = UIApplication.shared.windows.first { $0.isKeyWindow }?.layer else { return UIImage() }
+        
+        let currentScale = UIScreen.main.scale
+        
+        UIGraphicsBeginImageContextWithOptions(currentLayer.frame.size, false, currentScale)
+        
+        guard let currentContext = UIGraphicsGetCurrentContext() else { return UIImage() }
+        
+        currentLayer.render(in: currentContext)
+        
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return image ?? UIImage()
+    }
+    
+    func instagramShare(image: UIImage) {
+        if let urlScheme = URL(string: "instagram-stories://share") {
+            if UIApplication.shared.canOpenURL(urlScheme) {
+                let pasteboardItems = [
+                    [
+                        "com.instagram.sharedSticker.stickerImage": image.pngData(),
+                        "com.instagram.sharedSticker.backgroundImage": image.pngData()
+                    ]
+                ]
+                
+                let pasteboardOptions = [UIPasteboard.OptionsKey.expirationDate: Date().addingTimeInterval(60 * 5)]
+                
+                UIPasteboard.general.setItems(pasteboardItems, options: pasteboardOptions)
+                
+                UIApplication.shared.open(urlScheme as URL, options: [:], completionHandler: nil)
+            } else {
+                print("인스타 앱이 깔려있지 않습니다.")
+            }
+        }
+    }
+}
+
+struct Photo: Transferable {
+    public var image: Image
+    
+    static var transferRepresentation: some TransferRepresentation {
+        ProxyRepresentation(exporting: \.image)
     }
 }
 

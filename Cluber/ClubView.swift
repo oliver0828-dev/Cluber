@@ -33,6 +33,7 @@ struct ClubView: View {
     @State private var isTapped2 = false // for Signing Up
     @State private var counter = 0
     @State private var showAlert = false
+    @State private var share = false
     
     @Binding var loved: Bool
     @Binding var memberBoolean: Bool
@@ -141,6 +142,14 @@ struct ClubView: View {
                             Spacer()
                         }.padding()
                         
+                        Button {
+                            share.toggle()
+                        } label: {
+                            Text("Share")
+                        }
+                        .sheet(isPresented: $share) {
+                            LunchClubShareView()
+                        }
                     }
                 }
                 Spacer()

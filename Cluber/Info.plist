@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb885574550055108</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>885574550055108</string>
+	<key>FacebookClientToken</key>
+	<string>398ab93f9d73713d862c24ba333838c1</string>
+	<key>FacebookDisplayName</key>
+	<string>Cluber</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram-stories</string>
