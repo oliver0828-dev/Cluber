@@ -216,20 +216,21 @@ struct LunchClubView: View {
             .modifier(NavigationBarModifier())
             .toolbar {
                 // Instagram Share View
+                Button {
+                    isTapped.toggle()
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }.sheet(isPresented: $isTapped) {
+                    IGShareView()
+                }
                 
                 Button {
                     isLoved.toggle()
                 } label: {
                     if isLoved == false {
                         Image(systemName: "arrow.up.arrow.down.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
                     } else {
                         Image(systemName: "arrow.up.arrow.down.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
                     }
                     
                 }

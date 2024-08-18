@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 class UsernameGradeClass: ObservableObject {
+    
     @AppStorage("schoolGrade") var schoolGrade: String = ""
+    
     @Published var grade: String = "Elementary" {
         didSet {
             if grade.isEmpty {
@@ -18,6 +20,7 @@ class UsernameGradeClass: ObservableObject {
             schoolGrade = grade
         }
     }
+    
     @AppStorage ("userName") var userName: String = ""
     @AppStorage ("gradeYear") var gradeNumber: Int = 1 
     @AppStorage ("memberStatus") var member: String = ""

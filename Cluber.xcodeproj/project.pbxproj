@@ -10,7 +10,7 @@
 		34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34605BD62C1B0CA6003EA9B0 /* iCalendarParser */; };
 		34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */; };
 		34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */; };
-		34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */; };
+		34605BDE2C1DD639003EA9B0 /* IGShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDD2C1DD639003EA9B0 /* IGShareView.swift */; };
 		34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */; };
 		346568002C5F798900B2FD40 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346567FF2C5F798900B2FD40 /* WidgetKit.framework */; };
 		346568022C5F798900B2FD40 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346568012C5F798900B2FD40 /* SwiftUI.framework */; };
@@ -44,7 +44,7 @@
 		34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB832BD9062A00821D81 /* ClubView.swift */; };
 		34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC62BE7C6C100821D81 /* LunchData.swift */; };
 		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
-		34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */; };
+		34B2ABCD2BEA5C0500821D81 /* UsernameGradeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */; };
 		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
 		34CCAA352C4FD19A00F7E17F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
@@ -95,7 +95,7 @@
 /* Begin PBXFileReference section */
 		34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGradeSettingsView.swift; sourceTree = "<group>"; };
 		34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
-		34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubShareView.swift; sourceTree = "<group>"; };
+		34605BDD2C1DD639003EA9B0 /* IGShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGShareView.swift; sourceTree = "<group>"; };
 		34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubDetailsView.swift; sourceTree = "<group>"; };
 		346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		346567FF2C5F798900B2FD40 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 		34B2AB832BD9062A00821D81 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		34B2ABC62BE7C6C100821D81 /* LunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
 		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameGradeClass.swift; sourceTree = "<group>"; };
 		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
 		34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
@@ -259,7 +259,9 @@
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
+				34605BDD2C1DD639003EA9B0 /* IGShareView.swift */,
 				347591932C5E5AFA00924CB4 /* LottieView.swift */,
+				34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */,
 				3475919B2C5E5D2A00924CB4 /* jets.json */,
 				34ED01812C3D125F0021D1DD /* Calendar */,
 				34605BD82C1BEA4B003EA9B0 /* Settings */,
@@ -304,7 +306,6 @@
 			children = (
 				34B2AB782BD7E24400821D81 /* LunchClubView.swift */,
 				34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */,
-				34605BDD2C1DD639003EA9B0 /* LunchClubShareView.swift */,
 				34B2AB802BD7E76900821D81 /* LunchClubData.swift */,
 			);
 			path = "Lunch Club";
@@ -326,7 +327,6 @@
 			children = (
 				34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */,
 				347591322C5C7A3F00924CB4 /* SplashView.swift */,
-				34B2ABCC2BEA5C0500821D81 /* OnboardingData.swift */,
 			);
 			path = "Onboarding Screen";
 			sourceTree = "<group>";
@@ -531,7 +531,7 @@
 			files = (
 				34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */,
 				34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */,
-				34B2ABCD2BEA5C0500821D81 /* OnboardingData.swift in Sources */,
+				34B2ABCD2BEA5C0500821D81 /* UsernameGradeClass.swift in Sources */,
 				34B2AB7D2BD7E25100821D81 /* LunchView.swift in Sources */,
 				34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */,
 				34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */,
@@ -548,7 +548,7 @@
 				348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */,
 				34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */,
 				34B2AB812BD7E76900821D81 /* LunchClubData.swift in Sources */,
-				34605BDE2C1DD639003EA9B0 /* LunchClubShareView.swift in Sources */,
+				34605BDE2C1DD639003EA9B0 /* IGShareView.swift in Sources */,
 				34ED01852C3D128E0021D1DD /* CalendarRowView.swift in Sources */,
 				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
 				34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */,

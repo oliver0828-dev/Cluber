@@ -24,7 +24,7 @@ struct OnboardingView: View {
     
     var body: some View {
        
-//            if showingLaunchScreen && savedName.isEmpty {
+            if showingLaunchScreen && savedName.isEmpty {
         ZStack {
             VStack {
                 Image("signUpScreen")
@@ -140,9 +140,9 @@ struct OnboardingView: View {
             .transition(.move(edge: .bottom))
             .padding()
         }
-//            } else {
-//                ContentView(username: $savedName, gradeLevel: $gradeLevel)
-//            }
+            } else {
+                ContentView(username: $savedName, gradeLevel: $gradeLevel)
+            }
       
     
     }
