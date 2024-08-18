@@ -143,7 +143,6 @@ struct LunchClubShareView: View {
             if UIApplication.shared.canOpenURL(urlScheme) {
                 let pasteboardItems = [
                     [
-                        "com.instagram.sharedSticker.stickerImage": image.pngData(),
                         "com.instagram.sharedSticker.backgroundImage": image.pngData()
                     ]
                 ]
