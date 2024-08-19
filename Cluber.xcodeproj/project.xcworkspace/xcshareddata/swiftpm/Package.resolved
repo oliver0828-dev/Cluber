@@ -1,5 +1,5 @@
 {
-  "originHash" : "c108c38c2ec4c58c90e1375c8b6f368cbad4a01bba3249e7e3e6932ea5aecc2f",
+  "originHash" : "3c1d7412b5311f747aa93e285ba0b23cd8769bb2dd1eacff9e120c475d656115",
   "pins" : [
     {
       "identity" : "confettiswiftui",
@@ -11,39 +11,12 @@
       }
     },
     {
-      "identity" : "facebook-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/facebook/facebook-ios-sdk",
-      "state" : {
-        "revision" : "c19607d535864533523d1f437c84035e5fb101cf",
-        "version" : "14.1.0"
-      }
-    },
-    {
       "identity" : "icalendarparser",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dmail-me/iCalendarParser.git",
       "state" : {
         "revision" : "f87378ca7b2d59533c9562324b17a8caf20f26a2",
         "version" : "0.2.0"
-      }
-    },
-    {
-      "identity" : "lottie-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/airbnb/lottie-ios",
-      "state" : {
-        "revision" : "fe4c6fe3a0aa66cdeb51d549623c82ca9704b9a5",
-        "version" : "4.5.0"
-      }
-    },
-    {
-      "identity" : "screenshotableview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/RickeyBoy/ScreenshotableView",
-      "state" : {
-        "revision" : "4dcc274e518756c9bb6eabc153b2edb51a7bd482",
-        "version" : "1.1.0"
       }
     }
   ],

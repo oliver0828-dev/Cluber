@@ -16,6 +16,7 @@ struct IGShareView: View {
     @State private var middleSchoolLunchClubList: [LunchClubStruct] = LunchClubList.MiddleSchool
     @State private var clubCount = 0
     @State private var image: UIImage?
+    @State private var inInstagram = false
     
     var body: some View {
         GeometryReader { _ in
@@ -26,6 +27,11 @@ struct IGShareView: View {
                 
                 VStack {
                     VStack(alignment: .center) {
+                        Text("Cluber for DIS")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .fontDesign(.rounded)
+                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
                         HStack {
                             Text("I'm enrolled in")
                                 .foregroundStyle(.black)
@@ -133,11 +139,23 @@ struct IGShareView: View {
                         }
                         .foregroundStyle(.black)
                         
-                        Button {
-                            image = takeCapture()
-                        } label: {
-                            Text("Capture")
-                        }
+                     
+                            Button {
+                                image = takeCapture()
+                                inInstagram.toggle()
+                            } label: {
+                                HStack {
+                                    if !inInstagram {
+                                        Image(systemName: "camera.fill")
+                                    }
+                                    Text("Share with Instagram")
+                                        .foregroundStyle(inInstagram ? Color(red: 0, green: 0.51, blue: 0.6) : .black )
+                                        .fontDesign(.rounded)
+                                        .fontWeight(.semibold)
+                                        
+                                }.foregroundStyle(.black)
+                            }.padding()
+                        
                         
                         if let image {
                             Button {
@@ -155,10 +173,11 @@ struct IGShareView: View {
                                 .background(.black.gradient)
                                 .clipShape(.rect(cornerRadius: 15))
                             }
-                            Spacer()
+                         
                         }
+                        
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .top)
                     .onAppear {
                         updateClubCount()
                     }
@@ -166,7 +185,10 @@ struct IGShareView: View {
                         updateClubCount()
                     }
                     .fontDesign(.rounded)
-                }
+                   
+                    
+                    Spacer()
+                }.padding()
             }
         }
     }

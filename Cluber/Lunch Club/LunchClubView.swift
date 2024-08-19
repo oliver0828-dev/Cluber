@@ -1,5 +1,4 @@
 import SwiftUI
-import ScreenshotableView
 
 struct LunchClubView: View {
     

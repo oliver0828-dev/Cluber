@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		345ABA712C71DDE0009B3D43 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA702C71DDE0009B3D43 /* FacebookAEM */; };
-		345ABA732C71DDE0009B3D43 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA722C71DDE0009B3D43 /* FacebookBasics */; };
-		345ABA752C71DDE0009B3D43 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA742C71DDE0009B3D43 /* FacebookCore */; };
-		345ABA772C71DDE0009B3D43 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA762C71DDE0009B3D43 /* FacebookGamingServices */; };
-		345ABA792C71DDE0009B3D43 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 345ABA782C71DDE0009B3D43 /* FacebookLogin */; };
 		34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34605BD62C1B0CA6003EA9B0 /* iCalendarParser */; };
 		34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */; };
 		34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */; };
@@ -25,11 +20,7 @@
 		3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465680A2C5F798900B2FD40 /* AppIntent.swift */; };
 		3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3465680C2C5F798B00B2FD40 /* Assets.xcassets */; };
 		346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 346C47C62C635D6C00440CC8 /* ScreenshotableView */; };
 		347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 347590E22C58076500924CB4 /* ConfettiSwiftUI */; };
-		347591332C5C7A4000924CB4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591322C5C7A3F00924CB4 /* SplashView.swift */; };
-		347591762C5D033D00924CB4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 347591752C5D033D00924CB4 /* Lottie */; };
-		347591942C5E5AFA00924CB4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347591932C5E5AFA00924CB4 /* LottieView.swift */; };
 		3475919C2C5E5D2A00924CB4 /* jets.json in Resources */ = {isa = PBXBuildFile; fileRef = 3475919B2C5E5D2A00924CB4 /* jets.json */; };
 		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
 		348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B73112C3E741D001CBCFE /* LunchModel.swift */; };
@@ -51,7 +42,6 @@
 		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
 		34B2ABCD2BEA5C0500821D81 /* UsernameGradeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */; };
 		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
-		34CCAA352C4FD19A00F7E17F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
 		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
 		34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01822C3D127B0021D1DD /* GetCalendar.swift */; };
@@ -112,8 +102,6 @@
 		3465680C2C5F798B00B2FD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3465680E2C5F798B00B2FD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		346C47BD2C6323FE00440CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		347591322C5C7A3F00924CB4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		347591932C5E5AFA00924CB4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		3475919B2C5E5D2A00924CB4 /* jets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jets.json; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		348B73112C3E741D001CBCFE /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
@@ -138,7 +126,6 @@
 		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameGradeClass.swift; sourceTree = "<group>"; };
 		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
-		34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
 		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		34ED01822C3D127B0021D1DD /* GetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
@@ -161,14 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */,
-				345ABA712C71DDE0009B3D43 /* FacebookAEM in Frameworks */,
-				345ABA752C71DDE0009B3D43 /* FacebookCore in Frameworks */,
-				347591762C5D033D00924CB4 /* Lottie in Frameworks */,
-				345ABA732C71DDE0009B3D43 /* FacebookBasics in Frameworks */,
-				345ABA792C71DDE0009B3D43 /* FacebookLogin in Frameworks */,
 				34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */,
-				346C47C72C635D6C00440CC8 /* ScreenshotableView in Frameworks */,
-				345ABA772C71DDE0009B3D43 /* FacebookGamingServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +221,6 @@
 		34B2AB402BD7E1F400821D81 = {
 			isa = PBXGroup;
 			children = (
-				34CCAA342C4FD19A00F7E17F /* Launch Screen.storyboard */,
 				34B2AB4B2BD7E1F400821D81 /* Cluber */,
 				34B2AB5C2BD7E1F600821D81 /* CluberTests */,
 				34B2AB662BD7E1F600821D81 /* CluberUITests */,
@@ -270,7 +249,6 @@
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
 				34B2AB832BD9062A00821D81 /* ClubView.swift */,
 				34605BDD2C1DD639003EA9B0 /* IGShareView.swift */,
-				347591932C5E5AFA00924CB4 /* LottieView.swift */,
 				34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */,
 				3475919B2C5E5D2A00924CB4 /* jets.json */,
 				34ED01812C3D125F0021D1DD /* Calendar */,
@@ -336,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */,
-				347591322C5C7A3F00924CB4 /* SplashView.swift */,
 			);
 			path = "Onboarding Screen";
 			sourceTree = "<group>";
@@ -391,13 +368,6 @@
 			packageProductDependencies = (
 				34605BD62C1B0CA6003EA9B0 /* iCalendarParser */,
 				347590E22C58076500924CB4 /* ConfettiSwiftUI */,
-				347591752C5D033D00924CB4 /* Lottie */,
-				346C47C62C635D6C00440CC8 /* ScreenshotableView */,
-				345ABA702C71DDE0009B3D43 /* FacebookAEM */,
-				345ABA722C71DDE0009B3D43 /* FacebookBasics */,
-				345ABA742C71DDE0009B3D43 /* FacebookCore */,
-				345ABA762C71DDE0009B3D43 /* FacebookGamingServices */,
-				345ABA782C71DDE0009B3D43 /* FacebookLogin */,
 			);
 			productName = Cluber;
 			productReference = 34B2AB492BD7E1F400821D81 /* Cluber.app */;
@@ -477,9 +447,6 @@
 			packageReferences = (
 				34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */,
 				347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
-				347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */,
-				345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 34B2AB4A2BD7E1F400821D81 /* Products */;
 			projectDirPath = "";
@@ -506,7 +473,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CCAA352C4FD19A00F7E17F /* Launch Screen.storyboard in Resources */,
 				34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */,
 				34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */,
 				3475919C2C5E5D2A00924CB4 /* jets.json in Resources */,
@@ -552,14 +518,12 @@
 				34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */,
 				34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */,
 				34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */,
-				347591332C5C7A4000924CB4 /* SplashView.swift in Sources */,
 				34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */,
 				34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */,
 				34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */,
 				349CAFE82C0BEC1F00642E1B /* ASAData.swift in Sources */,
 				34B2AB842BD9062A00821D81 /* ClubView.swift in Sources */,
 				34B2AB7F2BD7E35600821D81 /* ContentView.swift in Sources */,
-				347591942C5E5AFA00924CB4 /* LottieView.swift in Sources */,
 				34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */,
 				348B73122C3E741D001CBCFE /* LunchModel.swift in Sources */,
 				34605BDC2C1C5B04003EA9B0 /* ChangeProfileView.swift in Sources */,
@@ -791,15 +755,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cluber/Preview Content\"";
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cluber/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for DIS";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -810,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -829,15 +794,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cluber/Preview Content\"";
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cluber/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for DIS";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -848,7 +814,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -992,28 +958,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.1.0;
-			};
-		};
 		34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmail-me/iCalendarParser.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.0;
-			};
-		};
-		346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RickeyBoy/ScreenshotableView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
 			};
 		};
 		347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
@@ -1024,61 +974,18 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		345ABA702C71DDE0009B3D43 /* FacebookAEM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookAEM;
-		};
-		345ABA722C71DDE0009B3D43 /* FacebookBasics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookBasics;
-		};
-		345ABA742C71DDE0009B3D43 /* FacebookCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
-		345ABA762C71DDE0009B3D43 /* FacebookGamingServices */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookGamingServices;
-		};
-		345ABA782C71DDE0009B3D43 /* FacebookLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345ABA6F2C71DDE0009B3D43 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookLogin;
-		};
 		34605BD62C1B0CA6003EA9B0 /* iCalendarParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */;
 			productName = iCalendarParser;
 		};
-		346C47C62C635D6C00440CC8 /* ScreenshotableView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 346C47C52C635D6C00440CC8 /* XCRemoteSwiftPackageReference "ScreenshotableView" */;
-			productName = ScreenshotableView;
-		};
 		347590E22C58076500924CB4 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
-		};
-		347591752C5D033D00924CB4 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 347591742C5D033D00924CB4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
