@@ -57,7 +57,7 @@ struct ClubView: View {
                                 Text(ClubSubName)
                                     .foregroundStyle(.gray)
                             }
-                            .padding()
+                        
                             Spacer()
                             VStack{
                                 HStack {
@@ -111,7 +111,7 @@ struct ClubView: View {
                                 }
                                 Spacer()
                             }
-                            .padding()
+                         
                         }
                         
                         HStack {
@@ -139,7 +139,7 @@ struct ClubView: View {
                                 
                             }
                             Spacer()
-                        }.padding()
+                        }
                         
                     }
                 }
