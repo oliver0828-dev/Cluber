@@ -19,178 +19,183 @@ struct IGShareView: View {
     @State private var inInstagram = false
     
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
-                Image("igShareImage")
-                    .frame(maxWidth: 200)
-                    .ignoresSafeArea()
-                
-                VStack {
-                    VStack(alignment: .center) {
-                        Text("Cluber for DIS")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .fontDesign(.rounded)
-                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                        HStack {
-                            Text("I'm enrolled in")
-                                .foregroundStyle(.black)
-                            Text("\(clubCount)")
-                                .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                            Text("Clubs!")
-                        }
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .padding()
+        ViewThatFits {
+            GeometryReader { geometry in
+                ScrollView {
+                    ZStack {
+                        Image("igShareImage")
+                            .frame(maxWidth: min(geometry.size.width * 0.8, 200))
+                            .ignoresSafeArea()
                         
-                        if usernameGrade.schoolGrade == "Elementary" {
-                            Image("gliderYellow")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 250, height: 250)
-                        } else if usernameGrade.schoolGrade == "Middle" {
-                            Image("gliderPink")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 250, height: 250)
-                        } else {
-                            Image("gliderOrange")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 250, height: 250)
-                        }
-                        
-                        Text(usernameGrade.userName)
-                            .font(.title.bold())
-                            .frame(width: 140, height: 40)
-                            .background(.gray.opacity(0.4))
-                            .clipShape(.capsule)
-                            .padding()
-                        
-                        HStack(spacing: 1) {
-                            ForEach(1...5, id: \.self) { day in
-                                VStack {
-                                    Text(textConvert(num: day))
-                                        .frame(width: 70, height: 31)
-                                        .background(Color(red: 0, green: 0.51, blue: 0.6).opacity(0.35))
-                                        .clipShape(Capsule())
-                                        .foregroundColor(.white)
-                                    
-                                    switch usernameGrade.schoolGrade {
-                                    case "Elementary":
-                                        let clubsForDay = elementarySchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                        if clubsForDay.isEmpty {
-                                            Text("None")
-                                                .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                .frame(width: 70, height: 100)
-                                                .background(.gray.opacity(0.4))
-                                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                        } else {
-                                            ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                Text(club.clubName)
-                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                    .frame(width: 70, height: 100)
-                                                    .background(.gray.opacity(0.4))
-                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            }
-                                        }
-                                        
-                                    case "Middle":
-                                        let clubsForDay = middleSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                        if clubsForDay.isEmpty {
-                                            Text("None")
-                                                .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                .frame(width: 70, height: 100)
-                                                .background(.gray.opacity(0.4))
-                                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                        } else {
-                                            ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                Text(club.clubName)
-                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                    .frame(width: 70, height: 100)
-                                                    .background(.gray.opacity(0.4))
-                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            }
-                                        }
-                                        
-                                    case "High":
-                                        let clubsForDay = highSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                        if clubsForDay.isEmpty {
-                                            Text("None")
-                                                .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                .frame(width: 70, height: 100)
-                                                .background(.gray.opacity(0.4))
-                                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                        } else {
-                                            ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                Text(club.clubName)
-                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                    .frame(width: 70, height: 100)
-                                                    .background(.gray.opacity(0.4))
-                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            }
-                                        }
-                                        
-                                    default:
-                                        Text("Choose Your Lunch Club")
-                                    }
+                        VStack {
+                            VStack(alignment: .center) {
+                                Text("Cluber for DIS")
+                                    .font(geometry.size.width < 350 ? .title3 : .title)
+                                    .fontWeight(.semibold)
+                                    .fontDesign(.rounded)
+                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                HStack {
+                                    Text("I'm enrolled in")
+                                        .foregroundStyle(.black)
+                                    Text("\(clubCount)")
+                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                    Text("Clubs!")
                                 }
-                            }
-                        }
-                        .foregroundStyle(.black)
-                        
-                     
-                            Button {
-                                image = takeCapture()
-                                inInstagram.toggle()
-                            } label: {
-                                HStack {
-                                    if !inInstagram {
-                                        Image(systemName: "camera.fill")
-                                    }
-                                    Text("Share with Instagram")
-                                        .foregroundStyle(inInstagram ? Color(red: 0, green: 0.51, blue: 0.6) : .black )
-                                        .fontDesign(.rounded)
-                                        .fontWeight(.semibold)
-                                        
-                                }.foregroundStyle(.black)
-                            }.padding()
-                        
-                        
-                        if let image {
-                            Button {
-                                instagramShare(image: image)
-                            } label: {
-                                HStack {
-                                    Image("instagram")
+                                .font(geometry.size.width < 350 ? .title3 : .title)
+                                .fontWeight(.medium)
+                                .padding()
+                                
+                                if usernameGrade.schoolGrade == "Elementary" {
+                                    Image("gliderYellow")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(width: 20, height: 20)
-                                    Text("Instagram Stories")
-                                        .foregroundStyle(.white)
+                                        .frame(width: 250, height: 250)
+                                } else if usernameGrade.schoolGrade == "Middle" {
+                                    Image("gliderPink")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 250, height: 250)
+                                } else {
+                                    Image("gliderOrange")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 250, height: 250)
                                 }
-                                .frame(width: 200, height: 50)
-                                .background(.black.gradient)
-                                .clipShape(.rect(cornerRadius: 15))
+                                
+                                Text(usernameGrade.userName)
+                                    .font(.title.bold())
+                                    .frame(width: 140, height: 40)
+                                    .background(.gray.opacity(0.4))
+                                    .clipShape(.capsule)
+                                    .padding()
+                                
+                                HStack(spacing: 1) {
+                                    ForEach(1...5, id: \.self) { day in
+                                        VStack {
+                                            Text(textConvert(num: day))
+                                                .frame(width: 70, height: 31)
+                                                .background(Color(red: 0, green: 0.51, blue: 0.6).opacity(0.35))
+                                                .clipShape(Capsule())
+                                                .foregroundColor(.white)
+                                            
+                                            switch usernameGrade.schoolGrade {
+                                            case "Elementary":
+                                                let clubsForDay = elementarySchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                                if clubsForDay.isEmpty {
+                                                    Text("None")
+                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                        .frame(width: 70, height: 100)
+                                                        .background(.gray.opacity(0.4))
+                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                } else {
+                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                        Text(club.clubName)
+                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                            .frame(width: 70, height: 100)
+                                                            .background(.gray.opacity(0.4))
+                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                    }
+                                                }
+                                                
+                                            case "Middle":
+                                                let clubsForDay = middleSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                                if clubsForDay.isEmpty {
+                                                    Text("None")
+                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                        .frame(width: 70, height: 100)
+                                                        .background(.gray.opacity(0.4))
+                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                } else {
+                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                        Text(club.clubName)
+                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                            .frame(width: 70, height: 100)
+                                                            .background(.gray.opacity(0.4))
+                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                    }
+                                                }
+                                                
+                                            case "High":
+                                                let clubsForDay = highSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                                if clubsForDay.isEmpty {
+                                                    Text("None")
+                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                        .frame(width: 70, height: 100)
+                                                        .background(.gray.opacity(0.4))
+                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                } else {
+                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                        Text(club.clubName)
+                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                            .frame(width: 70, height: 100)
+                                                            .background(.gray.opacity(0.4))
+                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                    }
+                                                }
+                                                
+                                            default:
+                                                Text("Choose Your Lunch Club")
+                                            }
+                                        }
+                                    }
+                                }
+                                .foregroundStyle(.black)
+                                
+                                
+                                Button {
+                                    image = takeCapture()
+                                    inInstagram.toggle()
+                                } label: {
+                                    HStack {
+                                        if !inInstagram {
+                                            Image(systemName: "camera.fill")
+                                        }
+                                        Text("Share with Instagram")
+                                            .foregroundStyle(inInstagram ? Color(red: 0, green: 0.51, blue: 0.6) : .black )
+                                            .fontDesign(.rounded)
+                                            .fontWeight(.semibold)
+                                        
+                                    }.foregroundStyle(.black)
+                                }.padding()
+                                
+                                
+                                if let image {
+                                    Button {
+                                        instagramShare(image: image)
+                                    } label: {
+                                        HStack {
+                                            Image("instagram")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 20, height: 20)
+                                            Text("Instagram Stories")
+                                                .foregroundStyle(.white)
+                                        }
+                                        .frame(width: 200, height: 50)
+                                        .background(.black.gradient)
+                                        .clipShape(.rect(cornerRadius: 15))
+                                    }
+                                    
+                                }
+                                
                             }
-                         
-                        }
-                        
+                            .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .top)
+                            .onAppear {
+                                updateClubCount()
+                            }
+                            .onChange(of: usernameGrade.schoolGrade) { _ in
+                                updateClubCount()
+                            }
+                            .fontDesign(.rounded)
+                            
+                            
+                            Spacer()
+                        }.padding()
                     }
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .top)
-                    .onAppear {
-                        updateClubCount()
-                    }
-                    .onChange(of: usernameGrade.schoolGrade) { _ in
-                        updateClubCount()
-                    }
-                    .fontDesign(.rounded)
-                   
-                    
-                    Spacer()
-                }.padding()
+                }
             }
         }
+        
     }
     
     func updateClubCount() {

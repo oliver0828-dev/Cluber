@@ -16,12 +16,9 @@ struct LunchView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                LunchMenuView(date: $TodayDate)
-                LunchMenuView(date: $tomorrow)
+                
     
-                .padding()
-                .navigationTitle("Lunch")
-                .modifier(NavigationBarModifier())
+                
             }
         }
     }

@@ -14,12 +14,23 @@
 		34605BE02C269353003EA9B0 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BDF2C269353003EA9B0 /* LunchClubDetailsView.swift */; };
 		346568002C5F798900B2FD40 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346567FF2C5F798900B2FD40 /* WidgetKit.framework */; };
 		346568022C5F798900B2FD40 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346568012C5F798900B2FD40 /* SwiftUI.framework */; };
-		346568052C5F798900B2FD40 /* CalendarWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */; };
-		346568072C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */; };
-		346568092C5F798900B2FD40 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346568082C5F798900B2FD40 /* CalendarWidget.swift */; };
-		3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465680A2C5F798900B2FD40 /* AppIntent.swift */; };
-		3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3465680C2C5F798B00B2FD40 /* Assets.xcassets */; };
-		346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34662D8C2C7A0B0C0090DF3B /* Cluber_for_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662D8B2C7A0B0C0090DF3B /* Cluber_for_WatchApp.swift */; };
+		34662D902C7A0B0D0090DF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34662D8F2C7A0B0D0090DF3B /* Assets.xcassets */; };
+		34662D932C7A0B0D0090DF3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34662D922C7A0B0D0090DF3B /* Preview Assets.xcassets */; };
+		34662D9D2C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662D9C2C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppTests.swift */; };
+		34662DA72C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DA62C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITests.swift */; };
+		34662DA92C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DA82C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift */; };
+		34662DAC2C7A0B0D0090DF3B /* Cluber for Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 34662D892C7A0B0C0090DF3B /* Cluber for Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34662DCB2C7B72FA0090DF3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DCA2C7B72FA0090DF3B /* ContentView.swift */; };
+		34662DDE2C7B732B0090DF3B /* LunchMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DD32C7B732B0090DF3B /* LunchMenuView.swift */; };
+		34662DDF2C7B732B0090DF3B /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DD42C7B732B0090DF3B /* LunchModel.swift */; };
+		34662DE02C7B732B0090DF3B /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DD52C7B732B0090DF3B /* LunchRowView.swift */; };
+		34662DEB2C7BF0B40090DF3B /* calendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE42C7BF0B40090DF3B /* calendarData.swift */; };
+		34662DEC2C7BF0B40090DF3B /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE52C7BF0B40090DF3B /* CalendarJSONHelper.swift */; };
+		34662DED2C7BF0B40090DF3B /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE62C7BF0B40090DF3B /* CalendarModel.swift */; };
+		34662DEE2C7BF0B40090DF3B /* CalendarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE72C7BF0B40090DF3B /* CalendarRowView.swift */; };
+		34662DEF2C7BF0B40090DF3B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE82C7BF0B40090DF3B /* DateExtension.swift */; };
+		34662DF02C7BF0B40090DF3B /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34662DE92C7BF0B40090DF3B /* GetCalendar.swift */; };
 		347590E32C58076500924CB4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 347590E22C58076500924CB4 /* ConfettiSwiftUI */; };
 		3475919C2C5E5D2A00924CB4 /* jets.json in Resources */ = {isa = PBXBuildFile; fileRef = 3475919B2C5E5D2A00924CB4 /* jets.json */; };
 		348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348324F92BFAF20A005BAA45 /* SettingsView.swift */; };
@@ -28,9 +39,6 @@
 		34B2AB4D2BD7E1F400821D81 /* CluberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */; };
 		34B2AB512BD7E1F500821D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB502BD7E1F500821D81 /* Assets.xcassets */; };
 		34B2AB542BD7E1F500821D81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */; };
-		34B2AB5E2BD7E1F600821D81 /* CluberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB5D2BD7E1F600821D81 /* CluberTests.swift */; };
-		34B2AB682BD7E1F600821D81 /* CluberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB672BD7E1F600821D81 /* CluberUITests.swift */; };
-		34B2AB6A2BD7E1F600821D81 /* CluberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB692BD7E1F600821D81 /* CluberUITestsLaunchTests.swift */; };
 		34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB762BD7E23100821D81 /* HomeView.swift */; };
 		34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB782BD7E24400821D81 /* LunchClubView.swift */; };
 		34B2AB7B2BD7E24900821D81 /* ASAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2AB7A2BD7E24900821D81 /* ASAView.swift */; };
@@ -41,6 +49,7 @@
 		34B2ABC72BE7C6C100821D81 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC62BE7C6C100821D81 /* LunchData.swift */; };
 		34B2ABC92BE8B77F00821D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */; };
 		34B2ABCD2BEA5C0500821D81 /* UsernameGradeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */; };
+		34C923542C840E780056CF3A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C923532C840E780056CF3A /* ScheduleView.swift */; };
 		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
 		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
@@ -50,12 +59,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3465680F2C5F798B00B2FD40 /* PBXContainerItemProxy */ = {
+		34662D992C7A0B0D0090DF3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 346567FC2C5F798900B2FD40;
-			remoteInfo = CalendarWidgetExtension;
+			remoteGlobalIDString = 34662D882C7A0B0C0090DF3B;
+			remoteInfo = "Cluber for Watch Watch App";
+		};
+		34662DA32C7A0B0D0090DF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34662D882C7A0B0C0090DF3B;
+			remoteInfo = "Cluber for Watch Watch App";
+		};
+		34662DE22C7B859F0090DF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34662D882C7A0B0C0090DF3B;
+			remoteInfo = "Cluber for Watch Watch App";
 		};
 		34B2AB5A2BD7E1F600821D81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -80,9 +103,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				346568112C5F798B00B2FD40 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		346890412C79F9DC006BA894 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				34662DAC2C7A0B0D0090DF3B /* Cluber for Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -95,12 +128,25 @@
 		346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		346567FF2C5F798900B2FD40 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		346568012C5F798900B2FD40 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetBundle.swift; sourceTree = "<group>"; };
-		346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		346568082C5F798900B2FD40 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
-		3465680A2C5F798900B2FD40 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		3465680C2C5F798B00B2FD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3465680E2C5F798B00B2FD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34662D892C7A0B0C0090DF3B /* Cluber for Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cluber for Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34662D8B2C7A0B0C0090DF3B /* Cluber_for_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_WatchApp.swift; sourceTree = "<group>"; };
+		34662D8F2C7A0B0D0090DF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34662D922C7A0B0D0090DF3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34662D982C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for Watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34662D9C2C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_Watch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		34662DA22C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for Watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34662DA62C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_Watch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		34662DA82C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34662DCA2C7B72FA0090DF3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34662DD32C7B732B0090DF3B /* LunchMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchMenuView.swift; sourceTree = "<group>"; };
+		34662DD42C7B732B0090DF3B /* LunchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
+		34662DD52C7B732B0090DF3B /* LunchRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
+		34662DE42C7BF0B40090DF3B /* calendarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarData.swift; sourceTree = "<group>"; };
+		34662DE52C7BF0B40090DF3B /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
+		34662DE62C7BF0B40090DF3B /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		34662DE72C7BF0B40090DF3B /* CalendarRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRowView.swift; sourceTree = "<group>"; };
+		34662DE82C7BF0B40090DF3B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		34662DE92C7BF0B40090DF3B /* GetCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
 		346C47BD2C6323FE00440CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3475919B2C5E5D2A00924CB4 /* jets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jets.json; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -111,10 +157,7 @@
 		34B2AB502BD7E1F500821D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34B2AB592BD7E1F600821D81 /* CluberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CluberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34B2AB5D2BD7E1F600821D81 /* CluberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberTests.swift; sourceTree = "<group>"; };
 		34B2AB632BD7E1F600821D81 /* CluberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CluberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34B2AB672BD7E1F600821D81 /* CluberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberUITests.swift; sourceTree = "<group>"; };
-		34B2AB692BD7E1F600821D81 /* CluberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluberUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		34B2AB762BD7E23100821D81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34B2AB782BD7E24400821D81 /* LunchClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchClubView.swift; sourceTree = "<group>"; };
 		34B2AB7A2BD7E24900821D81 /* ASAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAView.swift; sourceTree = "<group>"; };
@@ -125,6 +168,7 @@
 		34B2ABC62BE7C6C100821D81 /* LunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
 		34B2ABC82BE8B77F00821D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameGradeClass.swift; sourceTree = "<group>"; };
+		34C923532C840E780056CF3A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
 		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
@@ -140,6 +184,27 @@
 			files = (
 				346568022C5F798900B2FD40 /* SwiftUI.framework in Frameworks */,
 				346568002C5F798900B2FD40 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D862C7A0B0C0090DF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D952C7A0B0D0090DF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D9F2C7A0B0D0090DF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,17 +253,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		346568032C5F798900B2FD40 /* CalendarWidget */ = {
+		34662D8A2C7A0B0C0090DF3B /* Cluber for Watch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				346568042C5F798900B2FD40 /* CalendarWidgetBundle.swift */,
-				346568062C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift */,
-				346568082C5F798900B2FD40 /* CalendarWidget.swift */,
-				3465680A2C5F798900B2FD40 /* AppIntent.swift */,
-				3465680C2C5F798B00B2FD40 /* Assets.xcassets */,
-				3465680E2C5F798B00B2FD40 /* Info.plist */,
+				34662D8B2C7A0B0C0090DF3B /* Cluber_for_WatchApp.swift */,
+				34662DEA2C7BF0B40090DF3B /* Calendar */,
+				34662DD72C7B732B0090DF3B /* Lunch  */,
+				34662DCA2C7B72FA0090DF3B /* ContentView.swift */,
+				34C923532C840E780056CF3A /* ScheduleView.swift */,
+				34662D8F2C7A0B0D0090DF3B /* Assets.xcassets */,
+				34662D912C7A0B0D0090DF3B /* Preview Content */,
 			);
-			path = CalendarWidget;
+			path = "Cluber for Watch Watch App";
+			sourceTree = "<group>";
+		};
+		34662D912C7A0B0D0090DF3B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				34662D922C7A0B0D0090DF3B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34662D9B2C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				34662D9C2C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppTests.swift */,
+			);
+			path = "Cluber for Watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		34662DA52C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34662DA62C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITests.swift */,
+				34662DA82C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Cluber for Watch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		34662DD72C7B732B0090DF3B /* Lunch  */ = {
+			isa = PBXGroup;
+			children = (
+				34662DD32C7B732B0090DF3B /* LunchMenuView.swift */,
+				34662DD42C7B732B0090DF3B /* LunchModel.swift */,
+				34662DD52C7B732B0090DF3B /* LunchRowView.swift */,
+			);
+			path = "Lunch ";
+			sourceTree = "<group>";
+		};
+		34662DEA2C7BF0B40090DF3B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				34662DE42C7BF0B40090DF3B /* calendarData.swift */,
+				34662DE52C7BF0B40090DF3B /* CalendarJSONHelper.swift */,
+				34662DE62C7BF0B40090DF3B /* CalendarModel.swift */,
+				34662DE72C7BF0B40090DF3B /* CalendarRowView.swift */,
+				34662DE82C7BF0B40090DF3B /* DateExtension.swift */,
+				34662DE92C7BF0B40090DF3B /* GetCalendar.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		349CAFE62C0BEC0E00642E1B /* ASA */ = {
@@ -222,9 +336,9 @@
 			isa = PBXGroup;
 			children = (
 				34B2AB4B2BD7E1F400821D81 /* Cluber */,
-				34B2AB5C2BD7E1F600821D81 /* CluberTests */,
-				34B2AB662BD7E1F600821D81 /* CluberUITests */,
-				346568032C5F798900B2FD40 /* CalendarWidget */,
+				34662D8A2C7A0B0C0090DF3B /* Cluber for Watch Watch App */,
+				34662D9B2C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */,
+				34662DA52C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */,
 				346567FE2C5F798900B2FD40 /* Frameworks */,
 				34B2AB4A2BD7E1F400821D81 /* Products */,
 			);
@@ -237,6 +351,9 @@
 				34B2AB592BD7E1F600821D81 /* CluberTests.xctest */,
 				34B2AB632BD7E1F600821D81 /* CluberUITests.xctest */,
 				346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */,
+				34662D892C7A0B0C0090DF3B /* Cluber for Watch Watch App.app */,
+				34662D982C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests.xctest */,
+				34662DA22C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,23 +387,6 @@
 				34B2AB532BD7E1F500821D81 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		34B2AB5C2BD7E1F600821D81 /* CluberTests */ = {
-			isa = PBXGroup;
-			children = (
-				34B2AB5D2BD7E1F600821D81 /* CluberTests.swift */,
-			);
-			path = CluberTests;
-			sourceTree = "<group>";
-		};
-		34B2AB662BD7E1F600821D81 /* CluberUITests */ = {
-			isa = PBXGroup;
-			children = (
-				34B2AB672BD7E1F600821D81 /* CluberUITests.swift */,
-				34B2AB692BD7E1F600821D81 /* CluberUITestsLaunchTests.swift */,
-			);
-			path = CluberUITests;
 			sourceTree = "<group>";
 		};
 		34B2AB822BD7E77400821D81 /* Lunch Club */ = {
@@ -350,6 +450,59 @@
 			productReference = 346567FD2C5F798900B2FD40 /* CalendarWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34662DAD2C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch App" */;
+			buildPhases = (
+				34662D852C7A0B0C0090DF3B /* Sources */,
+				34662D862C7A0B0C0090DF3B /* Frameworks */,
+				34662D872C7A0B0C0090DF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cluber for Watch Watch App";
+			productName = "Cluber for Watch Watch App";
+			productReference = 34662D892C7A0B0C0090DF3B /* Cluber for Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34662D972C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34662DB02C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch AppTests" */;
+			buildPhases = (
+				34662D942C7A0B0D0090DF3B /* Sources */,
+				34662D952C7A0B0D0090DF3B /* Frameworks */,
+				34662D962C7A0B0D0090DF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34662D9A2C7A0B0D0090DF3B /* PBXTargetDependency */,
+			);
+			name = "Cluber for Watch Watch AppTests";
+			productName = "Cluber for Watch Watch AppTests";
+			productReference = 34662D982C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34662DA12C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34662DB32C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch AppUITests" */;
+			buildPhases = (
+				34662D9E2C7A0B0D0090DF3B /* Sources */,
+				34662D9F2C7A0B0D0090DF3B /* Frameworks */,
+				34662DA02C7A0B0D0090DF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34662DA42C7A0B0D0090DF3B /* PBXTargetDependency */,
+			);
+			name = "Cluber for Watch Watch AppUITests";
+			productName = "Cluber for Watch Watch AppUITests";
+			productReference = 34662DA22C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		34B2AB482BD7E1F400821D81 /* Cluber */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34B2AB6D2BD7E1F600821D81 /* Build configuration list for PBXNativeTarget "Cluber" */;
@@ -358,11 +511,12 @@
 				34B2AB462BD7E1F400821D81 /* Frameworks */,
 				34B2AB472BD7E1F400821D81 /* Resources */,
 				346568122C5F798B00B2FD40 /* Embed Foundation Extensions */,
+				346890412C79F9DC006BA894 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				346568102C5F798B00B2FD40 /* PBXTargetDependency */,
+				34662DE32C7B859F0090DF3B /* PBXTargetDependency */,
 			);
 			name = Cluber;
 			packageProductDependencies = (
@@ -422,6 +576,17 @@
 					346567FC2C5F798900B2FD40 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					34662D882C7A0B0C0090DF3B = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					34662D972C7A0B0D0090DF3B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 34662D882C7A0B0C0090DF3B;
+					};
+					34662DA12C7A0B0D0090DF3B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 34662D882C7A0B0C0090DF3B;
+					};
 					34B2AB482BD7E1F400821D81 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -456,6 +621,9 @@
 				34B2AB582BD7E1F600821D81 /* CluberTests */,
 				34B2AB622BD7E1F600821D81 /* CluberUITests */,
 				346567FC2C5F798900B2FD40 /* CalendarWidgetExtension */,
+				34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */,
+				34662D972C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */,
+				34662DA12C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,7 +633,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3465680D2C5F798B00B2FD40 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D872C7A0B0C0090DF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34662D932C7A0B0D0090DF3B /* Preview Assets.xcassets in Resources */,
+				34662D902C7A0B0D0090DF3B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D962C7A0B0D0090DF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662DA02C7A0B0D0090DF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,10 +690,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346568072C5F798900B2FD40 /* CalendarWidgetLiveActivity.swift in Sources */,
-				3465680B2C5F798900B2FD40 /* AppIntent.swift in Sources */,
-				346568052C5F798900B2FD40 /* CalendarWidgetBundle.swift in Sources */,
-				346568092C5F798900B2FD40 /* CalendarWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D852C7A0B0C0090DF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34662DCB2C7B72FA0090DF3B /* ContentView.swift in Sources */,
+				34662DEF2C7BF0B40090DF3B /* DateExtension.swift in Sources */,
+				34662DED2C7BF0B40090DF3B /* CalendarModel.swift in Sources */,
+				34662DEB2C7BF0B40090DF3B /* calendarData.swift in Sources */,
+				34662DEE2C7BF0B40090DF3B /* CalendarRowView.swift in Sources */,
+				34C923542C840E780056CF3A /* ScheduleView.swift in Sources */,
+				34662DDE2C7B732B0090DF3B /* LunchMenuView.swift in Sources */,
+				34662DDF2C7B732B0090DF3B /* LunchModel.swift in Sources */,
+				34662DF02C7BF0B40090DF3B /* GetCalendar.swift in Sources */,
+				34662D8C2C7A0B0C0090DF3B /* Cluber_for_WatchApp.swift in Sources */,
+				34662DE02C7B732B0090DF3B /* LunchRowView.swift in Sources */,
+				34662DEC2C7BF0B40090DF3B /* CalendarJSONHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D942C7A0B0D0090DF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34662D9D2C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34662D9E2C7A0B0D0090DF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34662DA72C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITests.swift in Sources */,
+				34662DA92C7A0B0D0090DF3B /* Cluber_for_Watch_Watch_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +764,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B2AB5E2BD7E1F600821D81 /* CluberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,18 +771,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B2AB682BD7E1F600821D81 /* CluberUITests.swift in Sources */,
-				34B2AB6A2BD7E1F600821D81 /* CluberUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		346568102C5F798B00B2FD40 /* PBXTargetDependency */ = {
+		34662D9A2C7A0B0D0090DF3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 346567FC2C5F798900B2FD40 /* CalendarWidgetExtension */;
-			targetProxy = 3465680F2C5F798B00B2FD40 /* PBXContainerItemProxy */;
+			target = 34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */;
+			targetProxy = 34662D992C7A0B0D0090DF3B /* PBXContainerItemProxy */;
+		};
+		34662DA42C7A0B0D0090DF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */;
+			targetProxy = 34662DA32C7A0B0D0090DF3B /* PBXContainerItemProxy */;
+		};
+		34662DE32C7B859F0090DF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */;
+			targetProxy = 34662DE22C7B859F0090DF3B /* PBXContainerItemProxy */;
 		};
 		34B2AB5B2BD7E1F600821D81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -630,6 +859,144 @@
 			};
 			name = Release;
 		};
+		34662DAE2C7A0B0D0090DF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cluber for Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.oliverPark.cluber;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		34662DAF2C7A0B0D0090DF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cluber for Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cluber for Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.oliverPark.cluber;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		34662DB12C7A0B0D0090DF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cluber for Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cluber for Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		34662DB22C7A0B0D0090DF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cluber for Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cluber for Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		34662DB42C7A0B0D0090DF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Cluber for Watch Watch App";
+			};
+			name = Debug;
+		};
+		34662DB52C7A0B0D0090DF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V475FZ3N2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Cluber for Watch Watch App";
+			};
+			name = Release;
+		};
 		34B2AB6B2BD7E1F600821D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -690,6 +1057,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -746,6 +1114,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
@@ -757,7 +1126,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Cluber/Preview Content\"";
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
@@ -775,7 +1144,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -796,7 +1165,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Cluber/Preview Content\"";
 				DEVELOPMENT_TEAM = 2V475FZ3N2;
 				ENABLE_PREVIEWS = YES;
@@ -814,7 +1183,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -915,6 +1284,33 @@
 			buildConfigurations = (
 				346568132C5F798B00B2FD40 /* Debug */,
 				346568142C5F798B00B2FD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34662DAD2C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34662DAE2C7A0B0D0090DF3B /* Debug */,
+				34662DAF2C7A0B0D0090DF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34662DB02C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34662DB12C7A0B0D0090DF3B /* Debug */,
+				34662DB22C7A0B0D0090DF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34662DB32C7A0B0D0090DF3B /* Build configuration list for PBXNativeTarget "Cluber for Watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34662DB42C7A0B0D0090DF3B /* Debug */,
+				34662DB52C7A0B0D0090DF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

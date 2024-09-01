@@ -1,13 +1,13 @@
 //
-//  CalendarRowView.swift
+//  LunchRowView.swift
 //  Cluber
 //
-//  Created by Oliver Park on 7/9/24.
+//  Created by Oliver Park on 7/19/24.
 //
 
 import SwiftUI
 
-struct RowView: View {
+struct LunchRowView: View {
     var data: EventCalModel
     @Binding var date: Date
     @Environment(\.colorScheme) var colorScheme
@@ -17,20 +17,28 @@ struct RowView: View {
     }
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack {
             if (items.isEmpty) {
-                Text("No Event")
-                    .foregroundStyle(.black)
+                Text("Lunch is not being served")
+                    .font(.caption)
+                    .fontDesign(.rounded)
+                    .foregroundStyle(.gray)
             }
             ForEach(items, id: \.id) { item in
-                VStack(alignment: .leading) {
-                    Text(item.summary)
-                        .foregroundStyle(.black)
-                }
+                Text(formatLunchPart(item.summary))
+                    .font(.caption2)
+                    .fontDesign(.rounded)
+                    .foregroundStyle(.gray)
             }
         }
         .padding()
-       
+    }
+    
+    // Function to format lunch summary
+    func formatLunchPart(_ lunchPart: String) -> String {
+        // Replace " / " with "\n" to create new lines
+        let formattedString = lunchPart.replacingOccurrences(of: " / ", with: "\n")
+        return formattedString
     }
     
     func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
@@ -59,10 +67,4 @@ struct RowView: View {
             }
         }
     }
-    
-    func dateRange(dateString: String) -> String {
-        
-        return "hello"
-    }
 }
-

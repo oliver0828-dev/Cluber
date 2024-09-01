@@ -85,6 +85,30 @@ struct SettingsView: View {
                                 .fontDesign(.rounded)
                         }
                     }
+                    
+                    Section("Help") {
+                        HStack {
+                            Image(systemName: "doc.badge.arrow.up.fill")
+                            Link("Feature Suggestions Form", destination: URL(string: "https://forms.gle/hLUobfQGEffYCPFJ6")!)
+                                .foregroundStyle(.primary)
+                                .fontDesign(.rounded)
+                        }
+                        
+                        HStack {
+                            Image(systemName: "person.fill.questionmark")
+                            Link("Support Form", destination: URL(string:"https://forms.gle/g2NX7SJ6yV1R6mep8")!)
+                                .foregroundStyle(.primary)
+                                .fontDesign(.rounded)
+                            
+                        }
+                        
+                        HStack {
+                            Image(systemName: "doc.badge.arrow.up.fill")
+                            Link("Lunch Clubs Update Form", destination: URL(string: "https://forms.gle/BWzrRHceM8kevX4g7")!)
+                                .foregroundStyle(.primary)
+                                .fontDesign(.rounded)
+                        }
+                    }
                 }
             }
             .navigationTitle("Settings")

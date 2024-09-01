@@ -201,6 +201,7 @@ struct ClubView: View {
                         .clipShape(.rect(cornerRadius:15))
                     }
             }
+            .scrollIndicators(.hidden)
             .fontDesign(.rounded)
         }
         .padding()

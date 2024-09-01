@@ -33,15 +33,18 @@ struct HomeView: View {
                         
                         DatePicker("Calendar", selection: $date, displayedComponents: .date)
                             .datePickerStyle(GraphicalDatePickerStyle())
-                            .fontDesign(.rounded)
+                            .modifier(NavigationBarModifier())
+                           
                             .padding()
                         
                         RowView(data: manager.event, date: $date)
+                            .foregroundStyle(.black)
                             .frame(width: 350)
                             .fontWeight(.semibold)
                             .fontDesign(.rounded)
-                            .background(colorScheme == .light ? .black : .white)
+                            .background(.gray.opacity(0.2))
                             .clipShape(RoundedRectangle(cornerRadius: 16))
+//                            .shadow(radius: 16)
                     }
                     .padding()
                 }
