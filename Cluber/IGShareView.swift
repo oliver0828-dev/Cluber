@@ -21,178 +21,177 @@ struct IGShareView: View {
     var body: some View {
         ViewThatFits {
             GeometryReader { geometry in
-                ScrollView {
-                    ZStack {
-                        Image("igShareImage")
-                            .frame(maxWidth: min(geometry.size.width * 0.8, 200))
-                            .ignoresSafeArea()
-                        
-                        VStack {
-                            VStack(alignment: .center) {
-                                Text("Cluber for DIS")
-                                    .font(geometry.size.width < 350 ? .title3 : .title)
-                                    .fontWeight(.semibold)
-                                    .fontDesign(.rounded)
-                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                HStack {
-                                    Text("I'm enrolled in")
-                                        .foregroundStyle(.black)
-                                    Text("\(clubCount)")
-                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                    Text("Clubs!")
-                                }
+                ZStack {
+                    Image("igShareImage")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: geometry.size.width)
+                        .ignoresSafeArea()
+                    
+                    VStack {
+                        VStack(alignment: .center) {
+                            Text("Cluber for DIS")
                                 .font(geometry.size.width < 350 ? .title3 : .title)
-                                .fontWeight(.medium)
+                                .fontWeight(.semibold)
+                                .fontDesign(.rounded)
+                                .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                            
+                            HStack {
+                                Text("I'm enrolled in")
+                                    .foregroundStyle(.black)
+                                Text("\(clubCount)")
+                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                Text("Clubs!")
+                            }
+                            .font(geometry.size.width < 350 ? .title3 : .title)
+                            .fontWeight(.medium)
+                            .padding()
+                            
+                            if usernameGrade.schoolGrade == "Elementary" {
+                                Image("gliderYellow")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6) // Adjusted size for screen width
+                            } else if usernameGrade.schoolGrade == "Middle" {
+                                Image("gliderPink")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6)
+                            } else {
+                                Image("gliderOrange")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6)
+                            }
+                            
+                            Text(usernameGrade.userName)
+                                .font(.title.bold())
+                                .frame(width: geometry.size.width * 0.4, height: 40) // Adjust based on screen width
+                                .background(.gray.opacity(0.4))
+                                .clipShape(Capsule())
                                 .padding()
-                                
-                                if usernameGrade.schoolGrade == "Elementary" {
-                                    Image("gliderYellow")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 250, height: 250)
-                                } else if usernameGrade.schoolGrade == "Middle" {
-                                    Image("gliderPink")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 250, height: 250)
-                                } else {
-                                    Image("gliderOrange")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 250, height: 250)
-                                }
-                                
-                                Text(usernameGrade.userName)
-                                    .font(.title.bold())
-                                    .frame(width: 140, height: 40)
-                                    .background(.gray.opacity(0.4))
-                                    .clipShape(.capsule)
-                                    .padding()
-                                
-                                HStack(spacing: 1) {
-                                    ForEach(1...5, id: \.self) { day in
-                                        VStack {
-                                            Text(textConvert(num: day))
-                                                .frame(width: 70, height: 31)
-                                                .background(Color(red: 0, green: 0.51, blue: 0.6).opacity(0.35))
-                                                .clipShape(Capsule())
-                                                .foregroundColor(.white)
-                                            
-                                            switch usernameGrade.schoolGrade {
-                                            case "Elementary":
-                                                let clubsForDay = elementarySchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                                if clubsForDay.isEmpty {
-                                                    Text("None")
+                            
+                            HStack(spacing: 1) {
+                                ForEach(1...5, id: \.self) { day in
+                                    VStack {
+                                        Text(textConvert(num: day))
+                                            .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.05) // Adjusted for dynamic screen size
+                                            .background(Color(red: 0, green: 0.51, blue: 0.6).opacity(0.35))
+                                            .clipShape(Capsule())
+                                            .foregroundColor(.white)
+                                        
+                                        switch usernameGrade.schoolGrade {
+                                        case "Elementary":
+                                            let clubsForDay = elementarySchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                            if clubsForDay.isEmpty {
+                                                Text("None")
+                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                    .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15) // Adjust frame size dynamically
+                                                    .background(.gray.opacity(0.4))
+                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                            } else {
+                                                ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                    Text(club.clubName)
                                                         .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                        .frame(width: 70, height: 100)
+                                                        .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15)
                                                         .background(.gray.opacity(0.4))
                                                         .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                } else {
-                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                        Text(club.clubName)
-                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                            .frame(width: 70, height: 100)
-                                                            .background(.gray.opacity(0.4))
-                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                    }
                                                 }
-                                                
-                                            case "Middle":
-                                                let clubsForDay = middleSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                                if clubsForDay.isEmpty {
-                                                    Text("None")
-                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                        .frame(width: 70, height: 100)
-                                                        .background(.gray.opacity(0.4))
-                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                } else {
-                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                        Text(club.clubName)
-                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                            .frame(width: 70, height: 100)
-                                                            .background(.gray.opacity(0.4))
-                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                    }
-                                                }
-                                                
-                                            case "High":
-                                                let clubsForDay = highSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
-                                                if clubsForDay.isEmpty {
-                                                    Text("None")
-                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                        .frame(width: 70, height: 100)
-                                                        .background(.gray.opacity(0.4))
-                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                } else {
-                                                    ForEach(clubsForDay, id: \.self.clubName) { club in
-                                                        Text(club.clubName)
-                                                            .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
-                                                            .frame(width: 70, height: 100)
-                                                            .background(.gray.opacity(0.4))
-                                                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                                                    }
-                                                }
-                                                
-                                            default:
-                                                Text("Choose Your Lunch Club")
                                             }
+                                            
+                                        case "Middle":
+                                            let clubsForDay = middleSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                            if clubsForDay.isEmpty {
+                                                Text("None")
+                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                    .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15)
+                                                    .background(.gray.opacity(0.4))
+                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                            } else {
+                                                ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                    Text(club.clubName)
+                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                        .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15)
+                                                        .background(.gray.opacity(0.4))
+                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                }
+                                            }
+                                            
+                                        case "High":
+                                            let clubsForDay = highSchoolLunchClubList.filter { $0.dayOfWeek == day && $0.isMember }
+                                            if clubsForDay.isEmpty {
+                                                Text("None")
+                                                    .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                    .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15)
+                                                    .background(.gray.opacity(0.4))
+                                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                            } else {
+                                                ForEach(clubsForDay, id: \.self.clubName) { club in
+                                                    Text(club.clubName)
+                                                        .foregroundStyle(Color(red: 0, green: 0.51, blue: 0.6))
+                                                        .frame(width: geometry.size.width * 0.18, height: geometry.size.height * 0.15)
+                                                        .background(.gray.opacity(0.4))
+                                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                }
+                                            }
+                                            
+                                        default:
+                                            Text("Choose Your Lunch Club")
                                         }
                                     }
                                 }
-                                .foregroundStyle(.black)
-                                
-                                
+                            }
+                            .foregroundStyle(.black)
+                            
+                            
+                            Button {
+                                image = takeCapture()
+                                inInstagram.toggle()
+                            } label: {
+                                HStack {
+                                    if !inInstagram {
+                                        Image(systemName: "camera.fill")
+                                    }
+                                    Text("Share with Instagram")
+                                        .foregroundStyle(inInstagram ? Color(red: 0, green: 0.51, blue: 0.6) : .black )
+                                        .fontDesign(.rounded)
+                                        .fontWeight(.semibold)
+                                }.foregroundStyle(.black)
+                            }.padding()
+                            
+                            
+                            if let image {
                                 Button {
-                                    image = takeCapture()
-                                    inInstagram.toggle()
+                                    instagramShare(image: image)
                                 } label: {
                                     HStack {
-                                        if !inInstagram {
-                                            Image(systemName: "camera.fill")
-                                        }
-                                        Text("Share with Instagram")
-                                            .foregroundStyle(inInstagram ? Color(red: 0, green: 0.51, blue: 0.6) : .black )
-                                            .fontDesign(.rounded)
-                                            .fontWeight(.semibold)
-                                        
-                                    }.foregroundStyle(.black)
-                                }.padding()
-                                
-                                
-                                if let image {
-                                    Button {
-                                        instagramShare(image: image)
-                                    } label: {
-                                        HStack {
-                                            Image("instagram")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 20, height: 20)
-                                            Text("Instagram Stories")
-                                                .foregroundStyle(.white)
-                                        }
-                                        .frame(width: 200, height: 50)
-                                        .background(.black.gradient)
-                                        .clipShape(.rect(cornerRadius: 15))
+                                        Image("instagram")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: geometry.size.width * 0.05, height: geometry.size.width * 0.05) // Adjusted icon size
+                                        Text("Instagram Stories")
+                                            .foregroundStyle(.white)
                                     }
-                                    
+                                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.07) // Adjusted button size
+                                    .background(.black.gradient)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
                                 }
-                                
                             }
-                            .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .top)
-                            .onAppear {
-                                updateClubCount()
-                            }
-                            .onChange(of: usernameGrade.schoolGrade) { _ in
-                                updateClubCount()
-                            }
-                            .fontDesign(.rounded)
                             
-                            
-                            Spacer()
-                        }.padding()
-                    }
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                        .onAppear {
+                            updateClubCount()
+                        }
+                        .onChange(of: usernameGrade.schoolGrade) { _ in
+                            updateClubCount()
+                        }
+                        .fontDesign(.rounded)
+                        
+                        Spacer()
+                    }.padding()
                 }
+                
             }
         }
         
@@ -255,45 +254,9 @@ struct IGShareView: View {
     }
 }
 
-func dayOfWeekString(from day: Int) -> String {
-    switch day {
-    case 1:
-        return "Monday"
-    case 2:
-        return "Tuesday"
-    case 3:
-        return "Wednesday"
-    case 4:
-        return "Thursday"
-    case 5:
-        return "Friday"
-    default:
-        return "Unknown Day"
-    }
-}
-
 #Preview {
     IGShareView()
         .environmentObject(UsernameGradeClass())
-}
-
-func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
-    switch (gradeLevel, colorScheme) {
-    case ("Elementary", .light):
-        return Color("yellowDark")
-    case ("Elementary", .dark):
-        return .yellow.opacity(0.7)
-    case ("Middle", .light):
-        return .blue.opacity(0.5)
-    case ("Middle", .dark):
-        return .blue
-    case ("High", .light):
-        return .green.opacity(0.7)
-    case ("High", .dark):
-        return .green
-    default:
-        return .white
-    }
 }
 
 func textConvert(num: Int) -> String {

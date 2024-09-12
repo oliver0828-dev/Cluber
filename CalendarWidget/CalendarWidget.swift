@@ -2,7 +2,7 @@
 //  CalendarWidget.swift
 //  CalendarWidget
 //
-//  Created by Oliver Park on 8/4/24.
+//  Created by Oliver Park on 9/2/24.
 //
 
 import WidgetKit
@@ -41,13 +41,11 @@ struct CalendarWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+        Text("Time:")
+        Text(entry.date, style: .time)
 
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-        }
+        Text("Favorite Emoji:")
+        Text(entry.configuration.favoriteEmoji)
     }
 }
 

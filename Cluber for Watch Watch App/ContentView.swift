@@ -20,13 +20,13 @@ struct ContentView: View {
                         .tag(0)
                     LunchMenuView(date: $tomorrow, currentPage: $currentPage)
                         .tag(1)
-                    ScheduleView()
-                        .tag(2)
+//                    ScheduleView()
+//                        .tag(2)
                 }
                 .tabViewStyle(.verticalPage)
             }
             .padding()
-            .navigationTitle("Cluber")
+            .navigationTitle("Luncher")
         }
     }
 }

@@ -17,20 +17,23 @@ struct RowView: View {
     }
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack{
             if (items.isEmpty) {
                 Text("No Event")
-                    .foregroundStyle(.black)
+                    .frame(width: 350)
+                
             }
             ForEach(items, id: \.id) { item in
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading){
                     Text(item.summary)
-                        .foregroundStyle(.black)
+                        .frame(width: 345)
+                    
+                    
                 }
             }
         }
         .padding()
-       
+        
     }
     
     func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {

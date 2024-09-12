@@ -19,10 +19,14 @@ struct ScheduleView: View {
                     VStack {
                         Text("Mr. Crewe")
                         Text("304")
-                    }.padding()
+                    }
+                    
+            
                     
                 }
             }
+            .padding()
+
         }
     }
 }

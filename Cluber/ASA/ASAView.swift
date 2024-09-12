@@ -12,150 +12,117 @@ struct ASAView: View {
     @State private var highSchoolASAList: [ASAStruct] = ASAList.HighSchool
     @State private var middleSchoolASAList: [ASAStruct] = ASAList.Middle
     @State private var isLoved = false
-    @AppStorage ("Quarter") var quarter = "Q1"
+    @AppStorage("Quarter") var quarter = "Q1"
     @State var quarterPicker = ["Q1", "Q2", "Q3"]
+    
+    @State private var searchText = ""
     
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     
-    
     var body: some View {
         NavigationStack {
             VStack {
-                Text(dayOfWeek(for: selectedDay ?? 1))
-                    .font(.title.bold())
-                    .fontDesign(.rounded)
-                
-                HStack {
-                    ForEach(1..<6) { day in
-                        Button(action: {
-                            print(dayOfWeek(for: day))
-                            selectedDay = day == selectedDay ? nil : day
-                        }, label: {
-                            if selectedDay == day {
-                                Image(systemName: "\(day).circle")
-                                    .resizable()
-                                    .foregroundStyle(.indigo.opacity(0.8))
-                                    .frame(width: 35, height: 35)
-                                    .padding()
-                            } else {
-                                Image(systemName: "\(day).circle.fill")
-                                    .resizable()
-                                    .foregroundStyle(.green.opacity(0.9))
-                                    .frame(width: 35, height: 35)
-                                    .padding()
-                            }
-                        })
+                if searchText.isEmpty {
+                    Text(dayOfWeek(for: selectedDay ?? 1))
+                        .font(.title.bold())
+                        .fontDesign(.rounded)
+                    
+                    HStack {
+                        ForEach(1..<6) { day in
+                            Button(action: {
+                                print(dayOfWeek(for: day))
+                                selectedDay = day == selectedDay ? 1 : day
+                            }, label: {
+                                if selectedDay == day && colorScheme == .light {
+                                    Image(systemName: "\(day).circle")
+                                        .resizable()
+                                        .foregroundStyle(.indigo.opacity(0.8))
+                                        .frame(width: 35, height: 35)
+                                        .padding()
+                                } else if selectedDay == day && colorScheme == .dark {
+                                    Image(systemName: "\(day).circle")
+                                        .resizable()
+                                        .foregroundStyle(.blue)
+                                        .frame(width: 35, height: 35)
+                                        .padding()
+                                } else {
+                                    Image(systemName: "\(day).circle.fill")
+                                        .resizable()
+                                        .foregroundStyle(.green.opacity(0.9))
+                                        .frame(width: 35, height: 35)
+                                        .padding()
+                                }
+                            })
+                        }
                     }
                 }
                 
                 List {
                     switch usernameGrade.schoolGrade {
                     case "Elementary":
-                       Text("Elementary Is Currently Not Available")
+                        Text("Elementary Is Currently Not Available")
                     case "Middle":
-                        ForEach(middleSchoolASAList.indices, id: \.self) { index in
-                            let middle = middleSchoolASAList[index]
-                            if middle.dayOfWeek == selectedDay && (!isLoved || middle.interested) {
-                                if quarterToString(quarter: middle.quarter) == quarter || quarterToString(quarter: middle.quarter) == "All"{
-                                    NavigationLink {
-                                        ClubView(
-                                            ClubName: middle.clubName,
-                                            ClubTeacher: middle.teacherName,
-                                            ClubImage: middle.groupImage,
-                                            ClubSubName: middle.subName,
-                                            description: middle.description,
-                                            schoolLevel: "Middle",
-                                            roomNumber: middle.roomNumber,
-                                            location: middle.location,
-                                            socialMedia: middle.socialMedia,
-                                            instagramLink: middle.instagramLink,
-                                            instagramID: middle.instagramID, quarter: quarterToString(quarter: middle.quarter), sports: middle.sports,
-                                            loved: $middleSchoolASAList[index].interested, memberBoolean: .constant(true)
-                                        )
-                                    } label: {
-                                        HStack {
-                                            if middle.groupImage != "n/a" {
-                                                Image(middle.groupImage)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            } else {
-                                                Image(systemName: "photo")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            }
-                                            VStack(alignment: .leading) {
-                                                
-                                                Text(middle.clubName)
-                                                    .fontDesign(.rounded)
-                                                    .fontWeight(.medium)
-                                                
-                                                if !middle.subName.isEmpty{
-                                                    Text(middle.subName)
-                                                        .font(.caption)
-                                                        .foregroundColor(.gray)
-                                                        .fontDesign(.rounded)
-                                                }
-                                            }
+                        ForEach(filteredASAs(for: middleSchoolASAList).indices, id: \.self) { index in
+                            let middle = filteredASAs(for: middleSchoolASAList)[index]
+                            if isClubVisible(club: middle) {
+                                if middle.dayOfWeek == selectedDay && (!isLoved || middle.interested) {
+                                    if quarterToString(quarter: middle.quarter) == quarter || quarterToString(quarter: middle.quarter) == "All" {
+                                        NavigationLink {
+                                            ClubView(
+                                                ClubName: middle.clubName,
+                                                ClubTeacher: middle.teacherName,
+                                                ClubImage: middle.groupImage,
+                                                ClubSubName: middle.subName,
+                                                description: middle.description,
+                                                schoolLevel: "Middle",
+                                                roomNumber: middle.roomNumber,
+                                                location: middle.location,
+                                                socialMedia: middle.socialMedia,
+                                                instagramLink: middle.instagramLink,
+                                                instagramID: middle.instagramID,
+                                                quarter: quarterToString(quarter: middle.quarter),
+                                                sports: middle.sports,
+                                                loved: $middleSchoolASAList[index].interested,
+                                                memberBoolean: .constant(true)
+                                            )
+                                        } label: {
+                                            clubRow(club: middle)
                                         }
+                                        .listRowBackground(Color.clear)
                                     }
-                                    .listRowBackground(Color.clear)
                                 }
                             }
                         }
                     case "High":
-                        ForEach(highSchoolASAList.indices, id: \.self) { index in
-                            let high = highSchoolASAList[index]
-                            if high.dayOfWeek == selectedDay && (!isLoved || high.interested) {
-                                if quarterToString(quarter: high.quarter) == quarter || quarterToString(quarter: high.quarter) == "All" {
-                                    NavigationLink {
-                                        ClubView(
-                                            ClubName: high.clubName,
-                                            ClubTeacher: high.teacherName,
-                                            ClubImage: high.groupImage,
-                                            ClubSubName: high.subName,
-                                            description: high.description,
-                                            schoolLevel: "High",
-                                            roomNumber: high.roomNumber,
-                                            location: high.location,
-                                            socialMedia: high.socialMedia,
-                                            instagramLink: high.instagramLink,
-                                            instagramID: high.instagramID, quarter: quarterToString(quarter: high.quarter), sports: high.sports,
-                                            loved: $highSchoolASAList[index].interested, memberBoolean: .constant(true)
-                                        )
-                                    } label: {
-                                        HStack {
-                                            if high.groupImage != "n/a" {
-                                                Image(high.groupImage)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            } else {
-                                                Image(systemName: "photo")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 150, height: 100)
-                                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                            }
-                                            VStack(alignment: .leading) {
-                                                Text(high.clubName)
-                                                    .fontDesign(.rounded)
-                                                    .fontWeight(.medium)
-                                                if !high.subName.isEmpty {
-                                                    Text(high.subName)
-                                                        .font(.caption)
-                                                        .foregroundColor(.gray)
-                                                        .fontDesign(.rounded)
-                                                }
-                                            }
+                        ForEach(filteredASAs(for: highSchoolASAList).indices, id: \.self) { index in
+                            let high = filteredASAs(for: highSchoolASAList)[index]
+                            if isClubVisible(club: high) {
+                                if high.dayOfWeek == selectedDay && (!isLoved || high.interested) {
+                                    if quarterToString(quarter: high.quarter) == quarter || quarterToString(quarter: high.quarter) == "All" {
+                                        NavigationLink {
+                                            ClubView(
+                                                ClubName: high.clubName,
+                                                ClubTeacher: high.teacherName,
+                                                ClubImage: high.groupImage,
+                                                ClubSubName: high.subName,
+                                                description: high.description,
+                                                schoolLevel: "High",
+                                                roomNumber: high.roomNumber,
+                                                location: high.location,
+                                                socialMedia: high.socialMedia,
+                                                instagramLink: high.instagramLink,
+                                                instagramID: high.instagramID,
+                                                quarter: quarterToString(quarter: high.quarter),
+                                                sports: high.sports,
+                                                loved: $highSchoolASAList[index].interested,
+                                                memberBoolean: .constant(true)
+                                            )
+                                        } label: {
+                                            clubRow(club: high)
                                         }
+                                        .listRowBackground(Color.clear)
                                     }
-                                    .listRowBackground(Color.clear)
                                 }
                             }
                         }
@@ -163,53 +130,87 @@ struct ASAView: View {
                         Text("No Lunch Club Available")
                     }
                 }
+                .scrollContentBackground(.hidden)
+                
             }
             .navigationTitle("ASA")
             .modifier(NavigationBarModifier())
-          
-            .scrollContentBackground(.hidden)
             .toolbar {
                 Picker("Quarter", selection: $quarter) {
-                    ForEach (quarterPicker, id: \.self) { s in
+                    ForEach(quarterPicker, id: \.self) { s in
                         Text(s)
                     }
-                }.pickerStyle(.segmented)
+                }
+                .pickerStyle(.segmented)
                 
                 Button {
                     isLoved.toggle()
                 } label: {
-                    if isLoved == false {
-                        Image(systemName: "arrow.up.arrow.down.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    } else {
-                        Image(systemName: "arrow.up.arrow.down.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    }
-                    
+                    Image(systemName: isLoved ? "arrow.up.arrow.down.circle.fill" : "arrow.up.arrow.down.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
                 }
             }
         }
-
+        .searchable(text: $searchText)
     }
     
-    func quarterToString(quarter: String) -> String {
-        if quarter == "1" {
-            return "Q1"
-        } else if quarter == "2" {
-            return "Q2"
-        } else if quarter == "3" {
-            return "Q3"
-        } else if quarter == "All"{
-            return "All"
+    func filteredASAs(for asa: [ASAStruct]) -> [ASAStruct] {
+        if searchText.isEmpty {
+            return asa
         } else {
-            return "Invalid"
+            return asa.filter { $0.clubName.lowercased().contains(searchText.lowercased()) }
         }
     }
     
+    func isClubVisible(club: ASAStruct) -> Bool {
+        if searchText.isEmpty {
+            return club.dayOfWeek == selectedDay && (!isLoved || club.interested)
+        } else {
+            let matchesSearchText = club.clubName.lowercased().contains(searchText.lowercased())
+            return matchesSearchText && (!isLoved || club.interested)
+        }
+    }
+    
+    func clubRow(club: ASAStruct) -> some View {
+        HStack {
+            if club.groupImage != "n/a" {
+                Image(club.groupImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 100)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+            } else {
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 100)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+            }
+            VStack(alignment: .leading) {
+                Text(club.clubName)
+                    .fontDesign(.rounded)
+                    .fontWeight(.medium)
+                if !club.subName.isEmpty {
+                    Text(club.subName)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .fontDesign(.rounded)
+                }
+            }
+        }
+    }
+    
+    func quarterToString(quarter: String) -> String {
+        switch quarter {
+        case "1": return "Q1"
+        case "2": return "Q2"
+        case "3": return "Q3"
+        case "All": return "All"
+        default: return "Invalid"
+        }
+    }
 }
 
 #Preview {

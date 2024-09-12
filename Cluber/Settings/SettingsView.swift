@@ -24,29 +24,34 @@ struct SettingsView: View {
             VStack {
                 List {
                     Section("Your Profile") {
-                        HStack {
-                            if let image = photoImage.selectedImage {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .clipShape(Circle())
-                                    .frame(width: 150, height: 100)
-                            } else {
-                                Image(systemName: "person.crop.circle.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
+                        NavigationLink {
+                            ChangeProfileView(name: username)
+                                .environmentObject(photoImage)
+                        } label: {
+                            HStack {
+                                if let image = photoImage.selectedImage {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Circle())
+                                        .frame(width: 150, height: 100)
+                                } else {
+                                    Image(systemName: "person.crop.circle.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                }
+                                VStack (alignment: .leading) {
+                                    Text(usernameGrade.userName)
+                                        .font(.title3.bold())
+                                    Text(usernameGrade.schoolGrade + " School")
+                                        .foregroundStyle(.secondary)
+                                    Text(gradeYear(year: usernameGrade.gradeNumber))
+                                        .foregroundStyle(.secondary)
+                                }
+                                .fontDesign(.rounded)
+                                .padding()
                             }
-                            VStack (alignment: .leading) {
-                                Text(usernameGrade.userName)
-                                    .font(.title3.bold())
-                                Text(usernameGrade.schoolGrade + " School")
-                                    .foregroundStyle(.secondary)
-                                Text(gradeYear(year: usernameGrade.gradeNumber))
-                                    .foregroundStyle(.secondary)
-                            }
-                            .fontDesign(.rounded)
-                            .padding()
                         }
                     }
                     
@@ -77,6 +82,19 @@ struct SettingsView: View {
                         }
                     }
                     
+//                    Section ("Change App Icons") {
+//                        NavigationLink {
+//                            ChangeAppIconView()
+//                        } label: {
+//                            HStack {
+//                                Image(systemName: "app.dashed")
+//                                    .fontWeight(.semibold)
+//                                Text("Change App Icon")
+//                                    .fontDesign(.rounded)
+//                            }
+//                        }
+//                    }
+                    
                     Section ("Check for Updates") {
                         HStack {
                             Image(systemName: "doc.plaintext.fill")
@@ -88,7 +106,7 @@ struct SettingsView: View {
                     
                     Section("Help") {
                         HStack {
-                            Image(systemName: "doc.badge.arrow.up.fill")
+                            Image(systemName: "doc.fill")
                             Link("Feature Suggestions Form", destination: URL(string: "https://forms.gle/hLUobfQGEffYCPFJ6")!)
                                 .foregroundStyle(.primary)
                                 .fontDesign(.rounded)

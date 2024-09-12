@@ -21,7 +21,6 @@ struct LunchClubView: View {
         
         NavigationStack {
             VStack {
-                // Hide the day buttons if search text is not empty
                 if searchText.isEmpty {
                     Text(dayOfWeek(for: selectedDay ?? 1))
                         .font(.title.bold())

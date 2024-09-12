@@ -34,17 +34,18 @@ struct HomeView: View {
                         DatePicker("Calendar", selection: $date, displayedComponents: .date)
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .modifier(NavigationBarModifier())
-                           
                             .padding()
                         
-                        RowView(data: manager.event, date: $date)
-                            .foregroundStyle(.black)
-                            .frame(width: 350)
-                            .fontWeight(.semibold)
-                            .fontDesign(.rounded)
-                            .background(.gray.opacity(0.2))
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
-//                            .shadow(radius: 16)
+                        VStack(alignment: .leading) {
+                            RowView(data: manager.event, date: $date)
+                                .frame(width: 350)
+                                .fontWeight(.semibold)
+                                .fontDesign(.rounded)
+                                .background(.gray.opacity(0.2))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .shadow(radius: 16)
+                               
+                        }
                     }
                     .padding()
                 }
@@ -97,5 +98,24 @@ func gradeYear(year: Int) -> String {
         return "Senior Version"
     default:
         return "Version"
+    }
+}
+
+func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
+    switch (gradeLevel, colorScheme) {
+    case ("Elementary", .light):
+        return Color("yellowDark")
+    case ("Elementary", .dark):
+        return .yellow.opacity(0.7)
+    case ("Middle", .light):
+        return .blue.opacity(0.5)
+    case ("Middle", .dark):
+        return .blue
+    case ("High", .light):
+        return .green.opacity(0.7)
+    case ("High", .dark):
+        return .green
+    default:
+        return .white
     }
 }
