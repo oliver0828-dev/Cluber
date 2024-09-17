@@ -49,13 +49,41 @@
 		34B2ABCD2BEA5C0500821D81 /* UsernameGradeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */; };
 		34C923542C840E780056CF3A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C923532C840E780056CF3A /* ScheduleView.swift */; };
 		34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCAA322C4A79D200F7E17F /* LunchRowView.swift */; };
-		34DFD8A22C931FA600F98347 /* Cluber_for_DISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD8A12C931FA600F98347 /* Cluber_for_DISApp.swift */; };
-		34DFD8A42C931FA600F98347 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD8A32C931FA600F98347 /* ContentView.swift */; };
-		34DFD8A62C931FA800F98347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DFD8A52C931FA800F98347 /* Assets.xcassets */; };
-		34DFD8A92C931FA800F98347 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DFD8A82C931FA800F98347 /* Preview Assets.xcassets */; };
-		34DFD8B32C931FA800F98347 /* Cluber_for_DISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD8B22C931FA800F98347 /* Cluber_for_DISTests.swift */; };
-		34DFD8BD2C931FA800F98347 /* Cluber_for_DISUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD8BC2C931FA800F98347 /* Cluber_for_DISUITests.swift */; };
-		34DFD8BF2C931FA800F98347 /* Cluber_for_DISUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD8BE2C931FA800F98347 /* Cluber_for_DISUITestsLaunchTests.swift */; };
+		34DFD9652C93CD3A00F98347 /* Cluber_for_DISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9642C93CD3A00F98347 /* Cluber_for_DISApp.swift */; };
+		34DFD9762C93CD3B00F98347 /* Cluber_for_DISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9752C93CD3B00F98347 /* Cluber_for_DISTests.swift */; };
+		34DFD9802C93CD3B00F98347 /* Cluber_for_DISUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD97F2C93CD3B00F98347 /* Cluber_for_DISUITests.swift */; };
+		34DFD9822C93CD3B00F98347 /* Cluber_for_DISUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9812C93CD3B00F98347 /* Cluber_for_DISUITestsLaunchTests.swift */; };
+		34DFD9B22C93CDAF00F98347 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DFD98C2C93CDAF00F98347 /* Preview Assets.xcassets */; };
+		34DFD9B32C93CDAF00F98347 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD98E2C93CDAF00F98347 /* WelcomeView.swift */; };
+		34DFD9B42C93CDAF00F98347 /* Cluber_for_DISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD98F2C93CDAF00F98347 /* Cluber_for_DISApp.swift */; };
+		34DFD9B52C93CDAF00F98347 /* ChangeAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9902C93CDAF00F98347 /* ChangeAppIconView.swift */; };
+		34DFD9B62C93CDAF00F98347 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9912C93CDAF00F98347 /* ChangeGradeSettingsView.swift */; };
+		34DFD9B72C93CDAF00F98347 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9922C93CDAF00F98347 /* ChangeProfileView.swift */; };
+		34DFD9B82C93CDAF00F98347 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9932C93CDAF00F98347 /* SettingsView.swift */; };
+		34DFD9B92C93CDAF00F98347 /* IGShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9952C93CDAF00F98347 /* IGShareView.swift */; };
+		34DFD9BC2C93CDAF00F98347 /* LunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9982C93CDAF00F98347 /* LunchData.swift */; };
+		34DFD9BD2C93CDAF00F98347 /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9992C93CDAF00F98347 /* LunchModel.swift */; };
+		34DFD9BE2C93CDAF00F98347 /* LunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD99A2C93CDAF00F98347 /* LunchRowView.swift */; };
+		34DFD9BF2C93CDAF00F98347 /* LunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD99B2C93CDAF00F98347 /* LunchView.swift */; };
+		34DFD9C02C93CDAF00F98347 /* ASAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD99D2C93CDAF00F98347 /* ASAData.swift */; };
+		34DFD9C12C93CDAF00F98347 /* ASAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD99E2C93CDAF00F98347 /* ASAView.swift */; };
+		34DFD9C22C93CDAF00F98347 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A02C93CDAF00F98347 /* HomeView.swift */; };
+		34DFD9C32C93CDAF00F98347 /* LunchClubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A22C93CDAF00F98347 /* LunchClubData.swift */; };
+		34DFD9C42C93CDAF00F98347 /* LunchClubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A32C93CDAF00F98347 /* LunchClubDetailsView.swift */; };
+		34DFD9C52C93CDAF00F98347 /* LunchClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A42C93CDAF00F98347 /* LunchClubView.swift */; };
+		34DFD9C62C93CDAF00F98347 /* UsernameGradeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A62C93CDAF00F98347 /* UsernameGradeClass.swift */; };
+		34DFD9C72C93CDAF00F98347 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A72C93CDAF00F98347 /* ClubView.swift */; };
+		34DFD9C82C93CDAF00F98347 /* calendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A82C93CDAF00F98347 /* calendarData.swift */; };
+		34DFD9C92C93CDAF00F98347 /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9A92C93CDAF00F98347 /* CalendarJSONHelper.swift */; };
+		34DFD9CA2C93CDAF00F98347 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9AA2C93CDAF00F98347 /* CalendarModel.swift */; };
+		34DFD9CB2C93CDAF00F98347 /* CalendarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9AB2C93CDAF00F98347 /* CalendarRowView.swift */; };
+		34DFD9CC2C93CDAF00F98347 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9AC2C93CDAF00F98347 /* DateExtension.swift */; };
+		34DFD9CD2C93CDAF00F98347 /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9AD2C93CDAF00F98347 /* GetCalendar.swift */; };
+		34DFD9CF2C93CDAF00F98347 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9B02C93CDAF00F98347 /* OnboardingView.swift */; };
+		34DFD9D12C93CE5A00F98347 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DFD9D02C93CE5A00F98347 /* ContentView.swift */; };
+		34DFD9D32C93D04800F98347 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 34DFD9D22C93D04800F98347 /* ConfettiSwiftUI */; };
+		34DFD9D52C93D04F00F98347 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34DFD9D42C93D04F00F98347 /* iCalendarParser */; };
+		34DFD9D72C96931C00F98347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DFD9D62C96931C00F98347 /* Assets.xcassets */; };
 		34ED017E2C3D0EE80021D1DD /* CalendarJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */; };
 		34ED01802C3D12540021D1DD /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED017F2C3D12540021D1DD /* CalendarModel.swift */; };
 		34ED01832C3D127B0021D1DD /* GetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED01822C3D127B0021D1DD /* GetCalendar.swift */; };
@@ -99,18 +127,18 @@
 			remoteGlobalIDString = 34B2AB482BD7E1F400821D81;
 			remoteInfo = Cluber;
 		};
-		34DFD8AF2C931FA800F98347 /* PBXContainerItemProxy */ = {
+		34DFD9722C93CD3B00F98347 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 34DFD89E2C931FA600F98347;
+			remoteGlobalIDString = 34DFD9612C93CD3A00F98347;
 			remoteInfo = "Cluber for DIS";
 		};
-		34DFD8B92C931FA800F98347 /* PBXContainerItemProxy */ = {
+		34DFD97C2C93CD3B00F98347 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B2AB412BD7E1F400821D81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 34DFD89E2C931FA600F98347;
+			remoteGlobalIDString = 34DFD9612C93CD3A00F98347;
 			remoteInfo = "Cluber for DIS";
 		};
 /* End PBXContainerItemProxy section */
@@ -188,16 +216,42 @@
 		34B2ABCC2BEA5C0500821D81 /* UsernameGradeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameGradeClass.swift; sourceTree = "<group>"; };
 		34C923532C840E780056CF3A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		34CCAA322C4A79D200F7E17F /* LunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
-		34DFD89F2C931FA600F98347 /* Cluber for DIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cluber for DIS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34DFD8A12C931FA600F98347 /* Cluber_for_DISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISApp.swift; sourceTree = "<group>"; };
-		34DFD8A32C931FA600F98347 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		34DFD8A52C931FA800F98347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		34DFD8A82C931FA800F98347 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		34DFD8AE2C931FA800F98347 /* Cluber for DISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for DISTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34DFD8B22C931FA800F98347 /* Cluber_for_DISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISTests.swift; sourceTree = "<group>"; };
-		34DFD8B82C931FA800F98347 /* Cluber for DISUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for DISUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34DFD8BC2C931FA800F98347 /* Cluber_for_DISUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISUITests.swift; sourceTree = "<group>"; };
-		34DFD8BE2C931FA800F98347 /* Cluber_for_DISUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34DFD9622C93CD3A00F98347 /* Cluber for DIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cluber for DIS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DFD9642C93CD3A00F98347 /* Cluber_for_DISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISApp.swift; sourceTree = "<group>"; };
+		34DFD9712C93CD3B00F98347 /* Cluber for DISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for DISTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DFD9752C93CD3B00F98347 /* Cluber_for_DISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISTests.swift; sourceTree = "<group>"; };
+		34DFD97B2C93CD3B00F98347 /* Cluber for DISUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cluber for DISUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DFD97F2C93CD3B00F98347 /* Cluber_for_DISUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISUITests.swift; sourceTree = "<group>"; };
+		34DFD9812C93CD3B00F98347 /* Cluber_for_DISUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34DFD98C2C93CDAF00F98347 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34DFD98E2C93CDAF00F98347 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		34DFD98F2C93CDAF00F98347 /* Cluber_for_DISApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cluber_for_DISApp.swift; sourceTree = "<group>"; };
+		34DFD9902C93CDAF00F98347 /* ChangeAppIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAppIconView.swift; sourceTree = "<group>"; };
+		34DFD9912C93CDAF00F98347 /* ChangeGradeSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGradeSettingsView.swift; sourceTree = "<group>"; };
+		34DFD9922C93CDAF00F98347 /* ChangeProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
+		34DFD9932C93CDAF00F98347 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		34DFD9952C93CDAF00F98347 /* IGShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGShareView.swift; sourceTree = "<group>"; };
+		34DFD9982C93CDAF00F98347 /* LunchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchData.swift; sourceTree = "<group>"; };
+		34DFD9992C93CDAF00F98347 /* LunchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
+		34DFD99A2C93CDAF00F98347 /* LunchRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchRowView.swift; sourceTree = "<group>"; };
+		34DFD99B2C93CDAF00F98347 /* LunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchView.swift; sourceTree = "<group>"; };
+		34DFD99D2C93CDAF00F98347 /* ASAData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
+		34DFD99E2C93CDAF00F98347 /* ASAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASAView.swift; sourceTree = "<group>"; };
+		34DFD9A02C93CDAF00F98347 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		34DFD9A22C93CDAF00F98347 /* LunchClubData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchClubData.swift; sourceTree = "<group>"; };
+		34DFD9A32C93CDAF00F98347 /* LunchClubDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchClubDetailsView.swift; sourceTree = "<group>"; };
+		34DFD9A42C93CDAF00F98347 /* LunchClubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchClubView.swift; sourceTree = "<group>"; };
+		34DFD9A62C93CDAF00F98347 /* UsernameGradeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameGradeClass.swift; sourceTree = "<group>"; };
+		34DFD9A72C93CDAF00F98347 /* ClubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
+		34DFD9A82C93CDAF00F98347 /* calendarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarData.swift; sourceTree = "<group>"; };
+		34DFD9A92C93CDAF00F98347 /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
+		34DFD9AA2C93CDAF00F98347 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		34DFD9AB2C93CDAF00F98347 /* CalendarRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRowView.swift; sourceTree = "<group>"; };
+		34DFD9AC2C93CDAF00F98347 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		34DFD9AD2C93CDAF00F98347 /* GetCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
+		34DFD9B02C93CDAF00F98347 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		34DFD9D02C93CE5A00F98347 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34DFD9D62C96931C00F98347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34ED017D2C3D0EE80021D1DD /* CalendarJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSONHelper.swift; sourceTree = "<group>"; };
 		34ED017F2C3D12540021D1DD /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		34ED01822C3D127B0021D1DD /* GetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
@@ -250,21 +304,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD89C2C931FA600F98347 /* Frameworks */ = {
+		34DFD95F2C93CD3A00F98347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34DFD9D32C93D04800F98347 /* ConfettiSwiftUI in Frameworks */,
+				34DFD9D52C93D04F00F98347 /* iCalendarParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34DFD96E2C93CD3B00F98347 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD8AB2C931FA800F98347 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		34DFD8B52C931FA800F98347 /* Frameworks */ = {
+		34DFD9782C93CD3B00F98347 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,9 +436,9 @@
 				34662D8A2C7A0B0C0090DF3B /* Cluber for Watch Watch App */,
 				34662D9B2C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */,
 				34662DA52C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */,
-				34DFD8A02C931FA600F98347 /* Cluber for DIS */,
-				34DFD8B12C931FA800F98347 /* Cluber for DISTests */,
-				34DFD8BB2C931FA800F98347 /* Cluber for DISUITests */,
+				34DFD9632C93CD3A00F98347 /* Cluber for DIS */,
+				34DFD9742C93CD3B00F98347 /* Cluber for DISTests */,
+				34DFD97E2C93CD3B00F98347 /* Cluber for DISUITests */,
 				346567FE2C5F798900B2FD40 /* Frameworks */,
 				34B2AB4A2BD7E1F400821D81 /* Products */,
 			);
@@ -397,9 +453,9 @@
 				34662D892C7A0B0C0090DF3B /* Luncher.app */,
 				34662D982C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests.xctest */,
 				34662DA22C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests.xctest */,
-				34DFD89F2C931FA600F98347 /* Cluber for DIS.app */,
-				34DFD8AE2C931FA800F98347 /* Cluber for DISTests.xctest */,
-				34DFD8B82C931FA800F98347 /* Cluber for DISUITests.xctest */,
+				34DFD9622C93CD3A00F98347 /* Cluber for DIS.app */,
+				34DFD9712C93CD3B00F98347 /* Cluber for DISTests.xctest */,
+				34DFD97B2C93CD3B00F98347 /* Cluber for DISUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,40 +519,122 @@
 			path = "Onboarding Screen";
 			sourceTree = "<group>";
 		};
-		34DFD8A02C931FA600F98347 /* Cluber for DIS */ = {
+		34DFD9632C93CD3A00F98347 /* Cluber for DIS */ = {
 			isa = PBXGroup;
 			children = (
-				34DFD8A12C931FA600F98347 /* Cluber_for_DISApp.swift */,
-				34DFD8A32C931FA600F98347 /* ContentView.swift */,
-				34DFD8A52C931FA800F98347 /* Assets.xcassets */,
-				34DFD8A72C931FA800F98347 /* Preview Content */,
+				34DFD98F2C93CDAF00F98347 /* Cluber_for_DISApp.swift */,
+				34DFD9D02C93CE5A00F98347 /* ContentView.swift */,
+				34DFD99F2C93CDAF00F98347 /* ASA */,
+				34DFD9AE2C93CDAF00F98347 /* Calendar */,
+				34DFD9A72C93CDAF00F98347 /* ClubView.swift */,
+				34DFD9A12C93CDAF00F98347 /* Home */,
+				34DFD9952C93CDAF00F98347 /* IGShareView.swift */,
+				34DFD99C2C93CDAF00F98347 /* Lunch  */,
+				34DFD9A52C93CDAF00F98347 /* Lunch Club */,
+				34DFD9B12C93CDAF00F98347 /* Onboarding Screen */,
+				34DFD98D2C93CDAF00F98347 /* Preview Content */,
+				34DFD9942C93CDAF00F98347 /* Settings */,
+				34DFD9A62C93CDAF00F98347 /* UsernameGradeClass.swift */,
+				34DFD98E2C93CDAF00F98347 /* WelcomeView.swift */,
+				34DFD9642C93CD3A00F98347 /* Cluber_for_DISApp.swift */,
+				34DFD9D62C96931C00F98347 /* Assets.xcassets */,
 			);
 			path = "Cluber for DIS";
 			sourceTree = "<group>";
 		};
-		34DFD8A72C931FA800F98347 /* Preview Content */ = {
+		34DFD9742C93CD3B00F98347 /* Cluber for DISTests */ = {
 			isa = PBXGroup;
 			children = (
-				34DFD8A82C931FA800F98347 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		34DFD8B12C931FA800F98347 /* Cluber for DISTests */ = {
-			isa = PBXGroup;
-			children = (
-				34DFD8B22C931FA800F98347 /* Cluber_for_DISTests.swift */,
+				34DFD9752C93CD3B00F98347 /* Cluber_for_DISTests.swift */,
 			);
 			path = "Cluber for DISTests";
 			sourceTree = "<group>";
 		};
-		34DFD8BB2C931FA800F98347 /* Cluber for DISUITests */ = {
+		34DFD97E2C93CD3B00F98347 /* Cluber for DISUITests */ = {
 			isa = PBXGroup;
 			children = (
-				34DFD8BC2C931FA800F98347 /* Cluber_for_DISUITests.swift */,
-				34DFD8BE2C931FA800F98347 /* Cluber_for_DISUITestsLaunchTests.swift */,
+				34DFD97F2C93CD3B00F98347 /* Cluber_for_DISUITests.swift */,
+				34DFD9812C93CD3B00F98347 /* Cluber_for_DISUITestsLaunchTests.swift */,
 			);
 			path = "Cluber for DISUITests";
+			sourceTree = "<group>";
+		};
+		34DFD98D2C93CDAF00F98347 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD98C2C93CDAF00F98347 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34DFD9942C93CDAF00F98347 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9902C93CDAF00F98347 /* ChangeAppIconView.swift */,
+				34DFD9912C93CDAF00F98347 /* ChangeGradeSettingsView.swift */,
+				34DFD9922C93CDAF00F98347 /* ChangeProfileView.swift */,
+				34DFD9932C93CDAF00F98347 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		34DFD99C2C93CDAF00F98347 /* Lunch  */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9982C93CDAF00F98347 /* LunchData.swift */,
+				34DFD9992C93CDAF00F98347 /* LunchModel.swift */,
+				34DFD99A2C93CDAF00F98347 /* LunchRowView.swift */,
+				34DFD99B2C93CDAF00F98347 /* LunchView.swift */,
+			);
+			path = "Lunch ";
+			sourceTree = "<group>";
+		};
+		34DFD99F2C93CDAF00F98347 /* ASA */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD99D2C93CDAF00F98347 /* ASAData.swift */,
+				34DFD99E2C93CDAF00F98347 /* ASAView.swift */,
+			);
+			path = ASA;
+			sourceTree = "<group>";
+		};
+		34DFD9A12C93CDAF00F98347 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9A02C93CDAF00F98347 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		34DFD9A52C93CDAF00F98347 /* Lunch Club */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9A22C93CDAF00F98347 /* LunchClubData.swift */,
+				34DFD9A32C93CDAF00F98347 /* LunchClubDetailsView.swift */,
+				34DFD9A42C93CDAF00F98347 /* LunchClubView.swift */,
+			);
+			path = "Lunch Club";
+			sourceTree = "<group>";
+		};
+		34DFD9AE2C93CDAF00F98347 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9A82C93CDAF00F98347 /* calendarData.swift */,
+				34DFD9A92C93CDAF00F98347 /* CalendarJSONHelper.swift */,
+				34DFD9AA2C93CDAF00F98347 /* CalendarModel.swift */,
+				34DFD9AB2C93CDAF00F98347 /* CalendarRowView.swift */,
+				34DFD9AC2C93CDAF00F98347 /* DateExtension.swift */,
+				34DFD9AD2C93CDAF00F98347 /* GetCalendar.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		34DFD9B12C93CDAF00F98347 /* Onboarding Screen */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD9B02C93CDAF00F98347 /* OnboardingView.swift */,
+			);
+			path = "Onboarding Screen";
 			sourceTree = "<group>";
 		};
 		34ED01812C3D125F0021D1DD /* Calendar */ = {
@@ -627,57 +765,61 @@
 			productReference = 34B2AB632BD7E1F600821D81 /* CluberUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		34DFD89E2C931FA600F98347 /* Cluber for DIS */ = {
+		34DFD9612C93CD3A00F98347 /* Cluber for DIS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34DFD8C62C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DIS" */;
+			buildConfigurationList = 34DFD9832C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DIS" */;
 			buildPhases = (
-				34DFD89B2C931FA600F98347 /* Sources */,
-				34DFD89C2C931FA600F98347 /* Frameworks */,
-				34DFD89D2C931FA600F98347 /* Resources */,
+				34DFD95E2C93CD3A00F98347 /* Sources */,
+				34DFD95F2C93CD3A00F98347 /* Frameworks */,
+				34DFD9602C93CD3A00F98347 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Cluber for DIS";
+			packageProductDependencies = (
+				34DFD9D22C93D04800F98347 /* ConfettiSwiftUI */,
+				34DFD9D42C93D04F00F98347 /* iCalendarParser */,
+			);
 			productName = "Cluber for DIS";
-			productReference = 34DFD89F2C931FA600F98347 /* Cluber for DIS.app */;
+			productReference = 34DFD9622C93CD3A00F98347 /* Cluber for DIS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		34DFD8AD2C931FA800F98347 /* Cluber for DISTests */ = {
+		34DFD9702C93CD3B00F98347 /* Cluber for DISTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34DFD8C72C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISTests" */;
+			buildConfigurationList = 34DFD9862C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISTests" */;
 			buildPhases = (
-				34DFD8AA2C931FA800F98347 /* Sources */,
-				34DFD8AB2C931FA800F98347 /* Frameworks */,
-				34DFD8AC2C931FA800F98347 /* Resources */,
+				34DFD96D2C93CD3B00F98347 /* Sources */,
+				34DFD96E2C93CD3B00F98347 /* Frameworks */,
+				34DFD96F2C93CD3B00F98347 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				34DFD8B02C931FA800F98347 /* PBXTargetDependency */,
+				34DFD9732C93CD3B00F98347 /* PBXTargetDependency */,
 			);
 			name = "Cluber for DISTests";
 			productName = "Cluber for DISTests";
-			productReference = 34DFD8AE2C931FA800F98347 /* Cluber for DISTests.xctest */;
+			productReference = 34DFD9712C93CD3B00F98347 /* Cluber for DISTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		34DFD8B72C931FA800F98347 /* Cluber for DISUITests */ = {
+		34DFD97A2C93CD3B00F98347 /* Cluber for DISUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34DFD8C82C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISUITests" */;
+			buildConfigurationList = 34DFD9892C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISUITests" */;
 			buildPhases = (
-				34DFD8B42C931FA800F98347 /* Sources */,
-				34DFD8B52C931FA800F98347 /* Frameworks */,
-				34DFD8B62C931FA800F98347 /* Resources */,
+				34DFD9772C93CD3B00F98347 /* Sources */,
+				34DFD9782C93CD3B00F98347 /* Frameworks */,
+				34DFD9792C93CD3B00F98347 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				34DFD8BA2C931FA800F98347 /* PBXTargetDependency */,
+				34DFD97D2C93CD3B00F98347 /* PBXTargetDependency */,
 			);
 			name = "Cluber for DISUITests";
 			productName = "Cluber for DISUITests";
-			productReference = 34DFD8B82C931FA800F98347 /* Cluber for DISUITests.xctest */;
+			productReference = 34DFD97B2C93CD3B00F98347 /* Cluber for DISUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -712,16 +854,16 @@
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 34B2AB482BD7E1F400821D81;
 					};
-					34DFD89E2C931FA600F98347 = {
+					34DFD9612C93CD3A00F98347 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					34DFD8AD2C931FA800F98347 = {
+					34DFD9702C93CD3B00F98347 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 34DFD89E2C931FA600F98347;
+						TestTargetID = 34DFD9612C93CD3A00F98347;
 					};
-					34DFD8B72C931FA800F98347 = {
+					34DFD97A2C93CD3B00F98347 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 34DFD89E2C931FA600F98347;
+						TestTargetID = 34DFD9612C93CD3A00F98347;
 					};
 				};
 			};
@@ -748,9 +890,9 @@
 				34662D882C7A0B0C0090DF3B /* Cluber for Watch Watch App */,
 				34662D972C7A0B0D0090DF3B /* Cluber for Watch Watch AppTests */,
 				34662DA12C7A0B0D0090DF3B /* Cluber for Watch Watch AppUITests */,
-				34DFD89E2C931FA600F98347 /* Cluber for DIS */,
-				34DFD8AD2C931FA800F98347 /* Cluber for DISTests */,
-				34DFD8B72C931FA800F98347 /* Cluber for DISUITests */,
+				34DFD9612C93CD3A00F98347 /* Cluber for DIS */,
+				34DFD9702C93CD3B00F98347 /* Cluber for DISTests */,
+				34DFD97A2C93CD3B00F98347 /* Cluber for DISUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -802,23 +944,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD89D2C931FA600F98347 /* Resources */ = {
+		34DFD9602C93CD3A00F98347 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34DFD8A92C931FA800F98347 /* Preview Assets.xcassets in Resources */,
-				34DFD8A62C931FA800F98347 /* Assets.xcassets in Resources */,
+				34DFD9B22C93CDAF00F98347 /* Preview Assets.xcassets in Resources */,
+				34DFD9D72C96931C00F98347 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD8AC2C931FA800F98347 /* Resources */ = {
+		34DFD96F2C93CD3B00F98347 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD8B62C931FA800F98347 /* Resources */ = {
+		34DFD9792C93CD3B00F98347 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -910,29 +1052,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD89B2C931FA600F98347 /* Sources */ = {
+		34DFD95E2C93CD3A00F98347 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34DFD8A42C931FA600F98347 /* ContentView.swift in Sources */,
-				34DFD8A22C931FA600F98347 /* Cluber_for_DISApp.swift in Sources */,
+				34DFD9C12C93CDAF00F98347 /* ASAView.swift in Sources */,
+				34DFD9CC2C93CDAF00F98347 /* DateExtension.swift in Sources */,
+				34DFD9C82C93CDAF00F98347 /* calendarData.swift in Sources */,
+				34DFD9CF2C93CDAF00F98347 /* OnboardingView.swift in Sources */,
+				34DFD9D12C93CE5A00F98347 /* ContentView.swift in Sources */,
+				34DFD9BE2C93CDAF00F98347 /* LunchRowView.swift in Sources */,
+				34DFD9B72C93CDAF00F98347 /* ChangeProfileView.swift in Sources */,
+				34DFD9B82C93CDAF00F98347 /* SettingsView.swift in Sources */,
+				34DFD9B52C93CDAF00F98347 /* ChangeAppIconView.swift in Sources */,
+				34DFD9C42C93CDAF00F98347 /* LunchClubDetailsView.swift in Sources */,
+				34DFD9BF2C93CDAF00F98347 /* LunchView.swift in Sources */,
+				34DFD9C02C93CDAF00F98347 /* ASAData.swift in Sources */,
+				34DFD9C72C93CDAF00F98347 /* ClubView.swift in Sources */,
+				34DFD9C52C93CDAF00F98347 /* LunchClubView.swift in Sources */,
+				34DFD9C92C93CDAF00F98347 /* CalendarJSONHelper.swift in Sources */,
+				34DFD9C32C93CDAF00F98347 /* LunchClubData.swift in Sources */,
+				34DFD9CA2C93CDAF00F98347 /* CalendarModel.swift in Sources */,
+				34DFD9C22C93CDAF00F98347 /* HomeView.swift in Sources */,
+				34DFD9CD2C93CDAF00F98347 /* GetCalendar.swift in Sources */,
+				34DFD9B42C93CDAF00F98347 /* Cluber_for_DISApp.swift in Sources */,
+				34DFD9B32C93CDAF00F98347 /* WelcomeView.swift in Sources */,
+				34DFD9BD2C93CDAF00F98347 /* LunchModel.swift in Sources */,
+				34DFD9CB2C93CDAF00F98347 /* CalendarRowView.swift in Sources */,
+				34DFD9652C93CD3A00F98347 /* Cluber_for_DISApp.swift in Sources */,
+				34DFD9B92C93CDAF00F98347 /* IGShareView.swift in Sources */,
+				34DFD9BC2C93CDAF00F98347 /* LunchData.swift in Sources */,
+				34DFD9C62C93CDAF00F98347 /* UsernameGradeClass.swift in Sources */,
+				34DFD9B62C93CDAF00F98347 /* ChangeGradeSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD8AA2C931FA800F98347 /* Sources */ = {
+		34DFD96D2C93CD3B00F98347 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34DFD8B32C931FA800F98347 /* Cluber_for_DISTests.swift in Sources */,
+				34DFD9762C93CD3B00F98347 /* Cluber_for_DISTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34DFD8B42C931FA800F98347 /* Sources */ = {
+		34DFD9772C93CD3B00F98347 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34DFD8BF2C931FA800F98347 /* Cluber_for_DISUITestsLaunchTests.swift in Sources */,
-				34DFD8BD2C931FA800F98347 /* Cluber_for_DISUITests.swift in Sources */,
+				34DFD9822C93CD3B00F98347 /* Cluber_for_DISUITestsLaunchTests.swift in Sources */,
+				34DFD9802C93CD3B00F98347 /* Cluber_for_DISUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,15 +1132,15 @@
 			target = 34B2AB482BD7E1F400821D81 /* Cluber */;
 			targetProxy = 34B2AB642BD7E1F600821D81 /* PBXContainerItemProxy */;
 		};
-		34DFD8B02C931FA800F98347 /* PBXTargetDependency */ = {
+		34DFD9732C93CD3B00F98347 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 34DFD89E2C931FA600F98347 /* Cluber for DIS */;
-			targetProxy = 34DFD8AF2C931FA800F98347 /* PBXContainerItemProxy */;
+			target = 34DFD9612C93CD3A00F98347 /* Cluber for DIS */;
+			targetProxy = 34DFD9722C93CD3B00F98347 /* PBXContainerItemProxy */;
 		};
-		34DFD8BA2C931FA800F98347 /* PBXTargetDependency */ = {
+		34DFD97D2C93CD3B00F98347 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 34DFD89E2C931FA600F98347 /* Cluber for DIS */;
-			targetProxy = 34DFD8B92C931FA800F98347 /* PBXContainerItemProxy */;
+			target = 34DFD9612C93CD3A00F98347 /* Cluber for DIS */;
+			targetProxy = 34DFD97C2C93CD3B00F98347 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1392,7 +1560,7 @@
 			};
 			name = Release;
 		};
-		34DFD8C02C931FA800F98347 /* Debug */ = {
+		34DFD9842C93CD3B00F98347 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1408,6 +1576,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1417,13 +1586,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		34DFD8C12C931FA800F98347 /* Release */ = {
+		34DFD9852C93CD3B00F98347 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1439,6 +1610,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1448,13 +1620,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
-		34DFD8C22C931FA800F98347 /* Debug */ = {
+		34DFD9872C93CD3B00F98347 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1467,16 +1641,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-DISTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cluber for DIS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cluber for DIS";
 			};
 			name = Debug;
 		};
-		34DFD8C32C931FA800F98347 /* Release */ = {
+		34DFD9882C93CD3B00F98347 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1489,16 +1661,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.olivergpark.Cluber-for-DISTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cluber for DIS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cluber for DIS";
 			};
 			name = Release;
 		};
-		34DFD8C42C931FA800F98347 /* Debug */ = {
+		34DFD98A2C93CD3B00F98347 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1516,7 +1686,7 @@
 			};
 			name = Debug;
 		};
-		34DFD8C52C931FA800F98347 /* Release */ = {
+		34DFD98B2C93CD3B00F98347 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1600,29 +1770,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34DFD8C62C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DIS" */ = {
+		34DFD9832C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34DFD8C02C931FA800F98347 /* Debug */,
-				34DFD8C12C931FA800F98347 /* Release */,
+				34DFD9842C93CD3B00F98347 /* Debug */,
+				34DFD9852C93CD3B00F98347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34DFD8C72C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISTests" */ = {
+		34DFD9862C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34DFD8C22C931FA800F98347 /* Debug */,
-				34DFD8C32C931FA800F98347 /* Release */,
+				34DFD9872C93CD3B00F98347 /* Debug */,
+				34DFD9882C93CD3B00F98347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34DFD8C82C931FA800F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISUITests" */ = {
+		34DFD9892C93CD3B00F98347 /* Build configuration list for PBXNativeTarget "Cluber for DISUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34DFD8C42C931FA800F98347 /* Debug */,
-				34DFD8C52C931FA800F98347 /* Release */,
+				34DFD98A2C93CD3B00F98347 /* Debug */,
+				34DFD98B2C93CD3B00F98347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1658,6 +1828,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
+		};
+		34DFD9D22C93D04800F98347 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 347590E12C58076500924CB4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+		34DFD9D42C93D04F00F98347 /* iCalendarParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34605BD52C1B0C43003EA9B0 /* XCRemoteSwiftPackageReference "iCalendarParser" */;
+			productName = iCalendarParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
