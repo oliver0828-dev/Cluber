@@ -153,13 +153,15 @@ struct LunchClubView: View {
             .navigationTitle("Lunch Club")
             .modifier(NavigationBarModifier())
             .toolbar {
-                Button {
-                    isTapped.toggle()
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                }.sheet(isPresented: $isTapped) {
-                    IGShareView()
-                }
+                if UIDevice.current.userInterfaceIdiom != .pad {
+                     Button {
+                         isTapped.toggle()
+                     } label: {
+                         Image(systemName: "square.and.arrow.up")
+                     }.sheet(isPresented: $isTapped) {
+                         IGShareView()
+                     }
+                 }
                 
                 Button {
                     isLoved.toggle()

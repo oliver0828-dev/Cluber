@@ -24,7 +24,7 @@ struct HomeView: View {
                                 .fontDesign(.rounded)
                                 .fontWeight(.semibold)
                                 .frame(width: 320, height: 40)
-                                .background(CircleColor(gradeLevel: usernameGrade.schoolGrade, colorScheme: colorScheme))
+                                .background(GradeColor(gradeLevel: usernameGrade.schoolGrade))
                                 .clipShape(RoundedRectangle(cornerRadius: 40))
                         }
                         Text(gradeYear(year: usernameGrade.gradeNumber))
@@ -101,20 +101,14 @@ func gradeYear(year: Int) -> String {
     }
 }
 
-func CircleColor(gradeLevel: String, colorScheme: ColorScheme) -> Color {
-    switch (gradeLevel, colorScheme) {
-    case ("Elementary", .light):
-        return Color("yellowDark")
-    case ("Elementary", .dark):
+func GradeColor(gradeLevel: String) -> Color {
+    switch (gradeLevel) {
+    case "Elementary":
         return .yellow.opacity(0.7)
-    case ("Middle", .light):
-        return .blue.opacity(0.5)
-    case ("Middle", .dark):
-        return .blue
-    case ("High", .light):
-        return .green.opacity(0.7)
-    case ("High", .dark):
-        return .green
+    case "Middle":
+        return .red.opacity(0.5)
+    case "High":
+        return .orange.opacity(0.7)
     default:
         return .white
     }

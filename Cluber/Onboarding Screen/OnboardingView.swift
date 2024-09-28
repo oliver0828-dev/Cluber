@@ -15,136 +15,142 @@ struct OnboardingView: View {
     @State private var name: String = ""
     @State private var isPresented = false
     
-    @AppStorage ("gradeInt") var gradeInt: Int = 1
+    @AppStorage("gradeInt") var gradeInt: Int = 1
     @AppStorage("userName") var savedName: String = ""
     @AppStorage("gradeLevel") var gradeLevel: String = "Elementary"
-    
     
     let grade: [String] = ["Elementary", "Middle", "High"]
     
     var body: some View {
-       
-            if showingLaunchScreen && savedName.isEmpty {
-        ZStack {
-            VStack {
-                Image("signUpScreen")
-                Spacer()
-                
-            }
-            VStack {
-             Spacer()
-                Text("Welcome to Cluber!")
-                    .foregroundStyle(Color(red: 0.36, green: 0.36, blue: 0.36))
-                    .font(.title.bold())
-                
-                if gradeLevel == "Elementary" {
-                    Image("gliderYellow")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 250, height: 250)
-                } else if gradeLevel == "Middle" {
-                    Image("gliderPink")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 250, height: 250)
-                } else {
-                    Image("gliderOrange")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 250, height: 250)
+        GeometryReader { geometry in
+            ZStack {
+                // Set background color dynamically based on the grade level for iPad
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    GradeColor(gradeLevel: gradeLevel)
+                        .edgesIgnoringSafeArea(.all)
                 }
                 
-                
-                ZStack {
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 351, height: 46)
-                      .background(Color(red: 0.96, green: 0.96, blue: 0.96))
-                      .cornerRadius(23)
-                    
-                    HStack {
-                        TextField("Your Firstname Only", text: $name)
-                            .fontDesign(.rounded)
-                            .frame(width: 300, height: 50)
-                            .foregroundStyle(.black)
-                            .submitLabel(.done)
-                            .padding()
-                        
-                    }
-                }
-                HStack {
-                    Picker("Grade", selection: $gradeLevel) {
-                        ForEach(grade, id: \.self) { school in
-                            Text(school)
+                if showingLaunchScreen && savedName.isEmpty {
+                    VStack {
+                        // Show "signUpScreen" image only for iPhone
+                        if UIDevice.current.userInterfaceIdiom == .phone {
+                            Image("signUpScreen")
                         }
-                    }
-                    
-                }
-                .pickerStyle(.segmented)
-                .padding()
-                
-                HStack {
-                    Text("Grade")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color(red: 0, green: 0.5, blue: 0.59))
-                    ZStack {
-                        Rectangle()
-                          .foregroundStyle(.clear)
-                          .frame(width: 248, height: 46)
-                          .background(Color(red: 0.96, green: 0.96, blue: 0.96))
-                          .cornerRadius(23)
-                        TextField("", value: $gradeInt, formatter: NumberFormatter())
-                            .fontDesign(.rounded)
-                            .frame(width: 20, height: 50)
-                            .foregroundStyle(colorSchemeDarkmode(colorScheme: colorScheme))
-                            .submitLabel(.done)
-                    }
-                }
-        
-                Button{
-                    withAnimation {
-                        showingLaunchScreen = false
-                        savedName = name
-                        usernameGrade.userName = savedName
-                        usernameGrade.schoolGrade = gradeLevel
-                        usernameGrade.gradeNumber = gradeInt
-                    }
-                    
-                    if gradeInt > 12 {
-                        isPresented.toggle()
-                    }
-                } label: {
-                    ZStack {
-                        Rectangle()
-                        .foregroundStyle(.clear)
-                        .frame(width: 368, height: 66)
-                        .background(Color(red: 0, green: 0.5, blue: 0.59))
-                        .cornerRadius(33)
-                        Text("Get Started")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
+                        
+                        Spacer()
+                        if UIDevice.current.userInterfaceIdiom != .pad {
+                            Text("Welcome to Cluber!")
+                                .foregroundStyle(Color(red: 0.36, green: 0.36, blue: 0.36))
+                                .font(.title.bold())
+                        } else {
+                            Text("Welcome to Cluber!")
+                                .foregroundStyle(Color(red: 0.36, green: 0.36, blue: 0.36))
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                        }
+                        
+                        if gradeLevel == "Elementary" {
+                            Image("gliderYellow")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                        } else if gradeLevel == "Middle" {
+                            Image("gliderPink")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                        } else {
+                            Image("gliderOrange")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                        }
+                        
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .frame(width: 351, height: 46)
+                                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                                .cornerRadius(23)
                             
+                            HStack {
+                                TextField("Your Firstname Only", text: $name)
+                                    .fontDesign(.rounded)
+                                    .frame(width: 300, height: 50)
+                                    .foregroundStyle(.black)
+                                    .submitLabel(.done)
+                                    .padding()
+                            }
+                        }
+                        
+                        HStack {
+                            Picker("Grade", selection: $gradeLevel) {
+                                ForEach(grade, id: \.self) { school in
+                                    Text(school)
+                                }
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding()
+                        
+                        HStack {
+                            Text("Grade")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(Color(red: 0, green: 0.5, blue: 0.59))
+                            ZStack {
+                                Rectangle()
+                                    .foregroundStyle(.clear)
+                                    .frame(width: 248, height: 46)
+                                    .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                                    .cornerRadius(23)
+                                TextField("", value: $gradeInt, formatter: NumberFormatter())
+                                    .fontDesign(.rounded)
+                                    .frame(width: 20, height: 50)
+                                    .submitLabel(.done)
+                            }
+                        }
+                        
+                        Button {
+                            withAnimation {
+                                showingLaunchScreen = false
+                                savedName = name
+                                usernameGrade.userName = savedName
+                                usernameGrade.schoolGrade = gradeLevel
+                                usernameGrade.gradeNumber = gradeInt
+                            }
+                            
+                            if gradeInt > 12 {
+                                isPresented.toggle()
+                            }
+                        } label: {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundStyle(.clear)
+                                    .frame(width: 368, height: 66)
+                                    .background(Color(red: 0, green: 0.5, blue: 0.59))
+                                    .cornerRadius(33)
+                                Text("Get Started")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.white)
+                            }
+                        }
+                        .alert(isPresented: $isPresented) {
+                            Alert(title: Text("Please check your inputs"))
+                        }
+                        
+                        Spacer()
                     }
+                    .fontDesign(.rounded)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .transition(.move(edge: .bottom))
+                    .padding()
+                } else {
+                    ContentView(username: $savedName, gradeLevel: $gradeLevel)
                 }
-                .alert(isPresented: $isPresented) {
-                    Alert (title: Text("Please check your inputs"))
-                }
-                Spacer()
-                  
-                
             }
-            .fontDesign(.rounded)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .transition(.move(edge: .bottom))
-            .padding()
         }
-            } else {
-                ContentView(username: $savedName, gradeLevel: $gradeLevel)
-            }
-      
-    
     }
     
     func gradeLevelSuggestion(number: Int) -> String {
@@ -158,8 +164,9 @@ struct OnboardingView: View {
             return "Unknown"
         }
     }
-}
+    
 
+}
 
 #Preview {
     OnboardingView()
@@ -168,16 +175,6 @@ struct OnboardingView: View {
         .environmentObject(PhotoPickerViewModel())
     
 }
-
-
-func colorSchemeDarkmode(colorScheme: ColorScheme) -> Color {
-    if colorScheme == .dark {
-        return .white
-    } else {
-        return .black
-    }
-}
-
 
 
 

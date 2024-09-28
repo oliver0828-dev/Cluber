@@ -70,7 +70,7 @@ final class PhotoPickerViewModel: ObservableObject {
 struct ChangeProfileView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @State var name: String
-    @AppStorage ("username") var username: String = ""
+    @AppStorage("username") var username: String = ""
     @State var isTapped = false
     
     // Photo Picker

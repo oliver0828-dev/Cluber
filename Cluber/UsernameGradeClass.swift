@@ -22,10 +22,10 @@ class UsernameGradeClass: ObservableObject {
         }
     }
     
-    @AppStorage ("userName") var userName: String = ""
-    @AppStorage ("gradeYear") var gradeNumber: Int = 1 
-    @AppStorage ("memberStatus") var member: String = ""
-    @AppStorage ("memberBoolean") var memberBoolean = false 
+    @AppStorage("userName") var userName: String = ""
+    @AppStorage("gradeYear") var gradeNumber: Int = 1
+    @AppStorage("memberStatus") var member: String = ""
+    @AppStorage("memberBoolean") var memberBoolean = false
     
     @AppStorage("profileImage") var profileImageData: Data?
     var profileImage: UIImage? {
