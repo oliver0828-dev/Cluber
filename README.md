@@ -12,20 +12,4 @@ Develop a comprehensive application to efficiently manage school clubs' schedule
 ## Background Information
 Coordinating club activities in educational institutions often leads to logistical challenges such as scheduling conflicts, miscommunication, and underutilization of resources. A centralized platform can significantly enhance the extracurricular experience.
 
-## Current Status
-### Software: 
-
-### Finished - Prototype (DONE):
-1. Overall Structure (Finished)
-2. Lunch Club Information & UI (Finished)
-3. ASA UI (Finished) & Info (In Progress)
-4. Settings & Onboarding Page (Finished)
-
-### Ongoing
-1. Calendar Integration for Both Lunch and School Calendar 
-2. Working on SwiftData integration
-   
-### Design: 
-1. Template (Finished)
-2. Logo For The App (In Progress)
-3. Icons (Finished)
+## Download now on App Store
