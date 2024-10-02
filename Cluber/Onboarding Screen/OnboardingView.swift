@@ -29,15 +29,18 @@ struct OnboardingView: View {
                     GradeColor(gradeLevel: gradeLevel)
                         .edgesIgnoringSafeArea(.all)
                 }
-                
                 if showingLaunchScreen && savedName.isEmpty {
-                    VStack {
-                        // Show "signUpScreen" image only for iPhone
+                ZStack {
+                    VStack(alignment: .center) {
                         if UIDevice.current.userInterfaceIdiom == .phone {
                             Image("signUpScreen")
+                                .resizable()
+                                .frame(maxWidth: .infinity, maxHeight: 1200) // Dynamic sizing
+                                .ignoresSafeArea(.all)
                         }
-                        
-                        Spacer()
+                    }
+                    
+                    VStack {
                         if UIDevice.current.userInterfaceIdiom != .pad {
                             Text("Welcome to Cluber!")
                                 .foregroundStyle(Color(red: 0.36, green: 0.36, blue: 0.36))
@@ -53,30 +56,30 @@ struct OnboardingView: View {
                             Image("gliderYellow")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                                .frame(width: 200, height: 200)
                         } else if gradeLevel == "Middle" {
                             Image("gliderPink")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                                .frame(width: 200, height: 200)
                         } else {
                             Image("gliderOrange")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
+                                .frame(width: 200, height: 200)
                         }
                         
                         ZStack {
                             Rectangle()
                                 .foregroundColor(.clear)
-                                .frame(width: 351, height: 46)
+                                .frame(width: geometry.size.width * 0.9, height: 46)
                                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(23)
                             
                             HStack {
                                 TextField("Your Firstname Only", text: $name)
                                     .fontDesign(.rounded)
-                                    .frame(width: 300, height: 50)
+                                    .frame(width: geometry.size.width * 0.8, height: 50)
                                     .foregroundStyle(.black)
                                     .submitLabel(.done)
                                     .padding()
@@ -91,7 +94,9 @@ struct OnboardingView: View {
                             }
                         }
                         .pickerStyle(.segmented)
+                        .frame(maxWidth: geometry.size.width * 0.8) // Adjusted width
                         .padding()
+
                         
                         HStack {
                             Text("Grade")
@@ -101,15 +106,16 @@ struct OnboardingView: View {
                             ZStack {
                                 Rectangle()
                                     .foregroundStyle(.clear)
-                                    .frame(width: 248, height: 46)
+                                    .frame(width: geometry.size.width * 0.6, height: 46) // Adjusted width
                                     .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                                     .cornerRadius(23)
                                 TextField("", value: $gradeInt, formatter: NumberFormatter())
                                     .fontDesign(.rounded)
-                                    .frame(width: 20, height: 50)
+                                    .frame(width: 40, height: 50) // Slightly larger width
                                     .submitLabel(.done)
                             }
                         }
+                        
                         
                         Button {
                             withAnimation {
@@ -127,7 +133,7 @@ struct OnboardingView: View {
                             ZStack {
                                 Rectangle()
                                     .foregroundStyle(.clear)
-                                    .frame(width: 368, height: 66)
+                                    .frame(width: geometry.size.width * 0.9, height: 66) // Dynamic width
                                     .background(Color(red: 0, green: 0.5, blue: 0.59))
                                     .cornerRadius(33)
                                 Text("Get Started")
@@ -140,12 +146,12 @@ struct OnboardingView: View {
                             Alert(title: Text("Please check your inputs"))
                         }
                         
-                        Spacer()
+                       
                     }
                     .fontDesign(.rounded)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.move(edge: .bottom))
-                    .padding()
+                }
                 } else {
                     ContentView(username: $savedName, gradeLevel: $gradeLevel)
                 }
@@ -164,8 +170,6 @@ struct OnboardingView: View {
             return "Unknown"
         }
     }
-    
-
 }
 
 #Preview {
@@ -173,12 +177,4 @@ struct OnboardingView: View {
         .preferredColorScheme(.light)
         .environmentObject(UsernameGradeClass())
         .environmentObject(PhotoPickerViewModel())
-    
 }
-
-
-
-
-
-
-

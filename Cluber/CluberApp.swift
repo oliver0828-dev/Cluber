@@ -16,7 +16,7 @@ struct CluberApp: App {
     var body: some Scene {
         WindowGroup {
            OnboardingView()
-                .preferredColorScheme(.light)
+//                .preferredColorScheme(.light)
                 .environmentObject(usernameGrade)
                 .environmentObject(photoImage)
         }
