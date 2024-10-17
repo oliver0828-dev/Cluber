@@ -18,7 +18,6 @@ struct LunchView: View {
             ScrollView{
                 LunchMenuView(date: $TodayDate)
                 LunchMenuView(date: $tomorrow)
-    
                 .padding()
                 .navigationTitle("Lunch")
                 .modifier(NavigationBarModifier())

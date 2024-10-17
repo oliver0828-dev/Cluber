@@ -146,7 +146,6 @@
 		34662DE82C7BF0B40090DF3B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		34662DE92C7BF0B40090DF3B /* GetCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCalendar.swift; sourceTree = "<group>"; };
 		346C47BD2C6323FE00440CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		347A1F482CB2A19700F9675D /* Cluber.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cluber.entitlements; sourceTree = "<group>"; };
 		348324F92BFAF20A005BAA45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		348B73112C3E741D001CBCFE /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
 		349CAFE72C0BEC1F00642E1B /* ASAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAData.swift; sourceTree = "<group>"; };
@@ -386,7 +385,6 @@
 		34B2AB4B2BD7E1F400821D81 /* Cluber */ = {
 			isa = PBXGroup;
 			children = (
-				347A1F482CB2A19700F9675D /* Cluber.entitlements */,
 				346C47BD2C6323FE00440CC8 /* Info.plist */,
 				34B2AB4C2BD7E1F400821D81 /* CluberApp.swift */,
 				34B2AB7E2BD7E35600821D81 /* ContentView.swift */,
@@ -1194,7 +1192,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.2;
+				MARKETING_VERSION = 2.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1233,7 +1231,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.2;
+				MARKETING_VERSION = 2.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

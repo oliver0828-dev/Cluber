@@ -11,6 +11,12 @@ struct HomeView: View {
     @ObservedObject var manager = GetCal()
     let username: String
     
+    var weekdayName: String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEEE"
+            return formatter.string(from: date)
+        }
+    
     var body: some View {
         
         NavigationStack {
@@ -21,16 +27,22 @@ struct HomeView: View {
                             Text(getGreeting() + username)
                                 .foregroundStyle(.black)
                                 .font(.title)
-                                .fontDesign(.rounded)
                                 .fontWeight(.semibold)
                                 .frame(width: 320, height: 40)
                                 .background(GradeColor(gradeLevel: usernameGrade.schoolGrade))
                                 .clipShape(RoundedRectangle(cornerRadius: 40))
                         }
-                        Text(gradeYear(year: usernameGrade.gradeNumber))
-                            .fontDesign(.rounded)
-                            .foregroundStyle(.gray)
-                        
+//                        Text(gradeYear(year: usernameGrade.gradeNumber))
+//                            .fontDesign(.rounded)
+//                            .foregroundStyle(.gray)
+//                        HStack {
+//                            Text("\(weekdayName)")
+//                            Text(Date.now.formatted(date: .abbreviated, time: .omitted))
+//                        }
+//                        .fontWeight(.medium)
+//                        .foregroundStyle(.gray)
+                           
+    
                         DatePicker("Calendar", selection: $date, displayedComponents: .date)
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .modifier(NavigationBarModifier())
@@ -40,7 +52,6 @@ struct HomeView: View {
                             RowView(data: manager.event, date: $date)
                                 .frame(width: 350)
                                 .fontWeight(.semibold)
-                                .fontDesign(.rounded)
                                 .background(.gray.opacity(0.2))
                                 .clipShape(RoundedRectangle(cornerRadius: 16))
                                 .shadow(radius: 16)
@@ -48,6 +59,8 @@ struct HomeView: View {
                         }
                     }
                     .padding()
+                    .fontDesign(.rounded)
+                    
                 }
                 .navigationTitle("Cluber")
                 .modifier(NavigationBarModifier())
@@ -106,7 +119,7 @@ func GradeColor(gradeLevel: String) -> Color {
     case "Elementary":
         return .yellow.opacity(0.7)
     case "Middle":
-        return .red.opacity(0.5)
+        return .blue.opacity(0.7)
     case "High":
         return .orange.opacity(0.7)
     default:

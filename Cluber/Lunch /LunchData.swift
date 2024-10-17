@@ -13,7 +13,8 @@ import SwiftUI
 struct LunchMenuView: View {
     @Binding var date: Date
     @ObservedObject var manager = GetLunch()
-
+    
+    
     var isTomorrow: Bool {
         let calendar = Calendar.current
         let tomorrow = calendar.date(byAdding: .day, value: 1, to: Date.now)!
@@ -24,19 +25,20 @@ struct LunchMenuView: View {
         VStack{
             HStack {
                 Text(isTomorrow ? "Tomorrow's Lunch" : "Today's Lunch")
-                    
-                    .font(.title2)
-                Text(date, format: .dateTime.month().day())
-                    .font(.title2.bold())
-                    .foregroundStyle(.black)
-                    .frame(width: 120, height: 40)
-                    .clipShape(.rect(cornerRadius: 10))
-                 
-            }
+                Image(systemName: "fork.knife")
+            }.font(.title2)
+            
+            
             Divider()
                 .frame(width: 350)
             
-            LunchRowView(data: manager.event, date: $date)
+            if #available(iOS 18.0, *) {
+                LunchRowView(data: manager.event, date: date)
+                    .frame(width: 350)
+            } else {
+                non18LunchRowView(data: manager.event, date: $date)
+                    .frame(width: 350)
+            }
         }
         .fontDesign(.rounded)
     }
