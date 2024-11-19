@@ -22,6 +22,7 @@ struct ASAStruct: Identifiable {
     var instagramID: String = ""
     var quarter: String = "All"
     var sports: String = "N"
+    var championship: Bool = false
     
     var interested: Bool {
         get {
@@ -47,6 +48,13 @@ struct ASAList {
         ASAStruct(clubName: "HS Girls Futsal", teacherName: "Mr. Gall & Mr. Faille", groupImage: "HGF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments on Monday’s and Friday’s. They will be coached by Mr. Gall and Mr. Faille.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
         
         ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 1, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
+        
+        ASAStruct(clubName: "HS Boys Basketball", teacherName: "Mr. Kaschub", groupImage: "HBB", subName: "", description: """
+This is the SKAIS/KISAC team for high school basketball.  The teams will train to compete in SKAIS and KISAC tournaments. They also will compete once again
+DMHS at Camp Walker.
+
+Note: They will practice on Mondays from 4:30-6:00 pm and on Fridays from 2:50-4:20 pm.
+""", dayOfWeek: 1, roomNumber: 0,location: "DIS Gym", socialMedia: true, instagramLink: "https://www.instagram.com/dis_basketball/", instagramID: "@dis_basketball", quarter: "2", sports: "basketball"),
         
         ASAStruct(clubName: "Crochet Club", teacherName: "Ms. Wang", groupImage: "CrochetC", subName: "", description: "Have you ever experienced with crocheting? Ms. Wang's crochet club invites students who have any experience with crocheting or want to learn how to crochet. We can make nice and useful items like decoration items or accessory for ourselves. We will buy our own kit and crochet together in my classroom! For more clarification, come to Ms. Wang and I'd love to talk with you more!", dayOfWeek: 2, roomNumber: 202),
         
@@ -102,9 +110,15 @@ Additionally, this ASA optionally provides High School Visual Arts students extr
         
         ASAStruct(clubName: "HS Boys Futsal", teacherName: "Mr. Purdy", groupImage: "HBF", subName: "", description: "This is the SKAC/KISAC team for high school futsal.  The teams will train to compete in SKAC and KISAC tournaments. They will be coached by Mr. Purdy.", dayOfWeek: 5, roomNumber: 0, location: "DIS Futsal Fields", quarter: "3", sports: "futsal"),
         
-        ASAStruct(clubName: "HS Boy Volleyball", teacherName: "Mr. Bergan", groupImage: "HSBVBALL", subName: "", description: "This is the SKAIS/KISAC team for high school volleyball. The teams will train to compete in SKAIS and KISAC tournaments.", dayOfWeek: 1, roomNumber: 0, location: "DIS Gym", quarter: "1", sports: "volleyball"),
+        ASAStruct(clubName: "HS Boy Volleyball", teacherName: "Mr. Bergan", groupImage: "HSBVBALL", subName: "", description: "This is the SKAIS/KISAC team for high school volleyball. The teams will train to compete in SKAIS and KISAC tournaments.", dayOfWeek: 1, roomNumber: 0, location: "DIS Gym", quarter: "1", sports: "volleyball", championship: true),
         
         ASAStruct(clubName: "HS Boy Volleyball", teacherName: "Mr. Bergan", groupImage: "HSBVBALL", subName: "", description: "This is the SKAIS/KISAC team for high school volleyball. The teams will train to compete in SKAIS and KISAC tournaments.", dayOfWeek: 5, roomNumber: 0, location: "DIS Gym", quarter: "1", sports: "volleyball"),
+        
+        ASAStruct(clubName: "HS Boys Basketball", teacherName: "Mr. Kaschub", groupImage: "HBB", subName: "", description: """
+This is the SKAIS/KISAC team for high school basketball.  The teams will train to compete in SKAIS and KISAC tournaments. They also will compete once again DMHS at Camp Walker.
+
+Note: They will practice on Mondays from 4:30-6:00 pm and on Fridays from 2:50-4:20 pm.
+""", dayOfWeek: 5, roomNumber: 0,location: "DIS Gym", socialMedia: true, instagramLink: "https://www.instagram.com/dis_basketball/", instagramID: "@dis_basketball", quarter: "2", sports: "basketball"),
         
         ASAStruct(clubName: "HS Cross Country", teacherName: "Mr. Coleman", groupImage: "HSCC", subName: "", description: "This is the SKAIS team for middle school and high school cross country. The teams will train to compete in SKAIS tournaments", dayOfWeek: 1, roomNumber: 0, location: "Bongmu Lake", quarter: "1"),
         
@@ -137,7 +151,19 @@ The Model United Nations is a series of programs run throughout the country and 
         
         ASAStruct(clubName: "MS/HS Club Nintendo", teacherName: "Mr. Hinkle", groupImage: "MHCN", subName: "", description: "Join us for fun games of Mario Kart 8, Mario Strikers, Splatoon 2 & 3, Super Smash Bros, Switch Sports, and Overcooked 2 among other games.", dayOfWeek: 2, roomNumber: 313),
         
-    ASAStruct(clubName: "Podcast Production", teacherName: "Mr. Lipsky", groupImage: "n/a", subName: "", description: "Students will write, record, and edit audio podcast episodes. They will learn how to create original series and find unique stories. Students will use professional quality recording equipment and editing software. Finished podcasts will be published on the Jets Flyover website, along with logos, graphics, and writing to market and promote their shows.", dayOfWeek: 2, roomNumber: 309)
+    ASAStruct(clubName: "Podcast Production", teacherName: "Mr. Lipsky", groupImage: "n/a", subName: "", description: "Students will write, record, and edit audio podcast episodes. They will learn how to create original series and find unique stories. Students will use professional quality recording equipment and editing software. Finished podcasts will be published on the Jets Flyover website, along with logos, graphics, and writing to market and promote their shows.", dayOfWeek: 2, roomNumber: 309),
+        
+        ASAStruct(clubName: "HS Girls Basketball", teacherName: "Mr. Park", groupImage: "n/a", subName: "", description: """
+This is the SKAIS/KISAC team for high school basketball.  The teams will train to compete in SKAIS and KISAC tournaments. They also will compete once again DMHS at Camp Walker.
+
+Note: They will practice on Mondays from 4:30-6:00 pm and on Fridays from 2:50-4:20 pm.
+""", dayOfWeek: 5, roomNumber: 0,location: "DIS Gym", quarter: "2", sports: "basketball"),
+        
+        ASAStruct(clubName: "HS Girls Basketball", teacherName: "Mr. Park", groupImage: "n/a", subName: "", description: """
+This is the SKAIS/KISAC team for high school basketball.  The teams will train to compete in SKAIS and KISAC tournaments. They also will compete once again DMHS at Camp Walker.
+
+Note: They will practice on Mondays from 4:30-6:00 pm and on Fridays from 2:50-4:20 pm.
+""", dayOfWeek: 1, roomNumber: 0,location: "DIS Gym", quarter: "2", sports: "basketball")
         
         
         

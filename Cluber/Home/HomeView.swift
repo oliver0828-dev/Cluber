@@ -65,8 +65,11 @@ struct HomeView: View {
                 .navigationTitle("Cluber")
                 .modifier(NavigationBarModifier())
             }
-            
         }
+        .refreshable {
+            date = Date.now
+        }
+        
         
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343F13312CD0BE1F00B32281 /* ChampionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F13302CD0BE1F00B32281 /* ChampionsView.swift */; };
 		344EB2812C8C031D001C72AC /* ChangeAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344EB2802C8C031D001C72AC /* ChangeAppIconView.swift */; };
 		34605BD72C1B0CA6003EA9B0 /* iCalendarParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34605BD62C1B0CA6003EA9B0 /* iCalendarParser */; };
 		34605BDA2C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */; };
@@ -119,6 +120,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		343F13302CD0BE1F00B32281 /* ChampionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsView.swift; sourceTree = "<group>"; };
 		344EB2802C8C031D001C72AC /* ChangeAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAppIconView.swift; sourceTree = "<group>"; };
 		34605BD92C1BEA5E003EA9B0 /* ChangeGradeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGradeSettingsView.swift; sourceTree = "<group>"; };
 		34605BDB2C1C5B04003EA9B0 /* ChangeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				34B2AB7A2BD7E24900821D81 /* ASAView.swift */,
+				343F13302CD0BE1F00B32281 /* ChampionsView.swift */,
 				349CAFE72C0BEC1F00642E1B /* ASAData.swift */,
 			);
 			path = ASA;
@@ -861,6 +864,7 @@
 				34ED01872C3D12A10021D1DD /* DateExtension.swift in Sources */,
 				34CCAA332C4A79D200F7E17F /* LunchRowView.swift in Sources */,
 				34B2AB792BD7E24400821D81 /* LunchClubView.swift in Sources */,
+				343F13312CD0BE1F00B32281 /* ChampionsView.swift in Sources */,
 				348324FA2BFAF20A005BAA45 /* SettingsView.swift in Sources */,
 				34B2AB772BD7E23100821D81 /* HomeView.swift in Sources */,
 			);
@@ -1185,6 +1189,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1192,7 +1197,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.3;
+				MARKETING_VERSION = 2.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1224,6 +1229,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1231,7 +1237,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.3;
+				MARKETING_VERSION = 2.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverPark.cluber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

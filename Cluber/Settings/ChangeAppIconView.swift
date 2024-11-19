@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChangeAppIconView: View {
-    let appIcons:[String] = ["AppIcon1","AppIcon2","AppIcon3"]
+    let appIcons:[String] = ["AppIcon1","AppIcon2","BlueIcon"]
     @State private var isChanged: Bool = false
     
     let columns: [GridItem] = [GridItem(.flexible()),

@@ -26,6 +26,7 @@ struct ClubView: View {
     var quarter: String = "All"
     var sports: String = "N"
     var aiGenerated: Bool = false
+    var championship: Bool = false
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -33,9 +34,11 @@ struct ClubView: View {
     @State private var isTapped2 = false // for Signing Up
     @State private var counter = 0
     @State private var showAlert = false
+    @State private var banner = false
     
     @Binding var loved: Bool
     @Binding var memberBoolean: Bool
+    
     
     var body: some View {
         NavigationStack {
@@ -57,7 +60,7 @@ struct ClubView: View {
                                 Text(ClubSubName)
                                     .foregroundStyle(.gray)
                             }
-                        
+                            
                             Spacer()
                             VStack{
                                 HStack {
@@ -111,7 +114,7 @@ struct ClubView: View {
                                 }
                                 Spacer()
                             }
-                         
+                            
                         }
                         
                         HStack {
@@ -136,6 +139,28 @@ struct ClubView: View {
                                     }.foregroundStyle(.gray)
                                     
                                 }
+                                
+//                                if championship {
+//                                    VStack {
+//                                        Button(action: {
+//                                            // Toggle the state to show or hide the image
+//                                            banner.toggle()
+//                                        }) {
+//                                            HStack {
+//                                                Spacer()
+//                                                Image(systemName: "arrow.down.circle.fill")
+//                                                Text("Download Champion Banner")
+//                                                Spacer()
+//                                            }
+//                                            
+//                                        }
+//                                    }
+//                                    .sheet(isPresented: $banner) {
+//                                        Image(ClubName + "c")
+//                                    }
+//                                    
+//                                }
+                                
                                 
                             }
                             Spacer()

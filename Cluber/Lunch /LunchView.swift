@@ -23,6 +23,10 @@ struct LunchView: View {
                 .modifier(NavigationBarModifier())
             }
         }
+        .refreshable {
+            TodayDate = Date.now
+            tomorrow = Date.now.addingTimeInterval(86400)
+        }
     }
 }
 

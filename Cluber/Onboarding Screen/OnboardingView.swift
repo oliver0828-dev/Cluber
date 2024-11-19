@@ -90,11 +90,12 @@ struct OnboardingView: View {
                             Picker("Grade", selection: $gradeLevel) {
                                 ForEach(grade, id: \.self) { school in
                                     Text(school)
+                                        .foregroundStyle(.black)
                                 }
                             }
                         }
                         .pickerStyle(.segmented)
-                        .frame(maxWidth: geometry.size.width * 0.8) // Adjusted width
+                        .frame(maxWidth: geometry.size.width * 0.8)
                         .padding()
 
                         
@@ -111,8 +112,10 @@ struct OnboardingView: View {
                                     .cornerRadius(23)
                                 TextField("", value: $gradeInt, formatter: NumberFormatter())
                                     .fontDesign(.rounded)
-                                    .frame(width: 40, height: 50) // Slightly larger width
+                                    .frame(width: 40, height: 50)
                                     .submitLabel(.done)
+                                    .foregroundStyle(.black)
+                            
                             }
                         }
                         
@@ -148,15 +151,19 @@ struct OnboardingView: View {
                         
                        
                     }
+                    .preferredColorScheme(.light)
                     .fontDesign(.rounded)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.move(edge: .bottom))
+                    
                 }
                 } else {
                     ContentView(username: $savedName, gradeLevel: $gradeLevel)
+                        .preferredColorScheme(nil) 
                 }
             }
         }
+       
     }
     
     func gradeLevelSuggestion(number: Int) -> String {
@@ -172,9 +179,9 @@ struct OnboardingView: View {
     }
 }
 
+
 #Preview {
     OnboardingView()
-        .preferredColorScheme(.light)
         .environmentObject(UsernameGradeClass())
         .environmentObject(PhotoPickerViewModel())
 }

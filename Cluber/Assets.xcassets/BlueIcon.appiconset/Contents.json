@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "appstore.png",
+      "filename" : "Icon Blue.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +25,7 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "Group 11.png",
+      "filename" : "Tinted Icon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
