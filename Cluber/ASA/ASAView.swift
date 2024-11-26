@@ -22,6 +22,7 @@ struct ASAView: View {
     
     var body: some View {
         NavigationStack {
+            
             VStack {
                 if searchText.isEmpty {
                     Text(dayOfWeek(for: selectedDay ?? 1))
@@ -133,6 +134,7 @@ struct ASAView: View {
                 .scrollContentBackground(.hidden)
                 
             }
+            
             .navigationTitle("ASA")
             .modifier(NavigationBarModifier())
             .toolbar {

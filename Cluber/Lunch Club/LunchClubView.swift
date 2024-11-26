@@ -20,6 +20,7 @@ struct LunchClubView: View {
         
         
         NavigationStack {
+            
             VStack {
                 if searchText.isEmpty {
                     Text(dayOfWeek(for: selectedDay ?? 1))
@@ -148,20 +149,20 @@ struct LunchClubView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
-                
             }
+            
             .navigationTitle("Lunch Club")
             .modifier(NavigationBarModifier())
             .toolbar {
                 if UIDevice.current.userInterfaceIdiom != .pad {
-                     Button {
-                         isTapped.toggle()
-                     } label: {
-                         Image(systemName: "square.and.arrow.up")
-                     }.sheet(isPresented: $isTapped) {
-                         IGShareView()
-                     }
-                 }
+                    Button {
+                        isTapped.toggle()
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }.sheet(isPresented: $isTapped) {
+                        IGShareView()
+                    }
+                }
                 
                 Button {
                     isLoved.toggle()

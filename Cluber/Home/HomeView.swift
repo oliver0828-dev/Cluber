@@ -60,15 +60,26 @@ struct HomeView: View {
                     }
                     .padding()
                     .fontDesign(.rounded)
+                    .toolbar {
+                        Button {
+                            date = Date.now
+                        }label: {
+                            Text("Today")
+                        }
+                    }
                     
                 }
                 .navigationTitle("Cluber")
                 .modifier(NavigationBarModifier())
+               
             }
+            
         }
+        
         .refreshable {
             date = Date.now
         }
+        
         
         
     }
