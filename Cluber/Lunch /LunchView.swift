@@ -27,6 +27,10 @@ struct LunchView: View {
             TodayDate = Date.now
             tomorrow = Date.now.addingTimeInterval(86400)
         }
+        .onAppear {
+            TodayDate = Date.now
+            tomorrow = Date.now.addingTimeInterval(86400)
+        }
     }
 }
 

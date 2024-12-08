@@ -2,7 +2,6 @@ import SwiftUI
 import Combine
 import Foundation
 
-
 struct HomeView: View {
     @EnvironmentObject var usernameGrade: UsernameGradeClass
     @Environment(\.colorScheme) var colorScheme
@@ -12,13 +11,12 @@ struct HomeView: View {
     let username: String
     
     var weekdayName: String {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "EEEE"
-            return formatter.string(from: date)
-        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: date)
+    }
     
     var body: some View {
-        
         NavigationStack {
             GeometryReader { _ in
                 ScrollView {
@@ -32,17 +30,7 @@ struct HomeView: View {
                                 .background(GradeColor(gradeLevel: usernameGrade.schoolGrade))
                                 .clipShape(RoundedRectangle(cornerRadius: 40))
                         }
-//                        Text(gradeYear(year: usernameGrade.gradeNumber))
-//                            .fontDesign(.rounded)
-//                            .foregroundStyle(.gray)
-//                        HStack {
-//                            Text("\(weekdayName)")
-//                            Text(Date.now.formatted(date: .abbreviated, time: .omitted))
-//                        }
-//                        .fontWeight(.medium)
-//                        .foregroundStyle(.gray)
-                           
-    
+                        
                         DatePicker("Calendar", selection: $date, displayedComponents: .date)
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .modifier(NavigationBarModifier())
@@ -55,7 +43,6 @@ struct HomeView: View {
                                 .background(.gray.opacity(0.2))
                                 .clipShape(RoundedRectangle(cornerRadius: 16))
                                 .shadow(radius: 16)
-                               
                         }
                     }
                     .padding()
@@ -63,25 +50,26 @@ struct HomeView: View {
                     .toolbar {
                         Button {
                             date = Date.now
-                        }label: {
+                        } label: {
                             Text("Today")
                         }
                     }
-                    
                 }
                 .navigationTitle("Cluber")
                 .modifier(NavigationBarModifier())
-               
             }
-            
         }
-        
         .refreshable {
-            date = Date.now
+            refreshContent()
         }
-        
-        
-        
+        .onAppear {
+            refreshContent() // Automatically refresh content when the view appears
+        }
+    }
+    
+    func refreshContent() {
+        date = Date.now // Update the date to the current time
+        manager.objectWillChange.send() // Notify any changes in manager
     }
     
     func getGreeting() -> String {
@@ -97,13 +85,11 @@ struct HomeView: View {
     }
 }
 
-
 #Preview {
     HomeView(username: "Oliver")
         .environmentObject(UsernameGradeClass())
         .environmentObject(GetCal())
 }
-
 
 func gradeYear(year: Int) -> String {
     switch year {

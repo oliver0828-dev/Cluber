@@ -82,18 +82,18 @@ struct SettingsView: View {
                         }
                     }
                     
-//                    Section ("Change App Icons") {
-//                        NavigationLink {
-//                            ChangeAppIconView()
-//                        } label: {
-//                            HStack {
-//                                Image(systemName: "app.dashed")
-//                                    .fontWeight(.semibold)
-//                                Text("Change App Icon")
-//                                    .fontDesign(.rounded)
-//                            }
-//                        }
-//                    }
+                    Section ("Change App Icons") {
+                        NavigationLink {
+                            ChangeAppIconView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "app.dashed")
+                                    .fontWeight(.semibold)
+                                Text("Change App Icon")
+                                    .fontDesign(.rounded)
+                            }
+                        }
+                    }
                     
                     Section ("Check for Updates") {
                         HStack {

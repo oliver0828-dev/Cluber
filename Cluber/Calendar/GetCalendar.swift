@@ -25,7 +25,7 @@ class GetCal: ObservableObject {
         _ = Date()
         _ = DateFormatter()
 
-        let timeMaxString = "2025-12-31T00:00:00Z"
+        let timeMaxString = "2025-6-30T00:00:00Z"
         let timeMinString = "2024-01-01T00:00:00Z"
         let apiKey = "AIzaSyBFDvZH4c6WOwNkXA-pAUC_RuaTeA13g00"
         let calendarID = "vri7ttidnah73ujmj0tptpdscicue13m@import.calendar.google.com"

@@ -58,7 +58,7 @@ struct AppIconImageGridView: View {
 
 func AppIconFunction(name: String) -> String  {
     if name == "AppIcon1" {
-        return "Original"
+        return "18Icon"
     } else if name == "AppIcon2" {
         return "Green"
     } else {
