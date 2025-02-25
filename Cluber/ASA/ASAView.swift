@@ -12,7 +12,7 @@ struct ASAView: View {
     @State private var highSchoolASAList: [ASAStruct] = ASAList.HighSchool
     @State private var middleSchoolASAList: [ASAStruct] = ASAList.Middle
     @State private var isLoved = false
-    @AppStorage("Quarter") var quarter = "Q2"
+    @AppStorage("Quarter") var quarter = "Q3"
     @State var quarterPicker = ["Q1", "Q2", "Q3"]
     
     @State private var searchText = ""

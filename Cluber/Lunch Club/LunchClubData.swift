@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 import SwiftData
 
+
 class ClubClass: ObservableObject {
     
 }
@@ -62,6 +63,8 @@ struct LunchClubStruct: Identifiable {
             UserDefaults.standard.set(newValue, forKey: "\(clubName)'s member")
         }
     }
+    
+    var tags: String = ""
 }
 
 

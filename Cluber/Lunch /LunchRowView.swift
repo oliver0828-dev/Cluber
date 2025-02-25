@@ -7,53 +7,49 @@ struct LunchRowView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var items: [EventCalModel.Item] {
-        data.items.sorted { $0.sort < $1.sort }.filter { stringToDateConverter(start: $0.start, end: $0.end, dateDate: date) }
+        data.items.sorted { $0.sort < $1.sort }
+            .filter { stringToDateConverter(start: $0.start, end: $0.end, dateDate: date) }
     }
     
     var body: some View {
         VStack {
-            if (items.isEmpty) {
+            if items.isEmpty {
                 Text("Lunch is not being served")
                     .font(.title2)
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
                     .foregroundStyle(.gray)
-            }
-            ForEach(items, id: \.id) { item in
-                Text(item.summary)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .fontDesign(.rounded)
-                    .foregroundStyle(.gray)
+            } else {
+                ForEach(items, id: \.id) { item in
+                    Text(item.summary)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .fontDesign(.rounded)
+                        .foregroundStyle(.gray)
+                }
             }
         }
         .padding()
     }
     
-    func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
+    func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = currentDateFormate
-        let finalDate = formatter.date(from: convertDate)
+        guard let finalDate = formatter.date(from: convertDate) else { return "" }
         formatter.dateFormat = conVertFormate
-        let dateString = formatter.string(from: finalDate!)
-        return dateString
+        return formatter.string(from: finalDate)
     }
     
-    func stringToDateConverter(start: String, end: String?, dateDate: Date) -> Bool {
+    func stringToDateConverter(start: String?, end: String?, dateDate: Date) -> Bool {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        let changedDate = dateFormatter.date(from: start)
+        guard let start = start, let changedDate = dateFormatter.date(from: start) else { return false }
         
-        if let end {
-            let changedEndDate = dateFormatter.date(from: end)
-            return (changedDate?.compare(dateDate) == .orderedAscending) && (changedEndDate?.compare(dateDate) == .orderedDescending)
+        if let end = end, let changedEndDate = dateFormatter.date(from: end) {
+            return (changedDate <= dateDate) && (changedEndDate >= dateDate)
         } else {
-            if changedDate?.compare(dateDate) == .orderedSame {
-                return true
-            } else {
-                return false
-            }
+            return Calendar.current.isDate(changedDate, inSameDayAs: dateDate)
         }
     }
 }
@@ -64,53 +60,49 @@ struct non18LunchRowView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var items: [EventCalModel.Item] {
-        data.items.sorted { $0.sort < $1.sort }.filter {stringToDateConverter(start: $0.start, end: $0.end, dateDate: date)}
+        data.items.sorted { $0.sort < $1.sort }
+            .filter { stringToDateConverter(start: $0.start, end: $0.end, dateDate: date) }
     }
     
     var body: some View {
         VStack {
-            if (items.isEmpty) {
+            if items.isEmpty {
                 Text("Lunch is not being served")
                     .font(.title2)
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
                     .foregroundStyle(.gray)
-            }
-            ForEach(items, id: \.id) { item in
-                Text(item.summary)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .fontDesign(.rounded)
-                    .foregroundStyle(.gray)
+            } else {
+                ForEach(items, id: \.id) { item in
+                    Text(item.summary)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .fontDesign(.rounded)
+                        .foregroundStyle(.gray)
+                }
             }
         }
         .padding()
     }
     
-    func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
+    func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = currentDateFormate
-        let finalDate = formatter.date(from: convertDate)
+        guard let finalDate = formatter.date(from: convertDate) else { return "" }
         formatter.dateFormat = conVertFormate
-        let dateString = formatter.string(from: finalDate!)
-        return dateString
+        return formatter.string(from: finalDate)
     }
     
-    func stringToDateConverter(start: String, end: String?, dateDate: Date) -> Bool {
+    func stringToDateConverter(start: String?, end: String?, dateDate: Date) -> Bool {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        let changedDate = dateFormatter.date(from: start)
+        guard let start = start, let changedDate = dateFormatter.date(from: start) else { return false }
         
-        if let end {
-            let changedEndDate = dateFormatter.date(from: end)
-            return (changedDate?.compare(dateDate) == .orderedAscending) && (changedEndDate?.compare(dateDate) == .orderedDescending)
+        if let end = end, let changedEndDate = dateFormatter.date(from: end) {
+            return (changedDate <= dateDate) && (changedEndDate >= dateDate)
         } else {
-            if changedDate?.compare(dateDate) == .orderedSame {
-                return true
-            } else {
-                return false
-            }
+            return Calendar.current.isDate(changedDate, inSameDayAs: dateDate)
         }
     }
 }

@@ -1,10 +1,3 @@
-//
-//  CalendarModel.swift
-//  Cluber
-//
-//  Created by Oliver Park on 7/9/24.
-//
-
 import Foundation
 
 struct EventCalModel {
@@ -14,10 +7,10 @@ struct EventCalModel {
         let id: String
         let status: String
         let summary: String
-        let start: String
+        let start: String?
         let dateTime: String
         let timeZone: String
-        let end: String
+        let end: String?
         let sort: String
     }
     
@@ -36,15 +29,14 @@ struct EventCalModel {
             let dateTime = model.items[index].start?.dateTime ?? ""
             let timeZone = model.items[index].start?.timeZone ?? ""
             let end = model.items[index].end?.date ?? ""
-            let sort = model.items[index].start?.date ?? model.items[index].start?.dateTime
-            if model.items[index].status == "cancelled" {
-                
-            } else {
+            let sort = model.items[index].start?.date ?? model.items[index].start?.dateTime ?? ""
+            
+            if model.items[index].status != "cancelled" {
                 var sorted = ""
-                if start == "" {
-                    sorted = getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "dd", convertDate: sort!)
-                } else if dateTime == "" {
-                    sorted = getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "dd", convertDate: sort!)
+                if !start.isEmpty {
+                    sorted = getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd'T'HH:mm:ssZ", conVertFormate: "dd", convertDate: sort)
+                } else if !dateTime.isEmpty {
+                    sorted = getOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd", conVertFormate: "dd", convertDate: sort)
                 }
                 self.items.append(Item(id: id, status: status, summary: summary, start: start, dateTime: dateTime, timeZone: timeZone, end: end, sort: sorted))
             }
@@ -52,13 +44,10 @@ struct EventCalModel {
     }
 }
 
-func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String ) -> String {
+func getOnlyDateMonthYearFromFullDate(currentDateFormate: String, conVertFormate: String, convertDate: String) -> String {
     let formatter = DateFormatter()
     formatter.dateFormat = currentDateFormate
-    let finalDate = formatter.date(from: convertDate)
+    guard let finalDate = formatter.date(from: convertDate) else { return "" }
     formatter.dateFormat = conVertFormate
-    let dateString = formatter.string(from: finalDate!)
-
-    return dateString
+    return formatter.string(from: finalDate)
 }
-
